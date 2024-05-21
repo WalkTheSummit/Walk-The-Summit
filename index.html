@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Logo.png" type="image/png">
+  <title>Walk The Summit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #aboutUs{
+      background-color:#f2e8cf;
+    }
+    #box a:hover{
+      background-color: rgb(32, 74, 72);
+    }
+    #box a{
+      background-color:#1d4a4d; 
+      color: antiquewhite;
+      padding: 10px; 
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: all 0.5s;
+      font-size: 20px;
+    }
+    #Otherbox a{
+      background-color: rgb(217, 243, 245); 
+      padding: 10px; 
+      border-radius: 10px;
+      transition: all 0.5s;
+    }
+    #Follow{
+      background-color: #ece1cd;
+      border-radius: 10px;
+      color: rgb(92, 67, 46);
+      box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.11);
+    }
+    #Follow div{
+      padding-top: 10px;
+    }
+    
+    #FollowLinks a{
+      padding: 5px;
+    }
+    #donateNow{
+      color: antiquewhite; 
+      background-color:#1d4a4d; 
+      padding: 10px; 
+      border-radius: 10px; 
+      transition: all 0.5s;
+      box-shadow:5px 5px 10px rgba(0, 0, 0, 0.151);
+    }
+    #donateNow:hover{
+      background-color: rgb(32, 74, 72);
+    }
+      .slider-wraper{
+          position: relative;
+          max-width: 60rem;
+          margin: 0 auto;
+      }
+      .slider{
+          display: flex;
+          aspect-ratio: 16/9;
+          overflow-x: hidden;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+          border-radius: 0.5rem;
+      }
+      .slider img{
+          flex: 1 0 100%;
+          scroll-snap-align: start;
+          object-fit: cover;
+      }
+  </style>
+</head>
+<body style=" background-color:#f2e8cf;">
+  <div id="navbar" style="position: sticky; top: 0px; z-index: 111; padding-bottom: 5px; width: 100%; background-color:rgb(38, 86, 86); box-shadow: 10px 5px 15px rgba(255, 255, 255, 0.151);">
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img src="Logo.jpg" class="text-white" style="width: 15%; border-radius: 50%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);">
+          <span class="ml-3" style="color: white; font-size: 30px;"> <b>Walk The Summit</b></span>
+        </a>
+        <nav id="" class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+          <a class="mr-5 hover:text-gray-900"></a>
+        </nav>
+        <div class="items-center" id="Follow" style="padding: 20px; font-size: 25px;" id="Followus"> <b>Follow Us!</b>
+          <div class="flex" id="FollowLinks">
+            <a href="https://www.instagram.com/walkthesummit_">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/walk-the-summit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61559235285861&mibextid=ZbWKwL">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+            </a>
+          </div>
+          <div>
+            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="donateNow"><button>
+              Donate Now
+            </button></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="text-gray-600 body-font">
+        <nav id = "box" class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-gray-900" href="#aboutUs">About Us</a>
+          <a class="mr-5 hover:text-gray-900"href="FAQ.html">FAQ's</a>
+         <!-- <a class="mr-5 hover:text-gray-900"href="team.html">Our Founders</a> -->
+          <a class="mr-5 hover:text-gray-900"href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link">Apply Now</a>
+        </nav>
+    </header>
+
+    <hr>
+  </div>
+  <center style="margin-top: 10px;">
+    <div class="container" width="100%">
+        <div class="slider-wraper">
+            <div class="slider">
+                <video id="slider-1" src="Slider/slider.mp4" autoplay muted loop>
+            </div>
+        </div>
+      </div>
+  </center>
+  <div id="aboutUs">
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            <br class="hidden lg:inline-block"><b>Who Are We?</b>
+          </h1>
+          <p class="mb-8 leading-relaxed">We're a student-led organization dedicated to transforming the lives of
+            children in the remote villages of the Himalayas. We are driven by a deep
+            passion to ignite a spark of curiosity and opportunity in these young minds,
+            transcending the limitations of their local schools and connecting them
+            with the vast world beyond, to show them that their dreams can soar as
+            high as the peaks that surround them.</p>
+            <div class="flex justify-center">
+              <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="donateNow">
+                <button class="inline-flex text-white border-0 py-2 px-6 focus:outline-none rounded text-lg">Donate now</button>
+              </a>
+            </div>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img class="object-cover object-center rounded" alt="hero" src="1.jpg">
+        </div>
+      </div>
+      
+    </section>
+
+
+
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <img class="object-cover object-center rounded" alt="hero" src="2.jpg">
+        </div>
+        <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            <br class="hidden lg:inline-block"><b>What is our mission?</b>
+          </h1>
+          <p class="mb-8 leading-relaxed">In the rugged terrain of the Himalayas, where a simple pencil is a precious
+            commodity, where children trek miles just to reach school, we stand as a
+            beacon of hope and progress. That's why we're not just setting up computer
+            labs and bringing Wi-Fi to these villages, we're also empowering these kids
+            with essential 21st century life skills, preparing them for a future where
+            they can thrive and contribute meaningfully to society.
+            <br><br>
+            Our efforts extend to supporting local schools initiated by the community
+            itself, often lacking experienced teachers and resources. By providing them
+            with computers and Wi-Fi, we connect them with the outside world,
+            ensuring that every child has access to tools for success regardless of their
+            geographical constraints. We're not just changing lives, we're shaping
+            futures and building bridges between remote communities and the global
+            stage.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img class="lg:w-4/6 md:w-3/6 w-5/6 mb-10 object-cover object-center" style="border-radius: 2%; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.199);" alt="hero" src="Current ProjectsCollage.png">
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"><b>Current Projects</b></h1>
+          <p class="mb-8 leading-relaxed">Currently, we are supporting a school in Ram Gaon, located 12 kilometers
+            away from Mussoorie. We have already set up Wi-Fi at the school and are
+            now seeking funds of about 80,000-90,000 to provide two to three 40-inch
+            LED screens and laptops for the students. These technological resources
+            will greatly enhance their learning experience.In addition to the hardware,
+            we also plan to conduct virtual summer programs in collaboration with
+            other NGOs. These programs will focus on teaching the students valuable
+            21st-century skills through the monitors and laptops we provide, all made
+            possible through fundraising efforts.
+          </p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="text-gray-600 body-font bg-gray-100">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="Logo.png" class="w-20 h-20 text-white p-2 rounded-full">
+        <span class="ml-3 text-xl">Walk The Summit</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Walk The Summit --- <b>Contact info:</b><a href="mailto:walkthesummit@gmail.com">@Walk-The-Summit</a>
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" id="FollowLinks">
+        <a href="https://www.instagram.com/walkthesummit_">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/walk-the-summit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61559235285861&mibextid=ZbWKwL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>
