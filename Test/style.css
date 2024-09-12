@@ -1,0 +1,270 @@
+:root {
+    /**
+   * COLORS
+   */
+    --gold-crayola: #c28840;
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+    --smoky-black-1: hsla(40, 12%, 5%, 1);
+    --smoky-black-2: hsla(30, 8%, 5%, 1);
+    --smoky-black-3: hsla(0, 3%, 7%, 1);
+    --eerie-black-1: hsla(210, 4%, 9%, 1);
+    --eerie-black-2: hsla(210, 4%, 11%, 1);
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --eerie-black-4: hsla(0, 0%, 13%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+    /**
+   * GRADIENT COLOR
+   */
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%, transparent 66.66% 75%);
+    --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
+    /**
+   * TYPOGRAPHY
+   */
+    /* font-family */
+    --fontFamily-forum: 'Forum', cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+    /* font-size */
+    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-headline-1: calc(2rem + 2.5vw);
+    --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+    /* font-weight */
+    --weight-regular: 400;
+    --weight-bold: 700;
+    /* line-height */
+    --lineHeight-1: 1em;
+    --lineHeight-2: 1.2em;
+    --lineHeight-3: 1.5em;
+    --lineHeight-4: 1.6em;
+    --lineHeight-5: 1.85em;
+    --lineHeight-6: 1.4em;
+    /* letter-spacing */
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px;
+    /**
+   * SPACING
+   */
+    --section-space: 70px;
+    /**
+   * SHADOW
+   */
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+    /**
+   * BORDER RADIUS
+   */
+    --radius-24: 24px;
+    --radius-circle: 50%;
+    /**
+   * TRANSITION
+   */
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+}
+
+body {
+    background: #050303;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    margin-top: -50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible) .text-2 {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-secondary .text-2 {
+    color: var(--white);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--fontFamily-dm_sans);
+    font-size: var(--fontSize-label-2);
+    font-weight: var(--weight-bold);
+}
+
+#wand {
+    width: 10vmin;
+    aspect-ratio: 1 / 10;
+    background: linear-gradient( to right, rgb(26 24 28) 10%, rgb(42 40 44) 45% 55%, rgb(26 24 28) 90%);
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    translate: -50%;
+    rotate: -3deg;
+    z-index: 5;
+    border-radius: 3vmin;
+    box-shadow: 0vmin 1vmin 4vmin rgb(0 0 0 / 80%);
+    overflow: hidden;
+}
+
+#wand>.cap {
+    height: 20%;
+    width: 100%;
+    background: linear-gradient( to right, rgb(212 221 236) 10%, rgb(255 255 255) 45% 55%, rgb(212 221 236) 90%);
+}
+
+#tiles {
+    display: flex;
+}
+
+.tile {
+    display: grid;
+    place-items: center;
+    width: 38vmin;
+    aspect-ratio: 1;
+    border-radius: 2vmin;
+    box-shadow: 0vmin 3vmin 6vmin rgb(0 0 0 / 25%), inset 0vmin 0.5vmin 1vmin rgb(255 255 255 / 15%);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur( 10px);
+    -webkit-backdrop-filter: blur( 6.5px);
+    /*glassmorphic*/
+    scale: 125%;
+}
+
+.tile:nth-child(1) {
+    rotate: 0deg;
+    z-index: 3;
+}
+
+.tile:nth-child(2) {
+    rotate: -2deg;
+    z-index: 2;
+}
+
+.tile:nth-child(3) {
+    rotate: 5deg;
+    z-index: 1;
+}
+
+.tile:is(:nth-child(2), :nth-child(3)) {
+    margin-left: -10vmin;
+}
+
+.tile>i {
+    font-size: 15vmin;
+    color: rgb(255 255 255 / 10%);
+}
+
+.tile>img {
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+    opacity: var(--opacity);
+    filter: blur(calc(var(--blur) * 10px));
+}
+
+.btn {
+    position: relative;
+    color: var(--gold-crayola);
+    font-size: var(--fontSize-label-2);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-5);
+    max-width: max-content;
+    border: 2px solid var(--gold-crayola);
+    padding: 12px 45px;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba( 255, 255, 255, 0.15);
+    backdrop-filter: blur( 6.5px);
+    -webkit-backdrop-filter: blur( 6.5px);
+    /*glassmorphic*/
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    border-radius: var(--radius-circle);
+    background-color: var(--gold-crayola);
+    transition: var(--transition-2);
+    z-index: -1;
+}
+
+.btn .text {
+    transition: var(--transition-1);
+}
+
+.btn .text-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible)::before {
+    bottom: -50%;
+}
+
+.btn:is(:hover, :focus-visible) .text-1 {
+    transform: translateY(-40px);
+}
+
+.btn:is(:hover, :focus-visible) .text-2 {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-secondary {
+    background: rgba( 255, 255, 255, 0.15);
+    backdrop-filter: blur( 6.5px);
+    -webkit-backdrop-filter: blur( 6.5px);
+    /*glassmorphic*/
+}
+
+.btn-secondary::before {
+    background-color: var(--smoky-black-1);
+}
+
+.btn-secondary .text-2 {
+    color: var(--white);
+}
