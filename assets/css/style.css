@@ -33,6 +33,7 @@
     --fontSize-display-1: calc(1.3rem + 6.7vw);
     --fontSize-headline-1: calc(2rem + 2.5vw);
     --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-headline-3: calc(1.7rem + .7vw);
     --fontSize-title-1: calc(1.6rem + 1.2vw);
     --fontSize-title-2: 2.2rem;
     --fontSize-title-3: 2.1rem;
@@ -53,6 +54,7 @@
     --lineHeight-4: 1.6em;
     --lineHeight-5: 1.85em;
     --lineHeight-6: 1.4em;
+    --lineHeight-7: 1.0em;
     /* letter-spacing */
     --letterSpacing-1: 0.15em;
     --letterSpacing-2: 0.4em;
@@ -230,6 +232,7 @@ body.nav-active {
 .display-1,
 .headline-1,
 .headline-2,
+.headline-3,
 .title-1,
 .title-2,
 .title-3,
@@ -252,6 +255,11 @@ body.nav-active {
 .headline-2 {
     font-size: var(--fontSize-headline-2);
     line-height: var(--lineHeight-6);
+}
+
+.headline-3 {
+    font-size: var(--fontSize-headline-3);
+    line-height: var(--line-height-7);
 }
 
 .title-1 {
@@ -1386,10 +1394,12 @@ body.nav-active {
 \*-----------------------------------*/
 
 .reservation-form {
-    margin-block-start: -270px;
-    background-color: #050303;
+    margin-block-start: -300px;
     text-align: center;
-    width: fit-content;
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur( 6.5px);
+    mix-blend-mode: difference;
+    /*glassmorphic*/
 }
 
 .fixerr {
@@ -1399,64 +1409,7 @@ body.nav-active {
 }
 
 .form-text {
-    margin-block-end: 40px;
-}
-
-.form-text .link {
-    display: inline;
-    color: var(--gold-crayola);
-}
-
-.form-right .headline-1 {
-    margin-block-end: 40px;
-}
-
-.form-right .contact-label {
-    margin-block-end: 5px;
-}
-
-.form-right .separator {
-    margin: 20px auto;
-}
-
-.form-right .body-4 {
-    color: var(--quick-silver);
-    line-height: var(--lineHeight-3);
-}
-
-.form-right .body-4:not(:last-child) {
-    margin-block-end: 25px;
-}
-
-.form-left,
-.form-right {
-    padding: 40px 20px 30px;
-}
-
-.input-field[type="date"] {
-    text-transform: uppercase;
-    padding-inline-end: 10px;
-}
-
-.input-field[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-}
-
-textarea.input-field {
-    resize: none;
-    height: 140px;
-    padding-block: 20px;
-    line-height: var(--lineHeight-1);
-}
-
-.form-left .btn {
-    max-width: 100%;
-    width: 100%;
-}
-
-.form-right {
-    background-repeat: repeat;
-    background-position: top left;
+    margin-block-end: 1px;
 }
 
 
