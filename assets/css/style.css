@@ -1104,7 +1104,7 @@ body.nav-active {
 }
 
 .service .section-text {
-    margin-block-end: 40px;
+    margin-block-end: 0px;
 }
 
 .service-card {
@@ -1156,12 +1156,12 @@ body.nav-active {
 \*-----------------------------------*/
 
 .about .section-text {
-    margin-block: 15px 30px;
+    margin-block: 1px 1px;
 }
 
 .about .btn {
     margin-inline: auto;
-    margin-block-start: 26px;
+    margin-block-start: 6px;
 }
 
 .about .container {
@@ -1171,11 +1171,11 @@ body.nav-active {
 
 .about-banner {
     position: relative;
-    margin-block-end: 120px;
+    margin-block-end: 20px;
 }
 
 .about-banner>.w-100 {
-    padding-inline-start: 50px;
+    padding-inline-start: 20px;
 }
 
 .about .abs-img {
@@ -1195,7 +1195,7 @@ body.nav-active {
 
 .about .abs-img-2 {
     top: -65px;
-    right: 0;
+    right: -5;
     overflow: hidden;
 }
 
