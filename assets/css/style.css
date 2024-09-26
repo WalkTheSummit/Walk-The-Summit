@@ -471,14 +471,10 @@ body.nav-active {
 .has-before,
 .has-after {
     position: relative;
-    z-index: 1;
 }
 
 .has-before::before,
-.has-after::after {
-    content: "";
-    position: absolute;
-}
+.has-after::after {}
 
 .section {
     position: relative;
@@ -1187,7 +1183,7 @@ body.nav-active {
 }
 
 .about .abs-img-1 {
-    bottom: -120px;
+    bottom: -20px;
     left: 0;
     width: 150px;
     padding-block: 50px;
@@ -1197,6 +1193,30 @@ body.nav-active {
     top: -65px;
     right: -5;
     overflow: hidden;
+}
+
+.about .abs-img-3 {
+    bottom: 650px;
+    left: 75px;
+    width: 370px;
+    padding-block: 50px;
+    z-index: 0;
+}
+
+.about .abs-img-4 {
+    bottom: 550px;
+    left: 500px;
+    width: 300px;
+    padding-block: 50px;
+    z-index: 3;
+}
+
+.about .abs-img-5 {
+    bottom: 00px;
+    left: 520px;
+    width: 300px;
+    padding-block: 50px;
+    z-index: -2;
 }
 
 .about .abs-img-1::before {
@@ -1214,6 +1234,33 @@ body.nav-active {
     background-repeat: no-repeat;
     background-size: contain;
     animation: rotate360 15s linear infinite;
+}
+
+.about .abs-img-3::before {
+    top: 0;
+    bottom: 0;
+    left: 80%;
+    transform: translateX(50%, 50%);
+    width: 40px;
+    background-repeat: repeat;
+}
+
+.about .abs-img-4::before {
+    top: 0;
+    bottom: 0;
+    left: 80%;
+    transform: translateX(50%, 50%);
+    width: 40px;
+    background-repeat: repeat;
+}
+
+.about .abs-img-5::before {
+    top: 0;
+    bottom: 0;
+    left: 80%;
+    transform: translateX(50%, 50%);
+    width: 40px;
+    background-repeat: repeat;
 }
 
 
