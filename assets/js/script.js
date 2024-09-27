@@ -78,6 +78,11 @@ if (isMobileDevice()) {
     });
     var marginalp = document.querySelectorAll("mt-100")
 
+} else {
+    var elements = document.querySelectorAll('.anti-remover');
+    elements.forEach(function(element) {
+        element.parentNode.removeChild(element);
+    });
 }
 
 const preloader = document.querySelector("[data-preaload]");
