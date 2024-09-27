@@ -1444,7 +1444,7 @@ body.nav-active {
     margin-block-start: -300px;
     text-align: center;
     backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur( 6.5px);
+    -webkit-backdrop-filter: blur( 4.5px);
     mix-blend-mode: difference;
     /*glassmorphic*/
 }
