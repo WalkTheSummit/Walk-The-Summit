@@ -1762,7 +1762,7 @@ body.nav-active {
     right: 25px;
     background-color: var(--smoky-black-1);
     border: 1px solid var(--gold-crayola);
-    color: var(--smoky-black-1);
+    color: var(--gold-crayola);
     font-size: 22px;
     width: 50px;
     height: 50px;
@@ -1778,6 +1778,7 @@ body.nav-active {
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
     backdrop-filter: blur( 6.5px);
     -webkit-backdrop-filter: blur( 6.5px);
+    mix-blend-mode: difference;
     /*glassmorphic*/
 }
 
