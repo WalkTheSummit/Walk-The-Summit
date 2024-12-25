@@ -1,0 +1,205 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #17181B;
+    color: #969696;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    top: 0;
+    text-align: center;
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #17181B;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #C5C5C5;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: inherit;
+}
+
+#mod-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mod-item {
+    background-color: #262626;
+    color: #969696;
+    border-radius: 16px;
+    margin: 1%;
+    padding: 2%;
+    width: 27%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mod-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #3d3838;
+}
+
+.mod-desc {
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 14px;
+    color: #CDCDCD;
+}
+
+.mod-download {
+    font-family: "Monaco", "Times New Roman", serif;
+    font-size: 12px;
+    color: #CDCDCD;
+    transition: text-decoration 0.3s ease, background-color 0.3s ease;
+}
+
+.mod-download:hover {
+    color: #CDCDCE;
+    text-decoration: underline;
+}
+
+.tag {
+    background-color: #5a3e2b;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    vertical-align: left;
+    text-align: right;
+    margin-left: 10px;
+}
+
+#contact {
+    font-size: 12px;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.parallax {
+    background-image: url("parallax1.1.png");
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    text-shadow: 1px 1px 1px 1px;
+    position: relative;
+}
+
+.parallax-text {
+    background-color: rgba(255, 255, 255, 0.64);
+    text-align: center;
+    padding: 4px;
+    width: 40%;
+    margin: 10px auto; /* Center the text and add margin for spacing */
+    position: relative;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .mod-item {
+        width: 45%;
+    }
+
+    .parallax-text {
+      width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .mod-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .mod-item {
+        width: 100%;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        width: 90%;
+    }
+}
