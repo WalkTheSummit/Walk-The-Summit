@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    - primaQry meta tags
+  -->
+
+    <title>Walk The Summit</title>
+    <meta name="title" content="Walk The Summit">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/Logo transparent bg.png" type="image" style="border-radius: 50%;">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-slider-1.png">
+    <link rel="preload" as="image" href="./assets/images/hero-slider-2.png">
+    <link rel="preload" as="image" href="./assets/images/hero-slider-3.png">
+
+</head>
+
+<body id="top" style="overflow-y:hidden;">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
+    <div id="blob"></div>
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preload" data-preaload>
+        <div class="circle" style="text-align: center;"></div>
+        <p class="text">Walk The Summit</p>
+    </div>
+
+
+
+
+
+    <!-- 
+    - #TOP BAR
+  -->
+
+    <div class="topbar">
+        <div class="container" id="Gen">
+            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2" target="_blank">
+                <address class="topbar-item">
+                    <div class="icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                        Donate Now </span>
+                </address>
+            </a>
+
+            <div class="separator"></div>
+            <div class="topbar-item item-2">
+                <div class="icon">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </div>
+                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
+                    <span class="span">@Walk The Summit</span>
+                </a>
+            </div>
+
+            <a href="https://www.instagram.com/walkthesummit_/" target="_blank" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+
+                <span class="span">@Walk The Summit</span>
+            </a>
+
+            <div class="separator"></div>
+            <a href="mailto:walkthesummit@gmail.com" target="_blank" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </div>
+
+                <span class="span">walkthesummit@gmail.com</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+        <a href="idexcopyhome.html" class="logo">
+            <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home" style="border-radius:50%; scale:75%">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+            <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <a href="idexcopyhome.html" class="logo">
+                <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home">
+            </a>
+
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <a href="idexcopyhome.html" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+
+                        <span class="span">Home</span>
+                    </a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+
+                        <span class="span">About </span>
+                    </a>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="donate.html" class="navbar-link hover-underline active">
+                        <div class="separator"></div>
+
+                        <span class="span">Donate</span>
+                    </a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+
+                        <span class="span">Contact</span>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="faqs.html" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+
+                        <span class="span">FAQS</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="text-center">
+                <p class="headline-1 navbar-title">Main Menu</p>
+            </div>
+
+            <!--    &lt;!&ndash;<address class="body-4">
+                    Main market, Leh <br>
+                    Ladakh, North India
+                </address>
+
+                <a href="mailto:contact@Walk The Summit.dev" class="body-4 sidebar-link">contact@Walk The Summit.dev</a>
+
+                <div class="separator"></div>
+
+                <p class="contact-label"></p>&ndash;&gt;
+
+                <p class="body-4 navbar-text">Contact via:</p>
+
+                <a href="mailto:contact@Walk The Summit.dev" class="body-1 contact-number hover-underline">
+                    contact@Walk The Summit.dev
+                </a>
+
+                <a href="" class="body-1 contact-number hover-underline item-2">
+                    Discord (preferred)
+                </a>
+            </div>-->
+
+        </nav>
+
+        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" target="_blank">
+            <span class="text text-1">Donate now</span>
+
+            <span class="text text-2" aria-hidden="true">Donate now</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+</header>
+
+
+    <main>
+        <br><br><br>
+        <div class="remover">
+        <br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="j"style="max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;" >
+        <br><br><br>
+        <div id="wand" class="remover">
+            <div class="cap"></div>
+        </div>
+        <br>
+        <div id="tiles">
+            <div class="tile" >
+    
+                <img src="https://cdn-icons-png.flaticon.com/256/408/408777.png"  />
+            </div>
+        </div>
+    </div>
+    <h3 class="headline-2 text-center anti-remover" style="left: 50%; background: -webkit-linear-gradient(#540000, #ff6647); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Every donation counts</h3>
+    <br><br><br><br><br>
+    <div class="centerer">
+        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #ff6647;
+        transform: translateX(-50%);z-index: 9;
+        " target="_blank">
+            <span class="text text-1" style="color: #ff6647;">Donate now</span>
+
+            <span class="text text-2" aria-hidden="true">Donate now</span>
+        </a>
+    </div>
+        <script src="assets/js/heart.js"></script>
+        <br><br>
+
+
+        <div id="bottombar" style="z-index: 5;">
+        <div class="container" id="Gen">
+            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2">
+                <address class="topbar-item">
+                    <div class="icon">
+                        <ion-icon name="heart-outline"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                        Donate Now </span>
+                </address>
+            </a>
+
+            <div class="separator"></div>
+            <div class="topbar-item item-2">
+                <div class="icon">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </div>
+                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
+                    <span class="span">Walk The Summit</span>
+                </a>
+            </div>
+
+            <div class="separator"></div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link" class="topbar-item link" target="_blank">
+                <div class="icon">
+                    <ion-icon name="person-add-outline"></ion-icon>
+                </div>
+
+                <span class="span">Apply Now</span>
+            </a>
+
+            <a href="idexcopyhome.html" class="topbar-item link" target="">
+                <div class="icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                </div>
+
+                <span class="span">+91 9520008950 / +91 96541910894᲼᲼᲼᲼</span>
+            </a>
+        </div>
+    </div>
+    </main>
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href=" #top " class=" back-top-btn active " aria-label=" back to top " data-back-top-btn>
+        <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
+    </a>
+
+
+
+
+
+    <!-- 
+    - custom js link
+  -->
+    <script src=" ./assets/js/script.js "></script>
+    <script src=" ./assets/js/autoinfelytra.js "></script>
+    <script src=" ./assets/js/farlandsreborn.js "></script>
+    <script src=" ./assets/js/healthindicators.js "></script>
+    <script src=" ./assets/js/homewardbound.js "></script>
+    <script src=" ./assets/js/manhuntcompass.js "></script>
+    <script src=" ./assets/js/nodurability.js "></script>
+    <script src="./assets/js/popup.js"></script>
+
+
+    <!-- 
+    - ionicon link
+  -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </div>
+</body>
+
+</html>
