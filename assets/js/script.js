@@ -4,6 +4,18 @@ $(window).on('load', function() {
     initSmoothScrolling('.block', 'smoothscroll');
 });
 
+const carousel = document.getElementById('carousel');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      carousel.scrollTo({
+        left: carousel.clientWidth * currentIndex,
+        behavior: 'smooth'
+      });
+    }, 3000);
+
 function initSmoothScrolling(container, animation) {
     var sliderWidth = 0;
     var animationWidth = 0;

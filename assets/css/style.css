@@ -2799,3 +2799,78 @@ body.nav-active {
 .form-text {
     margin-block-end: 1px;
 }
+
+/*
+awards scroller: */
+ 
+.carousel {
+    text-align: center;
+  }
+  
+  .carousel-title {
+    margin: 1rem 0;
+  }
+  
+  .carousel-hint {
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-num i {
+    margin: 0 0.2rem;
+  }
+  
+  .carousel-stage {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, 50%);
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-height: 90%;
+    overflow-y: auto;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-caption p {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  .carousel-caption p {
+    text-align: justify;
+  }
+ 
