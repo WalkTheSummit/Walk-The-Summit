@@ -2874,3 +2874,77 @@ awards scroller: */
     text-align: justify;
   }
  
+
+  section.split-section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .half {
+    flex: 1;
+    position: relative;
+    color: white;
+    padding: 60px;
+    display: flex;
+    align-items: flex-start; /* <-- change this */
+    justify-content: center;
+    text-align: justify;
+    overflow-y: auto;
+  }
+  
+
+  .half::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: 1;
+  }
+
+  .left::before {
+    background-image: url('https://via.placeholder.com/800x1000?text=Gaddi+Tribe+Students');
+    background-color: #333;
+  }
+
+  .right::before {
+    background-image: url('https://via.placeholder.com/800x1000?text=Himalayan+School');
+    background-color: #444;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    backdrop-filter: blur(3px);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    letter-spacing: 0.05em;   /* much tighter */
+  line-height: 1.2;
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    section.split-section {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .half {
+      height: 100vh;
+    }
+  }
+

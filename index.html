@@ -26,7 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - custom css link
   -->
@@ -319,7 +323,7 @@
         </a>
 
     </section>
-            <section style="text-align:center; background-image: url(assets/images/picksoo/17.png); background-repeat: round no-repeat; overflow-x: hidden; background-size: 100% 100%;  ">
+            <section style="text-align:center; background-image: url(assets/images/picksoo/17.png); background-repeat: round no-repeat; overflow-x: hidden; background-size: 100% 100%;  " class="fade-scroll">
                 <br>
                 <p class="label-2 section-subtitle" id="about-label">About</p>
                 <h1 class="headline-1 section-title">Our Mission</h1>
@@ -560,25 +564,25 @@ With every project, we strive to meet the needs of today while preparing for the
             </section>
             -->
             <br>
-            <iframe src="https://swaritz.github.io/walkthesummit_horizontalscroll/" frameborder="0" frameborder="0" loading="lazy" style="width: 100%; height: 100vh;" scrolling="no" id="horizontal">
+            <iframe src="https://swaritz.github.io/walkthesummit_horizontalscroll/" frameborder="0" frameborder="0" loading="lazy" style="width: 100%; height: 100vh;" scrolling="no" id="horizontal" class="fade-scroll">
             </iframe>
             <!--CENTERER-->
-            <div id="heading" style="
-            
-            position: absolute;
-            z-index: 9;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: fit-content;
-            text-align: center;
-            margin-top: 50px;
-            ">
-            <p class="section-subtitle label-2 text-center">Impact</p>
-            <h2 class="section-title headline-1 text-center">Awards</h2>
-</div></article>
-            <div class="carousel">
+            <section class="fade-scroll">
+                <div id="heading" style="
+                position: absolute;
+                z-index: 9;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: fit-content;
+                text-align: center;
+                margin-top: 50px;
+                ">
+                <p class="section-subtitle label-2 text-center">Impact</p>
+                <h2 class="section-title headline-1 text-center">Awards</h2>
+    </div>
+            <div class="carousel"  >
                 <div class="carousel-stage" id="carousel">
                   <div class="carousel-item">
                     <div class="carousel-content">
@@ -593,7 +597,41 @@ With every project, we strive to meet the needs of today while preparing for the
                   </div>
                 </div>
               </div>
-            <section class="section event " aria-label="event">
+            </section>
+              <section class="split-section fade-scroll">
+                <div class="half left">
+                  <div class="content section-text">
+                    <h2 class="section-subtitle">Empowering Gaddi Tribe Students with 21st-Century Skills</h2>
+                    <p>Walk The Summit has been working closely with students from the Gaddi tribe in Dharamshala, a nomadic pastoralist community with limited access to modern education. Through this initiative, we have introduced 21st-century skills such as public speaking, leadership, critical thinking, and digital literacy, equipping students with the tools they need to thrive in a rapidly changing world.</p>
+              
+                    <h3>Impact of Our Work</h3>
+                    <p><strong>Bridging the Digital Divide:</strong> Many students had never interacted with digital tools before. Our sessions helped them gain basic computer literacy, making technology a part of their learning journey.</p>
+                    <p><strong>Building Confidence & Leadership:</strong> Through public speaking and leadership exercises, students have learned to express themselves, take initiative, and engage in meaningful discussions.</p>
+                    <p><strong>Encouraging Independent Thinking:</strong> Our interactive sessions have helped students develop critical thinking skills, encouraging them to ask questions and seek creative solutions.</p>
+                    <p><strong>Fostering Self-Expression:</strong> By creating a safe space for students to voice their ideas, debate social issues, and share personal experiences, we have nurtured a sense of empowerment and self-belief.</p>
+              
+                    <h3>Shaping a Future of Opportunity</h3>
+                    <p>For many Gaddi tribe children, learning was once confined to textbooks and traditional methods. By introducing new ways of thinking and engaging with the world, we are helping them develop the confidence and skills needed to navigate their futures with curiosity, resilience, and ambition.</p>
+                  </div>
+                </div>
+              
+                <div class="half right">
+                  <div class="content section-text">
+                    <h2 class="section-subtitle">Empowering Education at Himalayan International School</h2>
+                    <p>At Walk The Summit, we believe that education should be engaging, accessible, and future-ready. Our work at Himalayan International School near Kempty Falls, Mussoorie, reflects this commitment, bringing technology, resources, and essential skills to students who need them the most.</p>
+              
+                    <h3>What We’ve Done</h3>
+                    <p><strong>Smart Classrooms:</strong> We introduced interactive panels, turning traditional classrooms into dynamic learning spaces.</p>
+                    <p><strong>Digital Access:</strong> By providing WiFi connectivity, we’ve ensured students can explore online learning opportunities.</p>
+                    <p><strong>Essential Resources:</strong> From books and stationery to sports equipment, we’ve equipped students with tools for both academics and extracurriculars.</p>
+                    <p><strong>21st-Century Skills:</strong> Through leadership, public speaking, and critical thinking workshops, we’re preparing students for the future.</p>
+              
+                    <h3>The Impact</h3>
+                    <p>With these interventions, students now have access to interactive learning, a more engaging curriculum, and skill-building opportunities that go beyond textbooks. Our goal is to create a lasting transformation in how education is experienced in remote Himalayan communities, ensuring that every child has the chance to learn, grow, and thrive.</p>
+                  </div>
+                </div>
+              </section>
+            <section class="section event " aria-label="event" class="fade-scroll">
                 <div class="container">
         
                   <p class="section-subtitle label-2 text-center">Media</p>
@@ -642,7 +680,7 @@ With every project, we strive to meet the needs of today while preparing for the
         
                 </div>
               </section>
-              <section style="text-align:center; ">
+              <section style="text-align:center; " class="fade-scroll">
                 <p class="label-2 section-subtitle" id="about-label">HELPING HANDS</p>
                 <div class="anti-remover">
                     <br><br><br>
@@ -751,7 +789,7 @@ With every project, we strive to meet the needs of today while preparing for the
 <!--Bottom bar brs DONT REMOVE-->
     <br> <br> <br> <br> <br> <br> <br> <br> <br><br> 
 <br>
-<section style="text-align:center; ">
+<section style="text-align:center; " class="fade-scroll">
     <p class="label-2 section-subtitle" id="about-label">Intrested?</p>
     <div class="anti-remover">
         <br><br><br>
@@ -851,6 +889,25 @@ transform: translateX(-50%);
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 30%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>   
 </body>
 
 </html>

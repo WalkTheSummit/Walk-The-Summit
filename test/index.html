@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Walk The Summit | Empowerment Initiatives</title>
+  <style>
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .half {
+      flex: 1;
+      color: white;
+      position: relative;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+    }
+
+    .half::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .left::before {
+      background-image: url('gaddi-students.jpg'); /* 🔄 Replace with your image path */
+    }
+
+    .right::before {
+      background-image: url('himalayan-school.jpg'); /* 🔄 Replace with your image path */
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="half left">
+    <div class="content">
+      <h2>Empowering Gaddi Tribe Students with 21st-Century Skills</h2>
+      <p>Walk The Summit has been working closely with students from the Gaddi tribe in Dharamshala, a nomadic pastoralist community with limited access to modern education. Through this initiative, we have introduced 21st-century skills such as public speaking, leadership, critical thinking, and digital literacy, equipping students with the tools they need to thrive in a rapidly changing world.</p>
+
+      <h3>Impact of Our Work</h3>
+      <p><strong>Bridging the Digital Divide:</strong> Many students had never interacted with digital tools before. Our sessions helped them gain basic computer literacy, making technology a part of their learning journey.</p>
+      <p><strong>Building Confidence & Leadership:</strong> Through public speaking and leadership exercises, students have learned to express themselves, take initiative, and engage in meaningful discussions.</p>
+      <p><strong>Encouraging Independent Thinking:</strong> Our interactive sessions have helped students develop critical thinking skills, encouraging them to ask questions and seek creative solutions.</p>
+      <p><strong>Fostering Self-Expression:</strong> By creating a safe space for students to voice their ideas, debate social issues, and share personal experiences, we have nurtured a sense of empowerment and self-belief.</p>
+
+      <h3>Shaping a Future of Opportunity</h3>
+      <p>For many Gaddi tribe children, learning was once confined to textbooks and traditional methods. By introducing new ways of thinking and engaging with the world, we are helping them develop the confidence and skills needed to navigate their futures with curiosity, resilience, and ambition.</p>
+    </div>
+  </div>
+
+  <div class="half right">
+    <div class="content">
+      <h2>Empowering Education at Himalayan International School</h2>
+      <p>At Walk The Summit, we believe that education should be engaging, accessible, and future-ready. Our work at Himalayan International School near Kempty Falls, Mussoorie, reflects this commitment, bringing technology, resources, and essential skills to students who need them the most.</p>
+
+      <h3>What We’ve Done</h3>
+      <p><strong>Smart Classrooms:</strong> We introduced interactive panels, turning traditional classrooms into dynamic learning spaces.</p>
+      <p><strong>Digital Access:</strong> By providing WiFi connectivity, we’ve ensured students can explore online learning opportunities.</p>
+      <p><strong>Essential Resources:</strong> From books and stationery to sports equipment, we’ve equipped students with tools for both academics and extracurriculars.</p>
+      <p><strong>21st-Century Skills:</strong> Through leadership, public speaking, and critical thinking workshops, we’re preparing students for the future.</p>
+
+      <h3>The Impact</h3>
+      <p>With these interventions, students now have access to interactive learning, a more engaging curriculum, and skill-building opportunities that go beyond textbooks. Our goal is to create a lasting transformation in how education is experienced in remote Himalayan communities, ensuring that every child has the chance to learn, grow, and thrive.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

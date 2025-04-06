@@ -24,7 +24,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - custom css link
   -->
@@ -274,7 +278,7 @@ stage.
             </section>
             </b>
 <br><br>
-            <section class="special-dish text-center" aria-labelledby="dish-label">
+            <section class="special-dish text-center" aria-labelledby="dish-label" class="fade-scroll">
 
                 <div class="special-dish-banner">
                     <img src="./assets/images/Best/Best_Duo.jpg" width="940" height="900" loading="lazy" alt="special dish" class="img-cover">
@@ -397,6 +401,25 @@ stage.
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 10%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>
 </body>
 
 </html>
