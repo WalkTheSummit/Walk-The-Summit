@@ -17,7 +17,11 @@
     - favicon
   -->
     <link rel="shortcut icon" href="./assets/Logo.jpg" type="image" style="border-radius: 50%;">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - google font link
   -->
@@ -308,7 +312,7 @@
             
         
         
-        <dotlottie-player src="https://lottie.host/af371a7b-055c-470a-8963-5586b6dc4967/IaKXqmMWcu.lottie" background="transparent" speed="0.5" style="width: 600px; height: 600px; max-width: fit-content;
+        <dotlottie-player src="https://lottie.host/af371a7b-055c-470a-8963-5586b6dc4967/IaKXqmMWcu.lottie" background="transparent" class="fade-scroll" speed="0.5" style="width: 600px; height: 600px; max-width: fit-content;
         margin-left: auto;
         margin-top: -80px;
         margin-right: auto;" loop autoplay></dotlottie-player>
@@ -397,7 +401,25 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 30%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>   
     </div>
 </body>
 
