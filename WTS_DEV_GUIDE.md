@@ -57,5 +57,9 @@ Once you’re up to speed with Git and GitHub:
 
 ---
 
+If you need access or support, open an issue or reach out via GitHub.
+If your term is over, kindly update this document for future programmer's use.
+
+---
 Happy coding!  
 — Swarit 💻
