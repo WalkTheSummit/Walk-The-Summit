@@ -1,7 +1,7 @@
 # Walk The Summit (WTS) – Developer Guide
 
 Hi there! I’m Swarit, the former developer at Walk The Summit (WTS).  
-If you’re reading this, you're probably getting ready to contribute—awesome!
+If you’re reading this, you're probably getting ready to contribute —awesome!
 
 ---
 
@@ -57,6 +57,5 @@ Once you’re up to speed with Git and GitHub:
 
 ---
 
-Let me know if anything’s unclear or you run into blockers.  
 Happy coding!  
 — Swarit 💻
