@@ -1,0 +1,6 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+  <circle cx="960" cy="440" r="100" fill="white"/>
+  <rect x="860" y="540" width="200" height="200" fill="white"/>
+  <text x="960" y="840" text-anchor="middle" fill="white" font-family="Arial" font-size="48">For the Students, By the Students</text>
+</svg>

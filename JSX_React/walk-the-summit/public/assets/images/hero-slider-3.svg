@@ -1,0 +1,6 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+  <path d="M760 440H1160L960 740L760 440Z" fill="white"/>
+  <path d="M860 540H1060L960 640L860 540Z" fill="#1a1a1a"/>
+  <text x="960" y="840" text-anchor="middle" fill="white" font-family="Arial" font-size="48">Join Our Mission</text>
+</svg>
