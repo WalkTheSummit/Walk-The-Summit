@@ -24,7 +24,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - custom css link
   -->
@@ -137,7 +141,7 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="./assets/pages/about/" class="navbar-link hover-underline ">
+                    <a href="./about.html" class="navbar-link hover-underline active">
                         <div class="separator"></div>
 
                         <span class="span">About </span>
@@ -146,7 +150,7 @@
 
                 
                 <li class="navbar-item">
-                    <a href="./assets/pages/donate/" class="navbar-link hover-underline">
+                    <a href="./donate.html" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Donate</span>
@@ -154,20 +158,19 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="./assets/pages/contact/" class="navbar-link hover-underline">
+                    <a href="./contact.html" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Contact</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="./assets/pages/faqs/" class="navbar-link hover-underline active">
+                    <a href="./faqs.html " class="navbar-link hover-underline">
                         <div class="separator"></div>
 
-                        <span class="span">FAQS</span>
+                        <span class="span">Faqs</span>
                     </a>
                 </li>
-
             </ul>
 
             <div class="text-center">
@@ -219,111 +222,105 @@
         
         <article>
             <br><br><br><br><br><br><br><br>
-    <section style="text-align:center; ">
-        <p class="label-2 section-subtitle" id="about-label">FAQs</p>
-        <div class="anti-remover">
-            <br><br><br>
-        </div>
-        <h1 class="headline-1 section-title">Frequently Asked Questions</h1>
+            <section style="text-align:center;">
+                <p class="label-2 section-subtitle" id="about-label">About</p>
+                <h1 class="headline-1 section-title">Team behind WTS</h1>
+                <div style="width: 950px; max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;">
+                <p class="section-text anti-remover" style="text-align: justify;">
+                    In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity, 
+where children trek miles just to reach school, we stand as a beacon of hope and 
+progress. That's why we're not just setting up computer labs and bringing Wi-Fi to these 
+villages, we're also empowering these kids with essential 21st century life skills, 
+preparing them for a future where they can thrive and contribute meaningfully to society.  
+Our efforts extend to supporting local schools initiated by the community itself, often  
+lacking experienced teachers and resources. By providing them with computers and Wi-Fi, 
+we connect them with the outside world, ensuring that every child has access to tools for  
+success regardless of their geographical constraints. We're not just changing lives, 
+we're shaping futures by building bridges between remote communities and the global  
+stage.
 
-    <div class="faq-header"></div>    
-    <div class="faq-content">
-    <div class="faq-question">
-      <input id="q1" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q1" class="panel-title">What is Walk The Summit's mission?</label>
-      <div class="panel-content"> Walk The Summit is dedicated to transforming the lives of children in remote Himalayan
-          villages by providing them with education, resources, and opportunities that transcend
-          the limitations of their local schools.</div>
-    </div>
-    
-    <!-- <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>What is Walk The Summit's mission?</span>
-                <span class="accordion-icon">+</span>
+
+                </p>
+                <p class="section-text remover">
+                    In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity, where children trek miles just to reach 
+school, we stand as a beacon of hope and progress. That's why we're not just setting up computer labs and bringing Wi-Fi to these 
+villages, we're also empowering these kids with essential 21st century life skills, preparing them for a future where they can  
+thrive and contribute meaningfully to society. Our efforts extend to supporting local schools initiated by the community itself,  
+often lacking experienced teachers and resources. By providing them with computers and Wi-Fi, we connect them with the outside  
+world, ensuring that every child has access to tools for success regardless of their geographical constraints. <br><br> We're not just changing lives,  
+we're shaping futures by building bridges between remote communities and the global 
+stage.
+</div>
+                </p>
+                <br>
+                <div class="centerer anti-remover">
+                    <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; left: 50%;
+                    transform: translateX(-50%);
+                    " target="_blank">
+                        <span class="text text-1">Projects</span>
+
+                        <span class="text text-2" aria-hidden="true">Projects</span>
+                    </a>
+                    <br>
+                </div>
+                <div class="centerer" style="">
+                <a href="donate.html" class="btn btn-primary remover" style="max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;" >
+                    <span class="text text-1">Donate now</span>
+
+                    <span class="text text-2" aria-hidden="true">Donate now</span>
+                </a>
             </div>
-            <div class="accordion-content">
-                Walk The Summit is dedicated to transforming the lives of children in remote Himalayan villages by providing them with education, resources, and opportunities that transcend the limitations of their local schools.
-            </div>
+            </section>
+            </b>
+<br><br>
+            <section class="special-dish text-center" aria-labelledby="dish-label" class="fade-scroll">
+
+                <div class="special-dish-banner">
+                    <img src="./assets/images/Best/Best_Duo.jpg" width="940" height="900" loading="lazy" alt="special dish" class="img-cover fade-scroll">
+                </div>
+
+                <div class="special-dish-content bg-black-10">
+                    <div class="container ">
+
+                        <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" style="position:absolute; z-index:1; margin-left:-50px">
+
+                        <p class="section-subtitle label-2">THE IDEA</p>
+
+                        <h2 class="headline-1 section-title">Founder's story</h2>
+
+                        <p class="section-text fade-scroll ">
+                            Krishiv and Vansh, best friends from high school and the co-founders of Walk The Summit, are working toward a shared goal: transforming education for children in remote Himalayan villages. Their journey is rooted in a simple yet profound realization - geography should not determine the quality of education a child receives.
+                            <br><br>
+                            Krishiv's Vision: During summers spent in his grandmother’s remote village in Uttarakhand, Krishiv frequently witnessed the disparities between rural and urban education. He often observed children walking miles to schools with little infrastructure or technology, which deepened his desire to bring change. These experiences continuously shaped his vision for Walk The Summit, where every child gained access to the opportunities they deserved.
+                            <br><br>
+                            Vansh's Dedication: Inspired by Krishiv’s stories and driven by a passion for change, Vansh co-founded Walk The Summit. Together, they are working to level the playing field for rural students, ensuring access to modern educational tools and opportunities.
+                            <br><br>
+                            "We change lives <br>
+                            We move mountains <br>
+                            We Walk The Summit"
+                        </p>
+
+                        <div class="wrapper">
+                            <span class="span body-1"></span>
+                        </div>
+
+                        <a href="index.html#horizontal" class="btn btn-primary">
+                            <span class="text text-1">View all projects</span>
+
+                            <span class="text text-2" aria-hidden="true">View all projects</span>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
         </div>
-    </div> -->
-
-
-    <div class="faq-question">
-      <input id="q2" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q2" class="panel-title"> How does Walk The Summit aim to achieve its mission?</label>
-      <div class="panel-content">Walk The Summit aims to achieve its mission by setting up educational infrastructure
-          such as computer labs, providing access to Wi-Fi, and empowering children with
-          essential 21st-century life skills.</div>
+        </div>
     </div>
-    
-    <div class="faq-question">
-      <input id="q3" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q3" class="panel-title"> Why focus on remote Himalayan villages?</label>
-      <div class="panel-content">Walk The Summit focuses on remote Himalayan villages because these areas often lack
-          access to basic educational resources and opportunities, and children face significant
-          challenges in accessing quality education. </div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q4" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q4" class="panel-title">What specific programs does Walk The Summit offer?</label>
-      <div class="panel-content">Walk The Summit offers a range of programs including computer literacy classes,
-          English language workshops, STEM education initiatives, and mentorship programs
-          designed to empower children with the skills they need to succeed in the modern world.</div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q5" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q5" class="panel-title">How does Walk The Summit ensure sustainability of its programs?</label>
-      <div class="panel-content">Walk The Summit works closely with local communities, government agencies, and
-          other stakeholders to ensure the sustainability of its programs. Additionally, the
-          organization invests in training local teachers and leaders to carry forward its mission in
-          the long term. </div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q6" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q6" class="panel-title"> How does Walk The Summit measure the impact of its programs?</label>
-      <div class="panel-content">Walk The Summit employs various methods to measure the impact of its programs,
-          including tracking academic performance, conducting surveys and interviews with
-          students and teachers, and monitoring community engagement and participation.</div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q7" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q7" class="panel-title">Are there any challenges Walk The Summit faces in implementing its programs?</label>
-      <div class="panel-content">Walk The Summit faces challenges such as logistical hurdles in reaching remote
-          villages, limited resources, and cultural barriers. However, the organization remains
-          committed to overcoming these challenges in order to fulfill its mission.</div>
-    </div>
-  </div>
-</section>
-
-
-<script>
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-        
-        button.classList.toggle('active');
-        
-        if (button.classList.contains('active')) {
-            accordionContent.classList.add('active');
-        } else {
-            accordionContent.classList.remove('active');
-        }
-    });
-});
-</script>
-
+    </article>
     
     <div id="bottombar" style="position: relative;">
         <div class="container" id="Gen" style="position: relative;">
@@ -385,12 +382,7 @@ document.querySelectorAll('.accordion-header').forEach(button => {
     - custom js link
   -->
     <script src=" ./assets/js/script.js "></script>
-    <script src=" ./assets/js/autoinfelytra.js "></script>
-    <script src=" ./assets/js/farlandsreborn.js "></script>
-    <script src=" ./assets/js/healthindicators.js "></script>
-    <script src=" ./assets/js/homewardbound.js "></script>
-    <script src=" ./assets/js/manhuntcompass.js "></script>
-    <script src=" ./assets/js/nodurability.js "></script>
+    
     <script src="./assets/js/popup.js"></script>
 
 
@@ -403,6 +395,25 @@ document.querySelectorAll('.accordion-header').forEach(button => {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 10%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>
 </body>
 
 </html>
