@@ -640,7 +640,7 @@ body.nav-active {
 }
 
 .preload.loaded {
-    transition-delay: 250ms;
+    transition-delay: 50ms;
     transform: translateY(100%);
 }
 
@@ -2948,3 +2948,133 @@ awards scroller: */
     }
   }
 
+/* FAQ Accordion */
+
+.accordion {
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: 1px solid #540000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #540000;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgba(84, 0, 0, 0.1);
+}
+
+.accordion-header.active {
+    background-color: #540000;
+    color: white;
+}
+
+.accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.accordion-content.active {
+    padding: 20px;
+    max-height: 200px;
+}
+
+.accordion-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+
+/* Slider */
+
+     /* .slider-container {
+      width: 100vw;
+      height: 100vh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .slider-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .slider-image {
+      height: 80vh;
+      margin: 0 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .slider-image:hover {
+      transform: scale(1.05);
+    } */
+
+    .slider-outer {
+      width: 100vw;
+      height: 60vh; /* Adjust height as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #222;
+    }
+    .slider-container {
+      width: 90vw;
+      height: 50vh; /* Adjust height as needed */
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: auto;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      background: #181818;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+      padding: 1rem 0;
+    }
+    .slider-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .slider-image {
+      width: 350px;   /* Set your desired width */
+      height: 220px;  /* Set your desired height */
+      object-fit: cover;
+      margin: 0 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      background: #333;
+      flex-shrink: 0;
+    }
+    .slider-image:hover {
+      transform: scale(1.05);
+    }

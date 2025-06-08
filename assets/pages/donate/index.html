@@ -17,11 +17,7 @@
     - favicon
   -->
     <link rel="shortcut icon" href="./assets/Logo.jpg" type="image" style="border-radius: 50%;">
-    <!-- GSAP core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <!-- ScrollTrigger plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - google font link
   -->
@@ -32,7 +28,6 @@
     <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/contactstyle.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- 
@@ -41,10 +36,10 @@
     <link rel="preload" as="image" href="./assets/images/hero-slider-1.png">
     <link rel="preload" as="image" href="./assets/images/hero-slider-2.png">
     <link rel="preload" as="image" href="./assets/images/hero-slider-3.png">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
 </head>
 
-<body id="top">
+<body id="top" style="overflow-y:hidden;">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
     <div id="blob"></div>
@@ -134,7 +129,7 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-link hover-underline">
+                    <a href="/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Home</span>
@@ -142,15 +137,15 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="about.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/about/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">About </span>
                     </a>
                 </li>
-
+                
                 <li class="navbar-item">
-                    <a href="donate.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/donate/" class="navbar-link hover-underline active">
                         <div class="separator"></div>
 
                         <span class="span">Donate</span>
@@ -158,14 +153,14 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="contact.html" class="navbar-link hover-underline active">
+                    <a href="./assets/pages/contact/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Contact</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="faqs.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/faqs/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">FAQS</span>
@@ -221,109 +216,39 @@
 
 
     <main>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <section class="reservation">
-            <div class="container">
-    
-                <div class="form reservation-form bg-black-10">
-    
-                    <form class="form-left" action="https://formspree.io/f/xanwrqny" method="POST">
-                        <div class="anti-remover">
-                            <br><br>
-                        </div>
-    
-                        <h2 class="headline-1 text-center">Mail Us</h2>
-                        <br> <br>
-    
-                        <p class="form-text text-center">
-    
-                        </p>
-    
-                        <div class="input-wrapper">
-                            <input type="text" name="name" placeholder="Your Name" autocomplete="on" class="input-field">
-    
-                            <input type="tel" name="phone" placeholder="Phone Number" autocomplete="on" class="input-field">
-                        </div>
-    
-                        <div class="input-wrapper">
-                            <input type="email" name="Email" placeholder="Email address" autocomplete="on" class="input-field">
-    
-                            <input type="text" name="Address" placeholder="Address" autocomplete="on" class="input-field">
-                        </div>
-    
-    
-    
-                        <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-                        <div class="centerer">
-                            <button type="submit" class="btn btn-secondary centerer remover" style="position:absolute; margin-top:0px;left: 24.5vw ;
-                            transform: translateX(-50%);">
-                                <span class="text text-1">Submit</span>
-    
-                                <span class="text text-2" aria-hidden="true">Submit</span>
-                            </button>
-                        </div>
-                        <div class="centerer anti-remover">
-                            <button type="submit" class="btn btn-secondary centerer " style="position:absolute; margin-top:0px;left: 50%;
-                            transform: translateX(-50%);">
-                                <span class="text text-1">Submit</span>
-    
-                                <span class="text text-2" aria-hidden="true">Submit</span>
-                            </button>
-                            <br><br><br>
-                        </div>
-                    </form>
-    
-                    <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-    
-                        <h2 class="headline-1 text-center">Contact Us</h2>
-    
-                        <p class="label-2 section-subtitle" id="about-label">Email address</p>
-    
-                        <a href="mailto:walkthesummit@gmail.com" class="section-text hoverer">walkthesummit@gmail.com</a>
-                        </a>
-    
-    
-                        <p class="label-2 section-subtitle" id="about-label">Phone Number</p>
-    
-                        <a href="tel:+919520008950" class="section-text hoverer">+91 9520008950 <br> +91
-                            9654191089</a>
-    
-    
-                        <p class="label-2 section-subtitle" id="about-label">Join Us</p>
-                        
-    
-                        <div class="centerer anti-remover">
-                            <br><br><br><br>
-                        </div>
-    
-                    </div>
-    
-                </div>
-    
-            </div>
-        </section>
-        <br>
-        <section style="text-align:center; ">
-            <p class="label-2 section-subtitle" id="about-label">Intrested?</p>
-            <div class="anti-remover">
-                <br><br><br>
-            </div>
-            <h1 class="headline-1 section-title">Get Involved</h1>
-            
-        
-        
-        <dotlottie-player src="https://lottie.host/af371a7b-055c-470a-8963-5586b6dc4967/IaKXqmMWcu.lottie" background="transparent" class="fade-scroll" speed="0.5" style="width: 600px; height: 600px; max-width: fit-content;
+        <br><br><br>
+        <div class="remover">
+        <br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="j"style="max-width: fit-content;
         margin-left: auto;
-        margin-top: -80px;
-        margin-right: auto;" loop autoplay></dotlottie-player>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/alreadyresponded" class="btn btn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #265656;
-        transform: translateX(-50%);
+        margin-right: auto;" >
+        <br><br><br>
+        <!-- <div id="wand" class="remover">
+            <div class="cap"></div>
+        </div> -->
+        <br>
+        <div id="tiles">
+            <div class="tile" >
+    
+                <img src="https://cdn-icons-png.flaticon.com/256/408/408777.png"  />
+            </div>
+        </div>
+    </div>
+    <h3 class="headline-2 text-center anti-remover" style="left: 50%; background: -webkit-linear-gradient(#540000, #ff6647); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Every donation counts</h3>
+    <br><br><br><br><br>
+    <div class="centerer">
+        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #ff6647;
+        transform: translateX(-50%);z-index: 9;
         " target="_blank">
-            <span class="text text-1" style="color: #265656;">Join Now</span>
-        
-            <span class="text text-2" aria-hidden="true">Join Now</span>
+            <span class="text text-1" style="color: #ff6647;">Donate now</span>
+
+            <span class="text text-2" aria-hidden="true">Donate now</span>
         </a>
-    </section>
+    </div>
+        <script src="assets/js/heart.js"></script>
+        <br><br>
 
 
         <div id="bottombar" style="z-index: 5;">
@@ -369,13 +294,6 @@
         </div>
     </div>
     </main>
-    <!-- 
-    - #BACK TO TOP
-  -->
-
-    <a href=" #top " class=" back-top-btn active " aria-label=" back to top " data-back-top-btn>
-        <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
-    </a>
 
 
 
@@ -396,25 +314,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-    
-        gsap.utils.toArray(".fade-scroll").forEach(el => {
-        gsap.fromTo(el, 
-            { opacity: 0 }, 
-            { 
-            opacity: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 75%",     // when top of element hits 75% of viewport
-                end: "top 30%",       // when top of element hits 50% of viewport
-                scrub: true           // ties the animation to scroll position
-            }
-            }
-        );
-        });
-    </script>   
+
     </div>
 </body>
 

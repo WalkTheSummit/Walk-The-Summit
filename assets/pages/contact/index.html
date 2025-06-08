@@ -17,7 +17,11 @@
     - favicon
   -->
     <link rel="shortcut icon" href="./assets/Logo.jpg" type="image" style="border-radius: 50%;">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - google font link
   -->
@@ -28,6 +32,7 @@
     <!-- 
     - custom css link
   -->
+    <link rel="stylesheet" href="./assets/css/contactstyle.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- 
@@ -36,10 +41,10 @@
     <link rel="preload" as="image" href="./assets/images/hero-slider-1.png">
     <link rel="preload" as="image" href="./assets/images/hero-slider-2.png">
     <link rel="preload" as="image" href="./assets/images/hero-slider-3.png">
-
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
-<body id="tops" style="margin-bottom: -1000px;">
+<body id="top">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
     <div id="blob"></div>
@@ -129,7 +134,7 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-link hover-underline">
+                    <a href="/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Home</span>
@@ -137,16 +142,15 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="about.html" class="navbar-link hover-underline active">
+                    <a href="./assets/pages/about/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">About </span>
                     </a>
                 </li>
 
-                
                 <li class="navbar-item">
-                    <a href="donate.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/donate/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Donate</span>
@@ -154,14 +158,14 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="contact.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/contact/" class="navbar-link hover-underline active">
                         <div class="separator"></div>
 
                         <span class="span">Contact</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="faqs.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/faqs/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">FAQS</span>
@@ -215,81 +219,115 @@
     </div>
 </header>
 
+
     <main>
-        
-        <article>
-            <br><br><br><br><br><br><br><br>
-            <section style="text-align:center;">
-                <p class="label-2 section-subtitle" id="about-label">plans</p>
-                <h1 class="headline-1 section-title">Projects</h1>
-                <div style="width: 900px; max-width: fit-content;
-                margin-left: auto;
-                margin-right: auto;">
-                <p class="section-text anti-remover" style="text-align: justify;">
-                    We are seeking funding to support our initiative of improving educational opportunities for underprivileged children in the remote villages of the Himalayas. Our current project aims to deliver essential educational resources,
-                    such as interactive panels, along with custom notebooks and
-                    sports equipment, to schools in rural Uttarakhand. This will help bridge the significant gap in
-                    quality education and exposure these children face compared to their urban counterparts. <br> <br>
-                    These technological resources will have a profound impact on the students' learning experience. By
-                    introducing interactive panels and laptops, we are creating a more dynamic and engaging educational
-                    environment that fosters curiosity and creativity. Our virtual summer programs, in partnership with
-                    other NGOs, will further empower students by equipping them with essential 21st-century skills, such
-                    as digital literacy, critical thinking, and problem-solving. The goal is not just to improve their
-
-
-                </p>
-                <p class="section-text remover">
-                    We are seeking funding to support our initiative of improving educational opportunities for underprivileged children in the remote villages of the Himalayas. Our current project aims to deliver essential educational resources,
-                    such as interactive panels, along with custom notebooks and
-                    sports equipment, to schools in rural Uttarakhand. This will help bridge the significant gap in
-                    quality education and exposure these children face compared to their urban counterparts. <br> <br>
-                    These technological resources will have a profound impact on the students' learning experience. By
-                    introducing interactive panels and laptops, we are creating a more dynamic and engaging educational
-                    environment that fosters curiosity and creativity. Our virtual summer programs, in partnership with
-                    other NGOs, will further empower students by equipping them with essential 21st-century skills, such
-                    as digital literacy, critical thinking, and problem-solving. The goal is not just to improve their
-</div>
-                </p>
-                <br>
-                <div class="centerer anti-remover">
-                    <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; left: 50%;
-                    transform: translateX(-50%);
-                    " target="_blank">
-                        <span class="text text-1">Projects</span>
-
-                        <span class="text text-2" aria-hidden="true">Projects</span>
-                    </a>
-                    <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="reservation">
+            <div class="container">
+    
+                <div class="form reservation-form bg-black-10">
+    
+                    <form class="form-left" action="https://formspree.io/f/xanwrqny" method="POST">
+                        <div class="anti-remover">
+                            <br><br>
+                        </div>
+    
+                        <h2 class="headline-1 text-center">Mail Us</h2>
+                        <br> <br>
+    
+                        <p class="form-text text-center">
+    
+                        </p>
+    
+                        <div class="input-wrapper">
+                            <input type="text" name="name" placeholder="Your Name" autocomplete="on" class="input-field">
+    
+                            <input type="tel" name="phone" placeholder="Phone Number" autocomplete="on" class="input-field">
+                        </div>
+    
+                        <div class="input-wrapper">
+                            <input type="email" name="Email" placeholder="Email address" autocomplete="on" class="input-field">
+    
+                            <input type="text" name="Address" placeholder="Address" autocomplete="on" class="input-field">
+                        </div>
+    
+    
+    
+                        <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+                        <div class="centerer">
+                            <button type="submit" class="btn btn-secondary centerer remover" style="position:absolute; margin-top:0px;left: 24.5vw ;
+                            transform: translateX(-50%);">
+                                <span class="text text-1">Submit</span>
+    
+                                <span class="text text-2" aria-hidden="true">Submit</span>
+                            </button>
+                        </div>
+                        <div class="centerer anti-remover">
+                            <button type="submit" class="btn btn-secondary centerer " style="position:absolute; margin-top:0px;left: 50%;
+                            transform: translateX(-50%);">
+                                <span class="text text-1">Submit</span>
+    
+                                <span class="text text-2" aria-hidden="true">Submit</span>
+                            </button>
+                            <br><br><br>
+                        </div>
+                    </form>
+    
+                    <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+    
+                        <h2 class="headline-1 text-center">Contact Us</h2>
+    
+                        <p class="label-2 section-subtitle" id="about-label">Email address</p>
+    
+                        <a href="mailto:walkthesummit@gmail.com" class="section-text hoverer">walkthesummit@gmail.com</a>
+                        </a>
+    
+    
+                        <p class="label-2 section-subtitle" id="about-label">Phone Number</p>
+    
+                        <a href="tel:+919520008950" class="section-text hoverer">+91 9520008950 <br> +91
+                            9654191089</a>
+    
+    
+                        <p class="label-2 section-subtitle" id="about-label">Join Us</p>
+                        
+    
+                        <div class="centerer anti-remover">
+                            <br><br><br><br>
+                        </div>
+    
+                    </div>
+    
                 </div>
-                <div class="centerer" style="">
-                <a href="donate.html" class="btn btn-primary remover" style="max-width: fit-content;
-                margin-left: auto;
-                margin-right: auto;" >
-                    <span class="text text-1">Donate now</span>
-
-                    <span class="text text-2" aria-hidden="true">Donate now</span>
-                </a>
+    
             </div>
-            </section>
-            </b>
-<br><br>
-            <section>
-                <img src="assets/images/Best HEIC/IMG_2666.jpg" alt="" style="width: 50vw; margin-left:50vw; position: absolute; height: 580px;">
-                <h1 class="headline-1 section-title" style="position: absolute; left: 12.5vw; mix-blend-mode: screen; margin-top: 10px;">Our First School</h1>
-                <img src="assets/images/picksoo/wow.jpg" alt="" style="width: 50vw; height: 580px;">
-                
-                
+        </section>
+        <br>
+        <section style="text-align:center; ">
+            <p class="label-2 section-subtitle" id="about-label">Intrested?</p>
+            <div class="anti-remover">
+                <br><br><br>
+            </div>
+            <h1 class="headline-1 section-title">Get Involved</h1>
+            
+        
+        
+        <dotlottie-player src="https://lottie.host/af371a7b-055c-470a-8963-5586b6dc4967/IaKXqmMWcu.lottie" background="transparent" class="fade-scroll" speed="0.5" style="width: 600px; height: 600px; max-width: fit-content;
+        margin-left: auto;
+        margin-top: -80px;
+        margin-right: auto;" loop autoplay></dotlottie-player>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/alreadyresponded" class="btn btn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #265656;
+        transform: translateX(-50%);
+        " target="_blank">
+            <span class="text text-1" style="color: #265656;">Join Now</span>
+        
+            <span class="text text-2" aria-hidden="true">Join Now</span>
+        </a>
+    </section>
 
-            </section>
-    
-            <br><br>
-        </div>
-        </div>
-    </div>
-    </article>
-    
-    <div id="bottombar" style="position: relative;">
-        <div class="container" id="Gen" style="position: relative;">
+
+        <div id="bottombar" style="z-index: 5;">
+        <div class="container" id="Gen">
             <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2">
                 <address class="topbar-item">
                     <div class="icon">
@@ -331,12 +369,11 @@
         </div>
     </div>
     </main>
-
     <!-- 
     - #BACK TO TOP
   -->
 
-    <a href=" #tops " class=" back-top-btn active " aria-label=" back to top "  style="z-index: 9;">
+    <a href=" #top " class=" back-top-btn active " aria-label=" back to top " data-back-top-btn>
         <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
     </a>
 
@@ -348,12 +385,7 @@
     - custom js link
   -->
     <script src=" ./assets/js/script.js "></script>
-    <script src=" ./assets/js/autoinfelytra.js "></script>
-    <script src=" ./assets/js/farlandsreborn.js "></script>
-    <script src=" ./assets/js/healthindicators.js "></script>
-    <script src=" ./assets/js/homewardbound.js "></script>
-    <script src=" ./assets/js/manhuntcompass.js "></script>
-    <script src=" ./assets/js/nodurability.js "></script>
+    
     <script src="./assets/js/popup.js"></script>
 
 
@@ -364,7 +396,25 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 30%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>   
     </div>
 </body>
 

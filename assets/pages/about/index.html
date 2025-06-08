@@ -24,7 +24,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-- GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- 
     - custom css link
   -->
@@ -39,7 +43,7 @@
 
 </head>
 
-<body id="top" style="overflow-y:hidden;">
+<body id="tops" style="margin-bottom: -1000px;">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
     <div id="blob"></div>
@@ -129,7 +133,7 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-link hover-underline">
+                    <a href="/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Home</span>
@@ -137,15 +141,16 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="about.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/about/" class="navbar-link hover-underline active">
                         <div class="separator"></div>
 
                         <span class="span">About </span>
                     </a>
                 </li>
+
                 
                 <li class="navbar-item">
-                    <a href="donate.html" class="navbar-link hover-underline active">
+                    <a href="./assets/pages/donate/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Donate</span>
@@ -153,14 +158,14 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="contact.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/contact/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">Contact</span>
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="faqs.html" class="navbar-link hover-underline">
+                    <a href="./assets/pages/faqs/" class="navbar-link hover-underline">
                         <div class="separator"></div>
 
                         <span class="span">FAQS</span>
@@ -214,45 +219,112 @@
     </div>
 </header>
 
-
     <main>
-        <br><br><br>
-        <div class="remover">
-        <br><br><br><br><br><br><br><br><br>
-        </div>
-        <div class="j"style="max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;" >
-        <br><br><br>
-        <div id="wand" class="remover">
-            <div class="cap"></div>
-        </div>
-        <br>
-        <div id="tiles">
-            <div class="tile" >
-    
-                <img src="https://cdn-icons-png.flaticon.com/256/408/408777.png"  />
+        
+        <article>
+            <br><br><br><br><br><br><br><br>
+            <section style="text-align:center;">
+                <p class="label-2 section-subtitle" id="about-label">About</p>
+                <h1 class="headline-1 section-title">Team behind WTS</h1>
+                <div style="width: 950px; max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;">
+                <p class="section-text anti-remover" style="text-align: justify;">
+                    In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity, 
+where children trek miles just to reach school, we stand as a beacon of hope and 
+progress. That's why we're not just setting up computer labs and bringing Wi-Fi to these 
+villages, we're also empowering these kids with essential 21st century life skills, 
+preparing them for a future where they can thrive and contribute meaningfully to society.  
+Our efforts extend to supporting local schools initiated by the community itself, often  
+lacking experienced teachers and resources. By providing them with computers and Wi-Fi, 
+we connect them with the outside world, ensuring that every child has access to tools for  
+success regardless of their geographical constraints. We're not just changing lives, 
+we're shaping futures by building bridges between remote communities and the global  
+stage.
+
+
+                </p>
+                <p class="section-text remover">
+                    In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity, where children trek miles just to reach 
+school, we stand as a beacon of hope and progress. That's why we're not just setting up computer labs and bringing Wi-Fi to these 
+villages, we're also empowering these kids with essential 21st century life skills, preparing them for a future where they can  
+thrive and contribute meaningfully to society. Our efforts extend to supporting local schools initiated by the community itself,  
+often lacking experienced teachers and resources. By providing them with computers and Wi-Fi, we connect them with the outside  
+world, ensuring that every child has access to tools for success regardless of their geographical constraints. <br><br> We're not just changing lives,  
+we're shaping futures by building bridges between remote communities and the global 
+stage.
+</div>
+                </p>
+                <br>
+                <div class="centerer anti-remover">
+                    <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; left: 50%;
+                    transform: translateX(-50%);
+                    " target="_blank">
+                        <span class="text text-1">Projects</span>
+
+                        <span class="text text-2" aria-hidden="true">Projects</span>
+                    </a>
+                    <br>
+                </div>
+                <div class="centerer" style="">
+                <a href="donate.html" class="btn btn-primary remover" style="max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;" >
+                    <span class="text text-1">Donate now</span>
+
+                    <span class="text text-2" aria-hidden="true">Donate now</span>
+                </a>
             </div>
+            </section>
+            </b>
+<br><br>
+            <section class="special-dish text-center" aria-labelledby="dish-label" class="fade-scroll">
+
+                <div class="special-dish-banner">
+                    <img src="./assets/images/Best/Best_Duo.jpg" width="940" height="900" loading="lazy" alt="special dish" class="img-cover fade-scroll">
+                </div>
+
+                <div class="special-dish-content bg-black-10">
+                    <div class="container ">
+
+                        <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" style="position:absolute; z-index:1; margin-left:-50px">
+
+                        <p class="section-subtitle label-2">THE IDEA</p>
+
+                        <h2 class="headline-1 section-title">Founder's story</h2>
+
+                        <p class="section-text fade-scroll ">
+                            Krishiv and Vansh, best friends from high school and the co-founders of Walk The Summit, are working toward a shared goal: transforming education for children in remote Himalayan villages. Their journey is rooted in a simple yet profound realization - geography should not determine the quality of education a child receives.
+                            <br><br>
+                            Krishiv's Vision: During summers spent in his grandmother’s remote village in Uttarakhand, Krishiv frequently witnessed the disparities between rural and urban education. He often observed children walking miles to schools with little infrastructure or technology, which deepened his desire to bring change. These experiences continuously shaped his vision for Walk The Summit, where every child gained access to the opportunities they deserved.
+                            <br><br>
+                            Vansh's Dedication: Inspired by Krishiv’s stories and driven by a passion for change, Vansh co-founded Walk The Summit. Together, they are working to level the playing field for rural students, ensuring access to modern educational tools and opportunities.
+                            <br><br>
+                            "We change lives <br>
+                            We move mountains <br>
+                            We Walk The Summit"
+                        </p>
+
+                        <div class="wrapper">
+                            <span class="span body-1"></span>
+                        </div>
+
+                        <a href="index.html#horizontal" class="btn btn-primary">
+                            <span class="text text-1">View all projects</span>
+
+                            <span class="text text-2" aria-hidden="true">View all projects</span>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+        </div>
         </div>
     </div>
-    <h3 class="headline-2 text-center anti-remover" style="left: 50%; background: -webkit-linear-gradient(#540000, #ff6647); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-        Every donation counts</h3>
-    <br><br><br><br><br>
-    <div class="centerer">
-        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #ff6647;
-        transform: translateX(-50%);z-index: 9;
-        " target="_blank">
-            <span class="text text-1" style="color: #ff6647;">Donate now</span>
-
-            <span class="text text-2" aria-hidden="true">Donate now</span>
-        </a>
-    </div>
-        <script src="assets/js/heart.js"></script>
-        <br><br>
-
-
-        <div id="bottombar" style="z-index: 5;">
-        <div class="container" id="Gen">
+    </article>
+    
+    <div id="bottombar" style="position: relative;">
+        <div class="container" id="Gen" style="position: relative;">
             <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2">
                 <address class="topbar-item">
                     <div class="icon">
@@ -295,6 +367,14 @@
     </div>
     </main>
 
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href=" #tops " class=" back-top-btn active " aria-label=" back to top "  style="z-index: 9;">
+        <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
+    </a>
+
 
 
 
@@ -316,6 +396,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray(".fade-scroll").forEach(el => {
+        gsap.fromTo(el, 
+            { opacity: 0 }, 
+            { 
+            opacity: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 75%",     // when top of element hits 75% of viewport
+                end: "top 10%",       // when top of element hits 50% of viewport
+                scrub: true           // ties the animation to scroll position
+            }
+            }
+        );
+        });
+    </script>
 </body>
 
 </html>
