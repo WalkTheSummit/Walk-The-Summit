@@ -334,14 +334,16 @@
 
             <!-- Impact Section -->
 
-            <section style="text-align:center; background-color: #110d0d; padding: 50px 0;">
+            <section class="fade-scroll" id="impact-highlights"
+                style="text-align:center; background-color: #110d0d; padding: 50px 0;">
                 <p class="label-2 section-subtitle">Our Achievements</p>
                 <h1 class="headline-1 section-title">Impact Highlights</h1>
 
-                <div class="fade-scroll"
-                    style="display: flex; justify-content: space-evenly; align-items: flex-start; flex-wrap: nowrap; max-width: 1200px; margin: 40px auto;">
+                <div class="fade-scroll impact-highlights-container"
+                    style="display: flex; justify-content: space-evenly; align-items: flex-start; flex-wrap: wrap; max-width: 1200px; margin: 40px auto; gap: 24px;">
                     <!-- Impact Item 1 -->
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up currency"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="160000">
@@ -350,9 +352,9 @@
                                 style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">LAC</span><br>Raised
                         </p>
                     </div>
-
                     <!-- Impact Item 2 -->
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="700">
@@ -361,9 +363,9 @@
                                 style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Students</span><br>Empowered
                         </p>
                     </div>
-
                     <!-- Impact Item 3 -->
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="20">
@@ -372,9 +374,9 @@
                                 style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Rural</span><br>Classrom
                             Reached</p>
                     </div>
-
                     <!-- Impact Item 4 -->
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="280">
@@ -383,8 +385,8 @@
                                 style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Hours</span><br>Teaching
                         </p>
                     </div>
-
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="4">
@@ -393,8 +395,8 @@
                                 style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">NGOs</span><br>Registered
                             Partners</p>
                     </div>
-
-                    <div style="flex: 1; padding: 0 20px; text-align: center;">
+                    <div class="impact-item"
+                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
                         <h2 class="headline-1 count-up"
                             style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
                             data-target="4">
@@ -404,15 +406,128 @@
                             in Media Outlets</p>
                     </div>
                 </div>
+                <style>
+                    @media (max-width: 900px) {
+                        .impact-highlights-container {
+                            flex-wrap: wrap !important;
+                            gap: 16px !important;
+                        }
+
+                        .impact-item {
+                            flex: 1 1 45% !important;
+                            min-width: 140px !important;
+                        }
+                    }
+
+                    @media (max-width: 600px) {
+                        .impact-highlights-container {
+                            flex-direction: column !important;
+                            align-items: stretch !important;
+                        }
+
+                        .impact-item {
+                            flex: 1 1 100% !important;
+                            min-width: 100px !important;
+                            padding: 0 8px !important;
+                        }
+
+                        .count-up {
+                            font-size: 2em !important;
+                        }
+                    }
+                </style>
 
                 <div style="font-size: 3 rem;">
                     <p>Developed extensive in-house 21st century soft skill curriculum</p>
                     <p>Awarded by PHD Chamber of Commerce for inspiring social work</p>
                 </div>
+            </section>
+
+            <!-- - #Achievements -->
+            <!-- ---------------------------------------------------------------------- -->
+            <section
+                style="padding-bottom:3rem; text-align:center; background-image: url(assets/images/picksoo/sddd.png); background-repeat: no-repeat; background-size: cover; background-color: rgba(0,0,0,0.7); background-blend-mode: overlay;">
+
+                <br>
+                <p class="label-2 section-subtitle" id="about-label">Education & Outreach</p>
+                <h1 class="headline-1 section-title">CSR Initiatives That Inspire</h1>
+                <br>
+
+                <!-- Van Image -->
+                <!-- <div class="fade-scroll">
+                    <img src="./assets/images/Facilities/1.jpg" alt="School Bus"
+                        style="width: 300px;height: auto; margin-left: 62.5vw;" class="remover">
+                
+                </div>  -->
+
+                <!-- style="max-width: 300px; width: 100%; height: auto; margin: 0 auto;" class="responsive-img" -->
+
+                <!-- New Image (from uploaded picture) -->
+                <!-- <div class="fade-scroll" style="margin-top: 1rem;">
+                    <img src="./assets/images/Facilities/2.jpg" alt="CSR Outreach in Action"
+                    style="width: 300px;height: auto; margin-left: 62.5vw;" class="remover">
+                       
+                </div> -->
+
+                <!-- Image Container -->
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <div class="about-section" style="padding: 0 1rem;">
+                        <p>
+                            At Walk The Summit, we focus on unlocking real opportunities for students in remote
+                            Himalayan
+                            regions. One of our most impactful collaborations yet has resulted in the successful
+                            provision
+                            of a brand-new Force Trax mini school bus, worth over ₹15 lakhs, to a rural partner school
+                            in
+                            Mussoorie.
+                        </p>
+                        <p>
+                            This was made possible through a CSR partnership with a reputed multinational company, which
+                            we
+                            helped connect directly to the school.
+                        </p>
+                        <p>
+                            In mountainous areas like Mussoorie, students often have to trek 8-10 kilometres daily on
+                            steep,
+                            uneven terrain through forests, rough paths and even during extreme weather. This leads to
+                            low
+                            attendance, student fatigue and dropout risks, especially among younger children and girls.
+                            The
+                            newly provided bus changes that reality.
+                            The Force Trax, known for its durability and strength in tough terrains, now ensures that
+                            children have safe, reliable and dignified transport every day. What was once a struggle is
+                            now
+                            a smoother ride toward education, confidence and consistency.
+                        </p>
+                        <p>
+                            This achievement is a testament to the power of meaningful partnerships and youth-led
+                            action.
+                            We’re proud to have played a role in bridging the gap between communities in need and
+                            institutions willing to help.
+                        </p>
+                    </div>
+
+                    <div class="fade-scroll"
+                        style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; border-radius: 5rem;">
+                        <!-- Front view -->
+                        <img src="./assets/images/Facilities/1.jpg" alt="School Bus Front"
+                            class="fade-scroll image-row lightbox-img"
+                            style="width: 300px; height: 200px; object-fit: cover; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
+
+                        <!-- Rear view -->
+                        <img src="./assets/images/Facilities/2.jpg" alt="School Bus Rear"
+                            class="fade-scroll image-row lightbox-img"
+                            style="width: 300px; height: 200px; object-fit: cover; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
+                    </div>
+
+                </div>
+
+                <br>
 
             </section>
 
-            <!-- - #ABOUT -->
+            <!-- #Our Mission -->
+
             <section
                 style="padding-bottom:3rem; text-align:center; background-image: url(assets/images/picksoo/17.png); background-repeat: round no-repeat; overflow-x: hidden; background-size: 100% 100%;  ">
                 <br>
@@ -1096,7 +1211,7 @@ transform: translateX(-50%);
 
             <div class="separator"></div>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOoklOgoRCribVEXQ/viewform?usp=sf_link"
                 class="topbar-item link" target="_blank">
                 <div class="icon">
                     <ion-icon name="person-add-outline"></ion-icon>
@@ -1182,23 +1297,70 @@ transform: translateX(-50%);
     </script>
 
     <script>
-        const counters = document.querySelectorAll('.count-up');
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const current = +counter.innerText.replace(/\D/g, '') || 0;
-                const increment = target / 150;
-                if (current < target) {
-                    const value = Math.ceil(current + increment).toLocaleString();
-                    counter.innerText = counter.classList.contains('currency') ? `₹${value}+` : `${value}+`;
-                    setTimeout(updateCount, 10);
-                } else {
-                    const finalValue = target.toLocaleString();
-                    counter.innerText = counter.classList.contains('currency') ? `₹${finalValue}+` :
-                        `${finalValue}+`;
-                }
-            };
-            updateCount();
+        // Count-up animation every time section is visible
+        (function() {
+            function runCounters() {
+                document.querySelectorAll('.count-up').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let current = 0;
+                    const increment = Math.max(1, Math.ceil(target / 150));
+                    // Reset counter text before animating
+                    counter.innerText = counter.classList.contains('currency') ? '₹0' : '0';
+                    function updateCount() {
+                        current += increment;
+                        if (current < target) {
+                            const value = Math.ceil(current).toLocaleString();
+                            counter.innerText = counter.classList.contains('currency') ? `₹${value}+` : `${value}+`;
+                            setTimeout(updateCount, 10);
+                        } else {
+                            const finalValue = target.toLocaleString();
+                            counter.innerText = counter.classList.contains('currency') ? `₹${finalValue}+` : `${finalValue}+`;
+                        }
+                    }
+                    updateCount();
+                });
+            }
+            const section = document.getElementById('impact-highlights');
+            if (window.IntersectionObserver && section) {
+                let wasIntersecting = false;
+                const observer = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) {
+                        runCounters();
+                        wasIntersecting = true;
+                    } else {
+                        wasIntersecting = false;
+                    }
+                }, {
+                    threshold: 0.3
+                });
+                observer.observe(section);
+            } else {
+                // fallback: run on load
+                runCounters();
+            }
+        })();
+    </script>
+
+    <!-- Add Lightbox HTML at the end of body, before </body> -->
+    <div id="lightbox-overlay"
+        style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+        <img id="lightbox-img" src="" alt="Preview"
+            style="max-width:90vw; max-height:90vh; border-radius:2rem; box-shadow:0 8px 32px rgba(0,0,0,0.35); background:#fff;">
+    </div>
+
+    <script>
+        // Lightbox JS
+        document.querySelectorAll('.lightbox-img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox-overlay').style.display = 'flex';
+            });
+        });
+        document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+                document.getElementById('lightbox-img').src = '';
+            }
         });
     </script>
 </body>
