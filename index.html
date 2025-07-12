@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta property="og:image" content="./assets/Logo.jpg">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="400">
@@ -40,6 +40,246 @@
     - custom css link
   -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        /* Responsive fixes for header, navbar, hamburger menu, and spacing */
+
+        /* Ensure header and nav are always on top and full width */
+        .header {
+            width: 100%;
+            position: relative;
+            z-index: 100;
+        }
+
+        /* Hamburger menu button styling */
+        .nav-open-btn,
+        .close-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            z-index: 120;
+            padding: 0.5rem;
+        }
+
+        .nav-open-btn .line {
+            display: block;
+            width: 28px;
+            height: 3px;
+            margin: 5px 0;
+            background: #c28840;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Show hamburger on small screens */
+        @media (max-width: 900px) {
+            .nav-open-btn {
+                display: block !important;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                right: -100vw;
+                width: 80vw;
+                max-width: 350px;
+                height: 100vh;
+                background: #181818;
+                box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+                transition: right 0.3s;
+                z-index: 110;
+                overflow-y: auto;
+                padding-top: 3.5rem;
+                padding-bottom: 2rem;
+            }
+
+            .navbar.active {
+                right: 0;
+            }
+
+            .close-btn {
+                display: block !important;
+                top: 1.2rem;
+                right: 1.2rem;
+                position: absolute;
+                z-index: 120;
+            }
+
+            .overlay {
+                display: none;
+            }
+
+            .navbar-list {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 0;
+                margin: 2rem 0;
+            }
+
+            .header .logo {
+                margin-left: 0.5rem;
+            }
+        }
+
+        /* Overlay for mobile nav */
+        @media (max-width: 900px) {
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 109;
+            }
+
+            .navbar.active~.overlay {
+                display: block;
+            }
+        }
+
+        /* Reduce excessive spacing on small devices */
+        @media (max-width: 600px) {
+
+            body,
+            html {
+                padding: 0 !important;
+                margin: 0 !important;
+                overflow-x: hidden;
+            }
+
+            .container,
+            .about-section,
+            .impact-highlights-container,
+            .section,
+            .main,
+            main,
+            article {
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+
+            section,
+            .section {
+                padding: 18px 0 !important;
+                margin: 0 !important;
+            }
+
+            .headline-1,
+            .section-title {
+                font-size: 1.5rem !important;
+            }
+
+            .carousel,
+            .carousel-stage {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                overflow-x: auto;
+            }
+
+            .carousel-content {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .carousel-image {
+                width: 90vw !important;
+                max-width: 90vw !important;
+                height: auto !important;
+            }
+
+            .about-section {
+                font-size: 1rem !important;
+            }
+
+            .fade-scroll {
+                margin: 0 !important;
+            }
+
+            .impact-highlights-container {
+                gap: 10px !important;
+            }
+
+            .impact-item {
+                padding: 0 4px !important;
+            }
+
+            .btn {
+                font-size: 1rem !important;
+                padding: 0.5rem 1rem !important;
+            }
+
+            .dotlottie-player {
+                width: 90vw !important;
+                height: auto !important;
+                margin-top: 0 !important;
+            }
+
+            #heading {
+                position: static !important;
+                margin-top: 1.5rem !important;
+            }
+
+            .split-section {
+                flex-direction: column !important;
+            }
+
+            .half.left,
+            .half.right {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+
+            /* Remove excessive <br> spacing */
+            br {
+                display: none !important;
+            }
+        }
+
+        /* Add/override styles for transparent header and topbar */
+        .topbar {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(24, 24, 24, 0.7) !important;
+            z-index: 100;
+            /* backdrop-filter: blur(4px);  // Optional for glass effect */
+        }
+
+        .header {
+            position: absolute !important;
+            top: 48px;
+            left: 0;
+            width: 100%;
+            background: rgba(24, 24, 24, 0.7) !important;
+            z-index: 101;
+            /* backdrop-filter: blur(4px);  // Optional for glass effect */
+        }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 900px) {
+            .header {
+                top: 0 !important;
+            }
+
+            .topbar {
+                position: static !important;
+            }
+        }
+    </style>
 
     <!-- 
     - preload images
@@ -66,10 +306,110 @@
     </div>
 
     <!-- 
+    - #HERO
+    -->
+    <section class="hero text-center" aria-label="home" id="home" style="position: relative; z-index: 1;">
+
+        <ul class="hero-slider" data-hero-slider>
+
+            <li class="slider-item active" data-hero-slider-item>
+
+                <div class="slider-bg">
+                    <img src="./assets/images/hero-slider-1.png" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <h7 class="hero-title slider-reveal">
+                    We're a <b> student-led organization </b>dedicated to <br>transforming the lives of
+                    <b>children</b> <br>in the remote <b>villages of the Himalayas.</b>
+                </h7>
+
+                <p class="body-2 hero-text slider-reveal">
+                    For the Students <br> By the Students
+                </p>
+
+                <a href="#horizontal" class="btn fade-scrollbtn-primary slider-reveal">
+                    <span class="text text-1">Projects</span>
+
+                    <span class="text text-2" aria-hidden="true">Projects</span>
+                </a>
+
+            </li>
+
+            <li class="slider-item" data-hero-slider-item>
+
+                <div class="slider-bg">
+                    <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <h2 class="display-1 hero-title slider-reveal">
+                    Walk The Summit is joining hands with the
+                    <br> <b> Himalayan International School </b>
+                    <br> To continue the transformation,
+                    <br> <b>We need your support. </b>
+                </h2>
+
+                <p class="body-2 hero-text slider-reveal">
+
+                </p>
+
+                <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" target="_blank"
+                    class="btn fade-scrollbtn-primary slider-reveal">
+                    <span class="text text-1">Donate</span>
+
+                    <span class="text text-2" aria-hidden="true">Donate</span>
+                </a>
+
+            </li>
+
+            <li class="slider-item" data-hero-slider-item>
+
+                <div class="slider-bg">
+                    <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <h3 class="display-1 hero-title slider-reveal" id="longgtext">
+                    Situated near the Kempty Falls is the
+                    <br> School where dreams are turned into reality
+                    <br> to this we are also providing <br> <b> stationary kits and sports equipment</b>
+                    <br> to promote the holistic development of the students.
+                </h3>
+
+                <p class="body-2 hero-text slider-reveal">
+                </p>
+
+                <a href="#abit" class="btn fade-scrollbtn-primary slider-reveal">
+                    <span class="text text-1">About</span>
+
+                    <span class="text text-2" aria-hidden="true">About</span>
+                </a>
+
+            </li>
+
+        </ul>
+
+        <button class="fade-scroll" class="slider-btn fade-scrollprev" aria-label="slide to previous" data-prev-btn>
+            <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+        <button class="fade-scroll" class="slider-btn fade-scrollnext" aria-label="slide to next" data-next-btn>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+        <!-- <a href="#menu" class="hero-btn fade-scrollhas-after">
+                    <img src="./assets/images/hero-icon.svg" width="48" height="48" alt="booking icon"
+                        style="-webkit-filter: invert(100%); filter: invert(100%);">
+
+                    <span class="label-2 text-center span">All projects</span>
+                </a> -->
+
+    </section>
+
+    <!-- 
     - #TOP BAR
   -->
 
-    <div class="topbar">
+    <div class="topbar"
+        style="position: absolute; top: 0; left: 0; width: 100%; background: rgba(24,24,24,0.7); z-index: 100;">
         <div class="container" id="Gen">
             <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2"
                 target="_blank">
@@ -117,7 +457,8 @@
     - #HEADER
   -->
 
-    <header class="header" data-header>
+    <header class="header" data-header
+        style="position: absolute; top: 48px; left: 0; width: 100%; background: rgba(24,24,24,0.7); z-index: 101;">
         <div class="container">
             <a href="/" class="logo">
                 <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home"
@@ -125,8 +466,8 @@
             </a>
 
             <nav class="navbar" data-navbar>
-
-                <button class="fade-scroll" class="close-btn" aria-label="close menu" data-nav-toggler>
+                <!-- Hamburger close button (inside nav for mobile) -->
+                <button class="close-btn" aria-label="close menu" data-nav-toggler style="display:none;">
                     <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
                 </button>
 
@@ -206,20 +547,12 @@
                 </div>-->
 
             </nav>
-
-            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas"
-                class="btn fade-scrollbtn-secondary" target="_blank">
-                <span class="text text-1">Donate now</span>
-
-                <span class="text text-2" aria-hidden="true">Donate now</span>
-            </a>
-
-            <button class="fade-scroll" class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <!-- Hamburger open button (outside nav for mobile) -->
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
                 <span class="line line-3"></span>
             </button>
-
             <div class="overlay" data-nav-toggler data-overlay></div>
 
         </div>
@@ -227,110 +560,6 @@
 
     <main>
         <article>
-
-            <!-- 
-        - #HERO
-      -->
-
-            <section class="hero text-center" aria-label="home" id="home">
-
-                <ul class="hero-slider" data-hero-slider>
-
-                    <li class="slider-item active" data-hero-slider-item>
-
-                        <div class="slider-bg">
-                            <img src="./assets/images/hero-slider-1.png" width="1880" height="950" alt=""
-                                class="img-cover">
-                        </div>
-
-                        <h7 class="hero-title slider-reveal">
-                            We're a <b> student-led organization </b>dedicated to <br>transforming the lives of
-                            <b>children</b> <br>in the remote <b>villages of the Himalayas.</b>
-                        </h7>
-
-                        <p class="body-2 hero-text slider-reveal">
-                            For the Students <br> By the Students
-                        </p>
-
-                        <a href="#horizontal" class="btn fade-scrollbtn-primary slider-reveal">
-                            <span class="text text-1">Projects</span>
-
-                            <span class="text text-2" aria-hidden="true">Projects</span>
-                        </a>
-
-                    </li>
-
-                    <li class="slider-item" data-hero-slider-item>
-
-                        <div class="slider-bg">
-                            <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt=""
-                                class="img-cover">
-                        </div>
-
-                        <h2 class="display-1 hero-title slider-reveal">
-                            Walk The Summit is joining hands with the
-                            <br> <b> Himalayan International School </b>
-                            <br> To continue the transformation,
-                            <br> <b>We need your support. </b>
-                        </h2>
-
-                        <p class="body-2 hero-text slider-reveal">
-
-                        </p>
-
-                        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas"
-                            target="_blank" class="btn fade-scrollbtn-primary slider-reveal">
-                            <span class="text text-1">Donate</span>
-
-                            <span class="text text-2" aria-hidden="true">Donate</span>
-                        </a>
-
-                    </li>
-
-                    <li class="slider-item" data-hero-slider-item>
-
-                        <div class="slider-bg">
-                            <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt=""
-                                class="img-cover">
-                        </div>
-
-                        <h3 class="display-1 hero-title slider-reveal" id="longgtext">
-                            Situated near the Kempty Falls is the
-                            <br> School where dreams are turned into reality
-                            <br> to this we are also providing <br> <b> stationary kits and sports equipment</b>
-                            <br> to promote the holistic development of the students.
-                        </h3>
-
-                        <p class="body-2 hero-text slider-reveal">
-                        </p>
-
-                        <a href="#abit" class="btn fade-scrollbtn-primary slider-reveal">
-                            <span class="text text-1">About</span>
-
-                            <span class="text text-2" aria-hidden="true">About</span>
-                        </a>
-
-                    </li>
-
-                </ul>
-
-                <button class="fade-scroll" class="slider-btn fade-scrollprev" aria-label="slide to previous"
-                    data-prev-btn>
-                    <ion-icon name="chevron-back"></ion-icon>
-                </button>
-
-                <button class="fade-scroll" class="slider-btn fade-scrollnext" aria-label="slide to next" data-next-btn>
-                    <ion-icon name="chevron-forward"></ion-icon>
-                </button>
-
-                <!-- <a href="#menu" class="hero-btn fade-scrollhas-after">
-                    <img src="./assets/images/hero-icon.svg" width="48" height="48" alt="booking icon"
-                        style="-webkit-filter: invert(100%); filter: invert(100%);">
-
-                    <span class="label-2 text-center span">All projects</span>
-                </a> -->
-
-            </section>
 
             <!-- Impact Section -->
 
@@ -443,7 +672,7 @@
                 </div>
             </section>
 
-            <!-- - #Achievements -->
+            <!-- - #Education & Outreach -->
             <!-- ---------------------------------------------------------------------- -->
             <section
                 style="padding-bottom:3rem; text-align:center; background-image: url(assets/images/picksoo/sddd.png); background-repeat: no-repeat; background-size: cover; background-color: rgba(0,0,0,0.7); background-blend-mode: overlay;">
@@ -470,8 +699,8 @@
                 </div> -->
 
                 <!-- Image Container -->
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <div class="about-section" style="padding: 0 1rem;">
+                <div style="display: flex; justify-content: center; gap: 8rem; flex-wrap: wrap;">
+                    <div class="about-section" style="padding:5rem;">
                         <p>
                             At Walk The Summit, we focus on unlocking real opportunities for students in remote
                             Himalayan
@@ -512,12 +741,12 @@
                         <!-- Front view -->
                         <img src="./assets/images/Facilities/1.jpg" alt="School Bus Front"
                             class="fade-scroll image-row lightbox-img"
-                            style="width: 300px; height: 200px; object-fit: cover; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
+                            style="width: 400px; height: 90%;  border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
 
                         <!-- Rear view -->
                         <img src="./assets/images/Facilities/2.jpg" alt="School Bus Rear"
                             class="fade-scroll image-row lightbox-img"
-                            style="width: 300px; height: 200px; object-fit: cover; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
+                            style="width: 400px; height: 90%; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
                     </div>
 
                 </div>
@@ -942,7 +1171,8 @@
                             thrive in a rapidly changing world.</p>
 
                         <!-- <div style="display: flex; align-items: center; flex-direction: column; gap: 10px;"> -->
-                        <h3>Impact of Our Work</h3><br>
+                        <h3>Impact of Our Work</h3>
+                        <br>
                         <ol style="list-style-type:square; padding: 0; margin: 0;">
                             <li><strong>Bridging the Digital Divide</strong></li>
                             <li><strong>Building Confidence & Leadership</strong> </li>
@@ -968,7 +1198,8 @@
                             reflects this commitment, bringing technology, resources, and essential skills to students
                             who need them the most.</p>
 
-                        <h3>What We’ve Done</h3><br>
+                        <h3>What We’ve Done</h3>
+                        <br>
                         <p><strong>Smart Classrooms</strong></p>
                         <p><strong>Digital Access</strong> </p>
                         <p><strong>Essential Resources</strong> </p>
@@ -1000,7 +1231,8 @@
                                     <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                                         <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_48cacd57.jpg"
                                             width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
+                                            style="object-fit: contain;">
                                     </div>
                                 </div>
                             </li>
@@ -1011,7 +1243,8 @@
                                     <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                                         <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_4b630ffb.jpg"
                                             width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
+                                            style="object-fit: contain;">
 
                                     </div>
                             </li>
@@ -1022,7 +1255,8 @@
                                     <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                                         <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_6cc1d9ff.jpg"
                                             width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
+                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
+                                            style="object-fit: contain;">
                                     </div>
                                 </div>
                             </li>
@@ -1038,6 +1272,10 @@
                     </div>
                 </div>
             </section>
+
+
+
+
             <section style="text-align:center; ">
                 <p class="label-2 section-subtitle" id="about-label">HELPING HANDS</p>
                 <h1 class="headline-1 section-title">Partners and Collaborators</h1>
@@ -1211,7 +1449,7 @@ transform: translateX(-50%);
 
             <div class="separator"></div>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOoklOgoRCribVEXQ/viewform?usp=sf_link"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link"
                 class="topbar-item link" target="_blank">
                 <div class="icon">
                     <ion-icon name="person-add-outline"></ion-icon>
@@ -1306,15 +1544,18 @@ transform: translateX(-50%);
                     const increment = Math.max(1, Math.ceil(target / 150));
                     // Reset counter text before animating
                     counter.innerText = counter.classList.contains('currency') ? '₹0' : '0';
+
                     function updateCount() {
                         current += increment;
                         if (current < target) {
                             const value = Math.ceil(current).toLocaleString();
-                            counter.innerText = counter.classList.contains('currency') ? `₹${value}+` : `${value}+`;
+                            counter.innerText = counter.classList.contains('currency') ? `₹${value}+` :
+                                `${value}+`;
                             setTimeout(updateCount, 10);
                         } else {
                             const finalValue = target.toLocaleString();
-                            counter.innerText = counter.classList.contains('currency') ? `₹${finalValue}+` : `${finalValue}+`;
+                            counter.innerText = counter.classList.contains('currency') ? `₹${finalValue}+` :
+                                `${finalValue}+`;
                         }
                     }
                     updateCount();

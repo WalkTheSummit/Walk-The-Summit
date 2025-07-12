@@ -642,7 +642,7 @@ body.nav-active {
 }
 
 .preload.loaded {
-    transition-delay: 50ms;
+    transition-delay: 10ms;
     transform: translateY(100%);
 }
 
@@ -679,7 +679,7 @@ body.nav-active {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.5px var(--eerie-black-3);
-    animation: loadingText linear 2s infinite;
+    animation: loadingText linear 1s infinite;
 }
 
 @keyframes loadingText {
