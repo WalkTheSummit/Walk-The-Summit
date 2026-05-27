@@ -29,8 +29,7 @@
   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <!-- GSAP core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -278,7 +277,285 @@
             .topbar {
                 position: static !important;
             }
-        }
+        }/* =========================
+   MODERN GLOBAL THEME
+========================= */
+
+:root{
+  --bg-primary:#0F1115;
+  --bg-secondary:#151B2D;
+  --card-bg:rgba(255,255,255,0.04);
+  --border-soft:rgba(255,255,255,0.08);
+  --gold:#D4A65A;
+  --white:#F5F5F5;
+  --muted:#B8B8B8;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-primary);
+  color:var(--white);
+  overflow-x:hidden;
+}
+
+.headline-1,
+.section-title,
+.hero-title{
+  font-family:'Playfair Display',serif;
+  letter-spacing:0.5px;
+}
+
+section{
+  padding:110px 0;
+}
+
+.section-subtitle{
+  color:var(--gold);
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.section-text,
+p{
+  color:var(--muted);
+  line-height:1.9;
+  font-size:1.05rem;
+}
+
+/* =========================
+   MODERN HEADER
+========================= */
+
+.header,
+.topbar{
+  backdrop-filter:blur(14px);
+  background:rgba(15,17,21,0.72)!important;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-link{
+  transition:0.3s ease;
+}
+
+.navbar-link:hover{
+  color:var(--gold)!important;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,
+  rgba(0,0,0,0.55),
+  rgba(0,0,0,0.65));
+  z-index:1;
+}
+
+.hero-slider,
+.slider-item,
+.slider-bg,
+.hero-title,
+.hero-text,
+.btn{
+  position:relative;
+  z-index:2;
+}
+
+.hero-title{
+  font-size:4.5rem!important;
+  line-height:1.15;
+  max-width:1100px;
+  margin:auto;
+  color:#fff;
+}
+
+.hero-text{
+  margin-top:24px;
+  font-size:1.2rem;
+  color:#e0e0e0;
+}
+
+@media(max-width:900px){
+  .hero-title{
+    font-size:2.5rem!important;
+    padding:0 20px;
+  }
+
+  .hero-text{
+    font-size:1rem;
+    padding:0 20px;
+  }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+  border-radius:999px!important;
+  padding:14px 34px!important;
+  border:1px solid rgba(255,255,255,0.12)!important;
+  background:rgba(255,255,255,0.06)!important;
+  backdrop-filter:blur(10px);
+  transition:all 0.35s ease;
+  overflow:hidden;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  background:var(--gold)!important;
+  border-color:var(--gold)!important;
+}
+
+/* =========================
+   IMPACT CARDS
+========================= */
+
+.impact-highlights-container{
+  gap:32px!important;
+}
+
+.impact-item{
+  background:var(--card-bg);
+  border:1px solid var(--border-soft);
+  border-radius:28px;
+  padding:40px 24px!important;
+  backdrop-filter:blur(12px);
+  transition:all 0.35s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.impact-item:hover{
+  transform:translateY(-10px);
+  border-color:rgba(212,166,90,0.4);
+}
+
+.count-up{
+  color:var(--gold)!important;
+  font-weight:700;
+}
+
+/* =========================
+   ABOUT SECTIONS
+========================= */
+
+.about-section{
+  max-width:900px;
+  margin:auto;
+}
+
+.about-section p{
+  margin-bottom:26px;
+}
+
+/* =========================
+   IMAGE STYLING
+========================= */
+
+.image-row,
+.lightbox-img,
+.carousel-image{
+  transition:0.4s ease;
+}
+
+.image-row:hover,
+.carousel-image:hover{
+  transform:scale(1.03);
+}
+
+img{
+  max-width:100%;
+}
+
+/* =========================
+   HONORS SECTION
+========================= */
+
+hr{
+  opacity:0.2;
+}
+
+/* =========================
+   SPLIT SECTION
+========================= */
+
+.split-section{
+  display:flex;
+  gap:40px;
+  padding:100px 5%;
+}
+
+.half{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:28px;
+  padding:40px;
+  backdrop-filter:blur(10px);
+}
+
+@media(max-width:900px){
+  .split-section{
+    flex-direction:column;
+  }
+}
+
+/* =========================
+   NEWS SECTION
+========================= */
+
+.event-card{
+  border-radius:24px;
+  overflow:hidden;
+  transition:0.35s ease;
+}
+
+.event-card:hover{
+  transform:translateY(-8px);
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+#lightbox-overlay{
+  backdrop-filter:blur(10px);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media(max-width:600px){
+
+  section{
+    padding:75px 0;
+  }
+
+  .impact-item{
+    padding:28px 18px!important;
+  }
+
+  .headline-1,
+  .section-title{
+    font-size:2rem!important;
+  }
+
+  .split-section{
+    padding:70px 16px;
+  }
+
+  .half{
+    padding:24px;
+  }
+}
     </style>
 
     <!-- 
@@ -658,7 +935,7 @@
 
     
             </section> 
-            <section style="padding: 90px 0; text-align: center; background-color: #111;">
+            <section style="padding:120px 0; text-align:center; background:linear-gradient(180deg,#111827,#0F1115);">
   <p class="label-2 section-subtitle">Recognition & Media</p>
   <h1 class="headline-1 section-title">Honors & Coverage</h1>
 
