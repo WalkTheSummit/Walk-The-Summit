@@ -465,7 +465,28 @@ body.nav-active {
 .btn-secondary::before {
     background-color: var(--smoky-black-1);
 }
+.btn {
+    background: linear-gradient(
+        135deg,
+        #cfd4dc,
+        #8f98a8
+    ) !important;
 
+    color: #0b0d12 !important;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    transition: all 0.35s ease !important;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
 .btn-secondary .text-2 {
     color: var(--white);
 }
@@ -979,16 +1000,22 @@ body.nav-active {
     visibility: visible;
 }
 
-.hero .slider-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.15);
-    pointer-events: none;
-    user-select: none;
-    z-index: -1;
+.hero,
+.slider-bg,
+.hero-slider .slider-item {
+    background: linear-gradient(
+        to bottom,
+        #05070d,
+        #0f1117,
+        #171a22
+    ) !important;
+}
+
+.hero-title,
+.hero-text {
+    color: #f1f5f9 !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+}
 }
 
 .hero .slider-item.active .slider-bg {
@@ -2110,7 +2137,22 @@ body.nav-active {
         :focus-visible) {
         background-color: var(--gold-crayola);
         color: var(--black);
-    }
+    } .hero,
+.slider-bg,
+.hero-slider .slider-item {
+    background: linear-gradient(
+        to bottom,
+        #05070d,
+        #0f1117,
+        #171a22
+    ) !important;
+}
+
+.hero-title,
+.hero-text {
+    color: #f1f5f9 !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+}
 
     /**
    * RESERVATION
@@ -3432,7 +3474,12 @@ p {
     }
 }
 
-
+.header,
+.topbar {
+    background: rgba(10, 12, 18, 0.72) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
    /* Increasing Animation of the Impact */
 
@@ -3496,4 +3543,35 @@ p {
 .impact-section.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+.impact-item,
+.carousel-content,
+.event-card,
+.about-section {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    backdrop-filter: blur(10px);
+
+    transition: 0.35s ease;
+}
+
+.impact-item:hover,
+.carousel-content:hover,
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+} body {
+    background:
+    radial-gradient(circle at top, #1b2230 0%, #090b10 55%);
+}
+
+img {
+    border-radius: 18px;
+}
+
+.lightbox-img,
+.carousel-image,
+.image-row {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
