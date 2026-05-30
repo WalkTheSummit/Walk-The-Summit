@@ -3596,3 +3596,52 @@ img {
 .gallery-grid img:hover{
     transform:scale(1.03);
 }
+/* existing CSS */
+
+/* existing CSS */
+
+/* existing CSS */
+
+
+/* IMPACT GALLERY */
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
