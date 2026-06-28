@@ -14,7 +14,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/wts.css">
@@ -112,14 +112,14 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <div class="hero-eyebrow reveal">Student-Led · Est. 2022 · Himalayas, India</div>
-          <h1 class="hero-title reveal reveal-delay-1">
+          <div class="hero-eyebrow reveal" style="margin-bottom:32px;">Student-Led &nbsp;·&nbsp; Est. 2022 &nbsp;·&nbsp; Himalayas, India</div>
+          <h1 class="hero-title reveal reveal-delay-1" style="margin-bottom:28px;">
             We <em>change lives.</em><br>
             We move mountains.<br>
             We Walk The Summit.
           </h1>
           <p class="hero-sub reveal reveal-delay-2">
-            A student-led organization dedicated to transforming education for children in remote Himalayan villages — one classroom, one computer, one life at a time.
+            A student-led organisation dedicated to transforming education for children in remote Himalayan villages — one classroom, one child, one life at a time.
           </p>
           <div class="hero-actions reveal reveal-delay-3">
             <a href="about.html" class="btn-primary">
@@ -142,35 +142,42 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item reveal">
-            <div class="stat-number" data-count="1500000" data-prefix="₹">₹0</div>
+            <div class="stat-number">₹15L+</div>
             <div class="stat-label">CSR Funds Mobilized</div>
           </div>
           <div class="stat-item reveal reveal-delay-1">
-            <div class="stat-number" data-count="2000" data-suffix="+">0</div>
+            <div class="stat-number" data-count="2500" data-suffix="+">0</div>
             <div class="stat-label">Students Impacted</div>
           </div>
           <div class="stat-item reveal reveal-delay-2">
-            <div class="stat-number" data-count="70" data-suffix="+">0</div>
+            <div class="stat-number" data-count="75" data-suffix="+">0</div>
             <div class="stat-label">Rural Classrooms Reached</div>
           </div>
           <div class="stat-item reveal reveal-delay-3">
-            <div class="stat-number" data-count="400" data-suffix="+">0</div>
+            <div class="stat-number" data-count="800" data-suffix="+">0</div>
             <div class="stat-label">Hours of Structured Teaching</div>
           </div>
           <div class="stat-item reveal reveal-delay-4">
-            <div class="stat-number" data-count="4">0</div>
-            <div class="stat-label">NGO Registered Partners</div>
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">NGOs Partnered</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT PREVIEW -->
+    <!-- ABOUT PREVIEW / MISSION -->
     <section class="about-section" id="about">
       <div class="container">
         <div class="about-grid">
           <div class="about-media reveal">
-            <img src="./assets/images/Best/Best_Duo.jpg" alt="Walk The Summit founders with students" class="about-img-primary">
+            <!-- Primary image with caption overlay -->
+            <div style="position:relative;">
+              <img src="./assets/images/Best/Best_Duo.jpg" alt="Walk The Summit founders with students in Himalayas" class="about-img-primary">
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(to top,rgba(13,32,32,0.92),transparent);border-radius:0 0 var(--r-xl) var(--r-xl);">
+                <p style="font-size:0.78rem;color:var(--sand-200);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Mussoorie, Uttarakhand</p>
+                <p style="font-size:0.88rem;color:rgba(239,226,197,0.75);line-height:1.5;">Our team with students at a partner school in the Himalayas</p>
+              </div>
+            </div>
             <img src="./assets/images/Best/main.jpg" alt="Students in classroom" class="about-img-float">
             <div class="about-badge">Est. 2022 · Himalayas</div>
           </div>
@@ -247,36 +254,48 @@
       </div>
     </section>
 
-    <!-- PHOTO GALLERY / IMPACT -->
+    <!-- LIVES WE'VE TOUCHED -->
     <section class="impact-section" id="impact">
       <div class="container">
         <div class="impact-header">
           <div>
-            <div class="section-tag reveal">Impact Gallery</div>
+            <div class="section-tag reveal">On the Ground</div>
             <h2 class="section-title reveal reveal-delay-1">Lives we've <em>touched</em></h2>
           </div>
-          <a href="media.html" class="btn-secondary reveal">View All Photos <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          <a href="media.html" class="wts-text-link reveal">See all photos &rarr;</a>
         </div>
-        <div class="gallery-masonry">
-          <div class="gallery-item reveal">
-            <img src="./assets/images/Best/people.jpg" alt="Students and volunteers">
-            <div class="gallery-item-overlay"><span class="gallery-item-label">Community Outreach</span></div>
+
+        <!-- ROW 1: one big left + two stacked right -->
+        <div class="pg-row-1">
+          <div class="pg-cell pg-main reveal">
+            <img src="./assets/images/Best/people.jpg" alt="Volunteers and students together" loading="lazy">
+            <p class="pg-caption">Community outreach — Mussoorie, Uttarakhand</p>
           </div>
-          <div class="gallery-item reveal reveal-delay-1">
-            <img src="./assets/images/Best/Games.jpg" alt="Students playing games">
-            <div class="gallery-item-overlay"><span class="gallery-item-label">After-School Programs</span></div>
+          <div class="pg-cell-stack">
+            <div class="pg-cell pg-half reveal reveal-delay-1">
+              <img src="./assets/images/Best/Games.jpg" alt="Sports day with students" loading="lazy">
+              <p class="pg-caption">Sports day with partner school students</p>
+            </div>
+            <div class="pg-cell pg-half reveal reveal-delay-2">
+              <img src="./assets/images/Best/art.jpg" alt="Art session with children" loading="lazy">
+              <p class="pg-caption">Creative learning — art as expression</p>
+            </div>
           </div>
-          <div class="gallery-item reveal reveal-delay-2">
-            <img src="./assets/images/Best/art.jpg" alt="Creative sessions with children">
-            <div class="gallery-item-overlay"><span class="gallery-item-label">Creative Learning</span></div>
+        </div>
+
+        <!-- ROW 2: three equal -->
+        <div class="pg-row-2">
+          <div class="pg-cell pg-third reveal">
+            <img src="./assets/images/Best/outdoor.jpg" alt="Outdoor activities" loading="lazy">
+            <p class="pg-caption">Outdoor wellness sessions</p>
           </div>
-          <div class="gallery-item reveal reveal-delay-3">
-            <img src="./assets/images/Best/outdoor.jpg" alt="Outdoor activity with students">
-            <div class="gallery-item-overlay"><span class="gallery-item-label">Sports &amp; Wellness</span></div>
+          <div class="pg-cell pg-third reveal reveal-delay-1">
+            <img src="./assets/images/Best/Best_Duo.jpg" alt="Founders with students" loading="lazy">
+            <p class="pg-caption">Krishiv &amp; Vansh with the students</p>
           </div>
-          <div class="gallery-item reveal reveal-delay-4">
-            <img src="./assets/images/Best/showcase.jpg" alt="Student showcase">
-            <div class="gallery-item-overlay"><span class="gallery-item-label">Student Showcase</span></div>
+          <div class="pg-cell pg-third reveal reveal-delay-2">
+            <img src="./assets/images/Best/Football.jpg" alt="Football with students" loading="lazy">
+            <p class="pg-caption">Football tournament — student champions</p>
           </div>
         </div>
       </div>
@@ -326,11 +345,14 @@
                 <div class="press-item">Dainik Jagran <span>Student Empowerment &amp; CSR</span></div>
                 <div class="press-item">Dainik Bhaskar <span>21st Century Skills Curriculum</span></div>
                 <div class="press-item">Amar Ujala <span>Youth-Led Educational Leadership</span></div>
+                <div class="press-item">Hills of Mussoorie <span>Himalayan Education Outreach</span></div>
+                <div class="press-item">Garhwal Samachar <span>Community Impact &amp; Empowerment</span></div>
               </div>
             </div>
           </div>
           <div class="awards-media reveal reveal-delay-2">
             <img src="./assets/images/Facilities/1.jpg" alt="CSR School Bus — Mussoorie" class="awards-img">
+            <img src="./assets/images/awards/PHDCCI.jpg" alt="PHDCCI Astitva Samman Award" class="awards-img" style="margin-top:16px;">
             <div class="awards-csr-box">
               <h3>CSR Collaboration: ₹15 Lakh School Bus</h3>
               <p>Our most impactful collaboration resulted in providing a brand-new Force Trax mini school bus to a rural partner school in Mussoorie — enabling children who once trekked 8-10 km daily to attend school safely and reliably.</p>
@@ -341,31 +363,39 @@
     </section>
 
     <!-- GET INVOLVED -->
-    <section class="involve-section">
+    <section class="wts-involve-section">
       <div class="container">
-        <div class="text-center reveal">
-          <div class="section-tag">Join the Movement</div>
-          <h2 class="section-title" style="margin:0 auto 16px;">How you can <em>help</em></h2>
-          <p class="section-body" style="margin:0 auto;">Every person who joins our mission makes the mountains a little more reachable for a child who dreams big.</p>
-        </div>
-        <div class="involve-grid" style="margin-top:60px;">
-          <div class="involve-card reveal">
-            <div class="involve-icon"><ion-icon name="heart-outline"></ion-icon></div>
-            <h3>Donate</h3>
-            <p>Your contribution directly funds computers, school buses, Wi-Fi, and educational materials for children in remote villages.</p>
-            <a href="donate.html" class="involve-link">Donate Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        <div class="wts-involve-wrap">
+          <div class="wts-involve-left reveal">
+            <div class="section-tag">Join the Movement</div>
+            <h2 class="wts-involve-heading">Three ways<br>to make a<br><em>difference.</em></h2>
+            <p class="wts-involve-sub">Every rupee, every hour, every connection you bring — it reaches a child in the mountains who has been waiting for exactly that.</p>
           </div>
-          <div class="involve-card reveal reveal-delay-1">
-            <div class="involve-icon"><ion-icon name="people-outline"></ion-icon></div>
-            <h3>Volunteer</h3>
-            <p>Join our team of passionate students and professionals. Help us teach, organise, and expand our reach to more villages.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform" target="_blank" class="involve-link">Apply Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
-          </div>
-          <div class="involve-card reveal reveal-delay-2">
-            <div class="involve-icon"><ion-icon name="business-outline"></ion-icon></div>
-            <h3>CSR Partnership</h3>
-            <p>Partner with us through your organisation's CSR fund. We connect companies directly with high-impact schools in the Himalayas.</p>
-            <a href="contact.html" class="involve-link">Get in Touch <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          <div class="wts-involve-right">
+            <div class="wts-way reveal">
+              <div class="wts-way-num">01</div>
+              <div class="wts-way-body">
+                <h3>Donate</h3>
+                <p>Your money goes directly to computers, school buses, Wi-Fi, books, and teachers for children in remote Himalayan schools who have never had any of it.</p>
+                <a href="donate.html" class="wts-text-link">Give now &rarr;</a>
+              </div>
+            </div>
+            <div class="wts-way reveal reveal-delay-1">
+              <div class="wts-way-num">02</div>
+              <div class="wts-way-body">
+                <h3>Volunteer</h3>
+                <p>Come with us to the mountains. Or contribute your skills remotely — teaching, design, fundraising, or organising. We need people who care, not just credentials.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform" target="_blank" class="wts-text-link">Apply to join &rarr;</a>
+              </div>
+            </div>
+            <div class="wts-way reveal reveal-delay-2">
+              <div class="wts-way-num">03</div>
+              <div class="wts-way-body">
+                <h3>CSR Partnership</h3>
+                <p>We've already facilitated a ₹15L school bus through a CSR collaboration. If your company wants to create real, traceable impact — let's talk. We know how to make it count.</p>
+                <a href="contact.html" class="wts-text-link">Start a conversation &rarr;</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
