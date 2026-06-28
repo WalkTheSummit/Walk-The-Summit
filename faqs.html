@@ -1,408 +1,218 @@
 <!DOCTYPE html>
+<!-- zuup.dev employee id 109 | manufactured by zuup.dev -->
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 
-    - primaQry meta tags
-  -->
-
-    <title>Walk The Summit</title>
-    <meta name="title" content="Walk The Summit">
-
-    <!-- 
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./assets/Logo.jpg" type="image" style="border-radius: 50%;">
-
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
-
-    <!-- 
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!-- 
-    - preload images
-  -->
-    <link rel="preload" as="image" href="./assets/images/hero-slider-1.png">
-    <link rel="preload" as="image" href="./assets/images/hero-slider-2.png">
-    <link rel="preload" as="image" href="./assets/images/hero-slider-3.png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs — Walk The Summit</title>
+  <meta name="description" content="Frequently Asked Questions about Walk The Summit — our mission, operations, donation process, and how to get involved.">
+  <link rel="icon" href="./assets/Logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/wts.css">
 </head>
+<body>
 
-<body id="tops" style="margin-bottom: -1000px;">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
-    <div id="blob"></div>
-    <!-- 
-    - #PRELOADER
-  -->
+  <div id="wts-preloader">
+    <img src="./assets/Logo.jpg" alt="Walk The Summit" class="preloader-logo">
+    <p class="preloader-text">Walk The Summit</p>
+  </div>
 
-    <div class="preload" data-preaload>
-        <div class="circle" style="text-align: center;"></div>
-        <p class="text">Walk The Summit</p>
-    </div>
-
-
-
-
-
-    <!-- 
-    - #TOP BAR
-  -->
-
-    <div class="topbar">
-        <div class="container" id="Gen">
-            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2" target="_blank">
-                <address class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </div>
-
-                    <span class="span">
-                        Donate Now </span>
-                </address>
-            </a>
-
-            <div class="separator"></div>
-            <div class="topbar-item item-2">
-                <div class="icon">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
-                    <span class="span">@Walk The Summit</span>
-                </a>
-            </div>
-
-            <a href="https://www.instagram.com/walkthesummit/" target="_blank" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-
-                <span class="span">@Walk The Summit</span>
-            </a>
-
-            <div class="separator"></div>
-            <a href="mailto:walkthesummit@gmail.com" target="_blank" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="mail-unread-outline"></ion-icon>
-                </div>
-
-                <span class="span">walkthesummit@gmail.com</span>
-            </a>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
+  <div class="announcement-bar">
     <div class="container">
-        <a href="/" class="logo">
-            <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home" style="border-radius:50%; scale:75%">
-        </a>
-
-        <nav class="navbar" data-navbar>
-
-            <button class="close-btn" aria-label="close menu" data-nav-toggler>
-                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-            </button>
-
-            <a href="/" class="logo">
-                <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home">
-            </a>
-
-            <ul class="navbar-list">
-
-                <li class="navbar-item">
-                    <a href="/" class="navbar-link hover-underline">
-                        <div class="separator"></div>
-
-                        <span class="span">Home</span>
-                    </a>
-                </li>
-
-                <li class="navbar-item">
-                    <a href="./about.html" class="navbar-link hover-underline ">
-                        <div class="separator"></div>
-
-                        <span class="span">About </span>
-                    </a>
-                </li>
-
-                
-                <li class="navbar-item">
-                    <a href="./donate.html" class="navbar-link hover-underline">
-                        <div class="separator"></div>
-
-                        <span class="span">Donate</span>
-                    </a>
-                </li>
-
-                <li class="navbar-item">
-                    <a href="./contact.html" class="navbar-link hover-underline">
-                        <div class="separator"></div>
-
-                        <span class="span">Contact</span>
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="./faqs.html" class="navbar-link hover-underline active">
-                        <div class="separator"></div>
-
-                        <span class="span">FAQS</span>
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="text-center">
-                <p class="headline-1 navbar-title">Main Menu</p>
-            </div>
-
-            <!--    &lt;!&ndash;<address class="body-4">
-                    Main market, Leh <br>
-                    Ladakh, North India
-                </address>
-
-                <a href="mailto:contact@Walk The Summit.dev" class="body-4 sidebar-link">contact@Walk The Summit.dev</a>
-
-                <div class="separator"></div>
-
-                <p class="contact-label"></p>&ndash;&gt;
-
-                <p class="body-4 navbar-text">Contact via:</p>
-
-                <a href="mailto:contact@Walk The Summit.dev" class="body-1 contact-number hover-underline">
-                    contact@Walk The Summit.dev
-                </a>
-
-                <a href="" class="body-1 contact-number hover-underline item-2">
-                    Discord (preferred)
-                </a>
-            </div>-->
-
-        </nav>
-
-        <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn btn-secondary" target="_blank">
-            <span class="text text-1">Donate now</span>
-
-            <span class="text text-2" aria-hidden="true">Donate now</span>
-        </a>
-
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-        </button>
-
-        <div class="overlay" data-nav-toggler data-overlay></div>
-
-    </div>
-</header>
-
-    <main>
-        
-        <article>
-            <br><br><br><br><br><br><br><br>
-    <section style="text-align:center; ">
-        <p class="label-2 section-subtitle" id="about-label">FAQs</p>
-        <div class="anti-remover">
-            <br><br><br>
-        </div>
-        <h1 class="headline-1 section-title">Frequently Asked Questions</h1>
-
-    <div class="faq-header"></div>    
-    <div class="faq-content">
-    <div class="faq-question">
-      <input id="q1" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q1" class="panel-title">What is Walk The Summit's mission?</label>
-      <div class="panel-content"> Walk The Summit is dedicated to transforming the lives of children in remote Himalayan
-          villages by providing them with education, resources, and opportunities that transcend
-          the limitations of their local schools.</div>
-    </div>
-    
-    <!-- <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>What is Walk The Summit's mission?</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                Walk The Summit is dedicated to transforming the lives of children in remote Himalayan villages by providing them with education, resources, and opportunities that transcend the limitations of their local schools.
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="faq-question">
-      <input id="q2" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q2" class="panel-title"> How does Walk The Summit aim to achieve its mission?</label>
-      <div class="panel-content">Walk The Summit aims to achieve its mission by setting up educational infrastructure
-          such as computer labs, providing access to Wi-Fi, and empowering children with
-          essential 21st-century life skills.</div>
-    </div>
-    
-    <div class="faq-question">
-      <input id="q3" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q3" class="panel-title"> Why focus on remote Himalayan villages?</label>
-      <div class="panel-content">Walk The Summit focuses on remote Himalayan villages because these areas often lack
-          access to basic educational resources and opportunities, and children face significant
-          challenges in accessing quality education. </div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q4" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q4" class="panel-title">What specific programs does Walk The Summit offer?</label>
-      <div class="panel-content">Walk The Summit offers a range of programs including computer literacy classes,
-          English language workshops, STEM education initiatives, and mentorship programs
-          designed to empower children with the skills they need to succeed in the modern world.</div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q5" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q5" class="panel-title">How does Walk The Summit ensure sustainability of its programs?</label>
-      <div class="panel-content">Walk The Summit works closely with local communities, government agencies, and
-          other stakeholders to ensure the sustainability of its programs. Additionally, the
-          organization invests in training local teachers and leaders to carry forward its mission in
-          the long term. </div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q6" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q6" class="panel-title"> How does Walk The Summit measure the impact of its programs?</label>
-      <div class="panel-content">Walk The Summit employs various methods to measure the impact of its programs,
-          including tracking academic performance, conducting surveys and interviews with
-          students and teachers, and monitoring community engagement and participation.</div>
-    </div>
-  
-    <div class="faq-question">
-      <input id="q7" type="checkbox" class="panel">
-      <div class="plus">✦ </div>
-      <label for="q7" class="panel-title">Are there any challenges Walk The Summit faces in implementing its programs?</label>
-      <div class="panel-content">Walk The Summit faces challenges such as logistical hurdles in reaching remote
-          villages, limited resources, and cultural barriers. However, the organization remains
-          committed to overcoming these challenges in order to fulfill its mission.</div>
+      <div class="ann-links">
+        <a href="https://www.instagram.com/walkthesummit/" target="_blank"><ion-icon name="logo-instagram"></ion-icon> @walkthesummit</a>
+        <div class="ann-dot"></div>
+        <a href="mailto:walkthesummit@gmail.com"><ion-icon name="mail-outline"></ion-icon> walkthesummit@gmail.com</a>
+      </div>
+      <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" target="_blank" class="ann-donate"><ion-icon name="heart"></ion-icon> Support Our Cause</a>
     </div>
   </div>
-</section>
 
+  <nav class="site-nav scrolled" id="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="./assets/Logo.jpg" alt="Walk The Summit Logo" class="nav-logo-img">
+          <div class="nav-logo-text">Walk The Summit<span>For the Students, By the Students</span></div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="media.html" class="nav-link">Media</a>
+          <a href="faqs.html" class="nav-link active">FAQs</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="donate.html" class="btn-nav-donate">Donate Now</a>
+          <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-<script>
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-        
-        button.classList.toggle('active');
-        
-        if (button.classList.contains('active')) {
-            accordionContent.classList.add('active');
-        } else {
-            accordionContent.classList.remove('active');
-        }
-    });
-});
-</script>
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="nav-logo"><img src="./assets/Logo.jpg" class="nav-logo-img" alt=""><div class="nav-logo-text">Walk The Summit</div></a>
+      <button class="mobile-nav-close" id="mobile-nav-close"><ion-icon name="close-outline"></ion-icon></button>
+    </div>
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="media.html" class="mobile-nav-link">Media</a>
+    <a href="faqs.html" class="mobile-nav-link active">FAQs</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="donate.html" class="mobile-nav-donate">Donate Now →</a>
+  </div>
 
-    
-    <div id="bottombar" style="position: relative;">
-        <div class="container" id="Gen" style="position: relative;">
-            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2">
-                <address class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </div>
+  <main>
+    <section class="page-hero" style="background: var(--bg-subtle);">
+      <div class="container">
+        <div class="page-breadcrumb reveal"><a href="index.html">Home</a><span class="page-breadcrumb-sep">/</span><span>FAQs</span></div>
+        <div class="section-tag reveal" style="margin-top:12px;">Got Questions?</div>
+        <h1 class="section-title reveal reveal-delay-1">Frequently Asked <em>Questions</em></h1>
+        <p class="section-body reveal reveal-delay-2">Everything you need to know about Walk The Summit, our work, and how you can help.</p>
+      </div>
+    </section>
 
-                    <span class="span">
-                        Donate Now </span>
-                </address>
-            </a>
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-sidebar">
+            <div class="faq-sidebar-intro reveal">
+              <div class="section-tag">We're here for you</div>
+              <h2 class="section-title" style="font-size:clamp(1.4rem,2.5vw,2rem);">Can't find your <em>answer?</em></h2>
+              <p class="section-body" style="font-size:0.9rem;">Reach out directly and we'll get back to you within 24 hours.</p>
+            </div>
+            <div class="faq-contact-card reveal reveal-delay-1">
+              <h3>Get in Touch</h3>
+              <p>We'd love to hear from you — whether it's a question, partnership, or just a hello.</p>
+              <a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:12px 24px;">Contact Us <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
 
-            <div class="separator"></div>
-            <div class="topbar-item item-2">
-                <div class="icon">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
-                    <span class="span">Walk The Summit</span>
-                </a>
+          <div class="faq-list" id="faq-list">
+            <div class="faq-item reveal">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>What is Walk The Summit's mission?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">Walk The Summit is dedicated to transforming the lives of children in remote Himalayan villages by providing them with education, resources, and opportunities that transcend the limitations of their local schools. We set up computer labs, bring Wi-Fi, provide stationary, and empower students with 21st century life skills.</div>
             </div>
 
-            <div class="separator"></div>
+            <div class="faq-item reveal reveal-delay-1">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>Who runs Walk The Summit?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">Walk The Summit is a student-led organisation co-founded by Krishiv and Vansh — two high school best friends driven by a shared desire to bridge the education gap in India's most remote communities. The organisation is run by passionate young volunteers from across the country.</div>
+            </div>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link" class="topbar-item link" target="_blank">
-                <div class="icon">
-                    <ion-icon name="person-add-outline"></ion-icon>
-                </div>
+            <div class="faq-item reveal reveal-delay-2">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>How does my donation make a difference?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">100% of your donation goes directly to education programs and infrastructure. As little as ₹1,000 can cover a month's stationary for a classroom. ₹5,000 provides digital learning access for a full year. We are completely transparent — you will receive a receipt and can see exactly how funds are used through our public reporting.</div>
+            </div>
 
-                <span class="span">Apply Now</span>
-            </a>
+            <div class="faq-item reveal reveal-delay-3">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>Is my donation tax-exempt?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">Yes. Donations to Walk The Summit are tax-exempt under Section 80G of the Income Tax Act, India. You will receive a tax-deductible receipt for your contribution automatically via email after donating through Milaap.</div>
+            </div>
 
-            <a href="index.html" class="topbar-item link" target="">
-                <div class="icon">
-                    <ion-icon name="call-outline"></ion-icon>
-                </div>
+            <div class="faq-item reveal reveal-delay-4">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>How can I volunteer with Walk The Summit?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">We welcome passionate volunteers at all levels — whether you're a student, working professional, or retired expert. Fill out the volunteer application form on our website and our team will reach out to discuss how your skills can best contribute to our mission.</div>
+            </div>
 
-                <span class="span">+91 9520008950 / +91 96541910894᲼᲼᲼᲼</span>
-            </a>
+            <div class="faq-item reveal">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>Can companies partner with Walk The Summit for CSR?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">Absolutely. We have a proven track record of successfully facilitating CSR partnerships, including securing a ₹15+ lakh school bus for a rural school in Mussoorie. We connect companies directly with high-impact schools and ensure complete transparency and reporting. Reach out to us at walkthesummit@gmail.com for CSR partnership details.</div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-1">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>Where does Walk The Summit currently operate?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">We primarily operate in remote Himalayan regions including villages in Uttarakhand (Mussoorie area) and partner with schools affiliated with the Himalayan International School. Our reach currently extends to 70+ rural classrooms serving 2,000+ students across the region.</div>
+            </div>
+
+            <div class="faq-item reveal reveal-delay-2">
+              <div class="faq-question" onclick="toggleFaq(this)">
+                <h3>Is Walk The Summit a registered NGO?</h3>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-answer">Yes. Walk The Summit is a registered organization with 4 NGO registered partners. Our work has been officially recognised by the State Commission for Protection of Child Rights, Uttarakhand, and we have received multiple national awards including from AIIMS Delhi, PHDCCI, and NITI Aayog's Atal Innovation Mission.</div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section style="padding: var(--section-y) 0; background: var(--bg-subtle); border-top: 1px solid var(--border);">
+      <div class="container">
+        <div class="join-section-banner reveal">
+          <h2>Still have a question?</h2>
+          <p>Our team responds within 24 hours. Don't hesitate to reach out — we love hearing from people who care about this cause.</p>
+          <a href="contact.html" class="btn-primary">Contact Us <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="./assets/Logo.jpg" alt="Walk The Summit Logo"><div class="footer-logo-text">Walk The Summit</div></div>
+          <p class="footer-tagline">A student-led organisation transforming education for children in remote Himalayan villages.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/walkthesummit/" target="_blank" class="footer-social"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank" class="footer-social"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="mailto:walkthesummit@gmail.com" class="footer-social"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About Us</a><a href="projects.html" class="footer-link">Projects</a><a href="media.html" class="footer-link">Media</a></div></div>
+        <div class="footer-col"><h4>Support</h4><div class="footer-links"><a href="donate.html" class="footer-link">Donate</a><a href="contact.html" class="footer-link">Contact</a><a href="faqs.html" class="footer-link">FAQs</a></div></div>
+        <div class="footer-col"><h4>Contact</h4><div class="footer-links"><span class="footer-link">walkthesummit@gmail.com</span><span class="footer-link">+91 9520008950</span></div></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Walk The Summit. All rights reserved.</p>
+        <!-- zuup.dev employee id 109 -->
+        <a href="https://zuup.dev" target="_blank" rel="noopener" class="zuup-wm">manufactured by zuup.dev</a>
+      </div>
     </div>
-    </main>
+  </footer>
 
-    <!-- 
-    - #BACK TO TOP
-  -->
-
-    <a href=" #tops " class=" back-top-btn active " aria-label=" back to top "  style="z-index: 9;">
-        <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
-    </a>
-
-
-
-
-
-    <!-- 
-    - custom js link
-  -->
-    <script src=" ./assets/js/script.js "></script>
-    <script src=" ./assets/js/autoinfelytra.js "></script>
-    <script src=" ./assets/js/farlandsreborn.js "></script>
-    <script src=" ./assets/js/healthindicators.js "></script>
-    <script src=" ./assets/js/homewardbound.js "></script>
-    <script src=" ./assets/js/manhuntcompass.js "></script>
-    <script src=" ./assets/js/nodurability.js "></script>
-    <script src="./assets/js/popup.js"></script>
-
-
-    <!-- 
-    - ionicon link
-  -->
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    window.addEventListener('load', () => { setTimeout(() => document.getElementById('wts-preloader').classList.add('hidden'), 600); });
+    const h = document.getElementById('nav-hamburger'), mn = document.getElementById('mobile-nav'), ov = document.getElementById('nav-overlay'), cb = document.getElementById('mobile-nav-close');
+    h.addEventListener('click', () => { mn.classList.add('open'); ov.classList.add('show'); h.classList.add('open'); document.body.style.overflow='hidden'; });
+    [cb, ov].forEach(el => el.addEventListener('click', () => { mn.classList.remove('open'); ov.classList.remove('show'); h.classList.remove('open'); document.body.style.overflow=''; }));
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 </body>
-
 </html>

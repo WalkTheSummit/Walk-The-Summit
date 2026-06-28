@@ -1,1996 +1,499 @@
-<!--REMOVER CLASS == DESKTOP WEBSITE SHOWN ; ANTI-REMOVER == PHONE WEBSITE SHOWN-->
-<!--Ctrl+F these: CENETERER glassmorphism (this one is in css)-->
 <!DOCTYPE html>
+<!-- zuup.dev employee id 109 | manufactured by zuup.dev -->
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta property="og:image" content="./assets/Logo.jpg">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="400">
-    <meta property="og:image:height" content="400">
-
-    <!-- 
-    - primaQry meta tags.
-  -->
-
-    <title>Walk The Summit</title>
-    <meta name="title" content="Walk The Summit">
-
-    <!-- 
-    - favicon
-  -->
-    <link rel="icon" href="./assets/Logo.jpg" type="image/x-icon" style="border-radius: 50%;">
-
-    <!-- 
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <!-- GSAP core -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <!-- ScrollTrigger plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- 
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        /* Responsive fixes for header, navbar, hamburger menu, and spacing */
-
-        /* Ensure header and nav are always on top and full width */
-        .header {
-            width: 100%;
-            position: relative;
-            z-index: 100;
-        }
-
-        /* Hamburger menu button styling */
-        .nav-open-btn,
-        .close-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: none;
-            position: absolute;
-            top: 1.2rem;
-            right: 1.2rem;
-            z-index: 120;
-            padding: 0.5rem;
-        }
-
-        .nav-open-btn .line {
-            display: block;
-            width: 28px;
-            height: 3px;
-            margin: 5px 0;
-            background: #c28840;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        /* Show hamburger on small screens */
-        @media (max-width: 900px) {
-            .nav-open-btn {
-                display: block !important;
-            }
-
-            .navbar {
-                position: fixed;
-                top: 0;
-                right: -100vw;
-                width: 80vw;
-                max-width: 350px;
-                height: 100vh;
-                background: #181818;
-                box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
-                transition: right 0.3s;
-                z-index: 110;
-                overflow-y: auto;
-                padding-top: 3.5rem;
-                padding-bottom: 2rem;
-            }
-
-            .navbar.active {
-                right: 0;
-            }
-
-            .close-btn {
-                display: block !important;
-                top: 1.2rem;
-                right: 1.2rem;
-                position: absolute;
-                z-index: 120;
-            }
-
-            .overlay {
-                display: none;
-            }
-
-            .navbar-list {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 0;
-                margin: 2rem 0;
-            }
-
-            .header .logo {
-                margin-left: 0.5rem;
-            }
-        }
-
-        /* Overlay for mobile nav */
-        @media (max-width: 900px) {
-            .overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 109;
-            }
-
-            .navbar.active~.overlay {
-                display: block;
-            }
-        }
-
-        /* Reduce excessive spacing on small devices */
-        @media (max-width: 600px) {
-
-            body,
-            html {
-                padding: 0 !important;
-                margin: 0 !important;
-                overflow-x: hidden;
-            }
-
-            .container,
-            .about-section,
-            .impact-highlights-container,
-            .section,
-            .main,
-            main,
-            article {
-                padding-left: 8px !important;
-                padding-right: 8px !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                width: 100% !important;
-                box-sizing: border-box;
-            }
-
-            section,
-            .section {
-                padding: 18px 0 !important;
-                margin: 0 !important;
-            }
-
-            .headline-1,
-            .section-title {
-                font-size: 1.5rem !important;
-            }
-
-            .carousel,
-            .carousel-stage {
-                width: 100vw !important;
-                max-width: 100vw !important;
-                overflow-x: auto;
-            }
-
-            .carousel-content {
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            .carousel-image {
-                width: 90vw !important;
-                max-width: 90vw !important;
-                height: auto !important;
-            }
-
-            .about-section {
-                font-size: 1rem !important;
-            }
-
-            .fade-scroll {
-                margin: 0 !important;
-            }
-
-            .impact-highlights-container {
-                gap: 10px !important;
-            }
-
-            .impact-item {
-                padding: 0 4px !important;
-            }
-
-            .btn {
-                font-size: 1rem !important;
-                padding: 0.5rem 1rem !important;
-            }
-
-            .dotlottie-player {
-                width: 90vw !important;
-                height: auto !important;
-                margin-top: 0 !important;
-            }
-
-            #heading {
-                position: static !important;
-                margin-top: 1.5rem !important;
-            }
-
-            .split-section {
-                flex-direction: column !important;
-            }
-
-            .half.left,
-            .half.right {
-                width: 100% !important;
-                padding: 0 !important;
-            }
-
-            /* Remove excessive <br> spacing */
-            br {
-                display: none !important;
-            }
-        }
-
-        /* Add/override styles for transparent header and topbar */
-        .topbar {
-            position: absolute !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(24, 24, 24, 0.7) !important;
-            z-index: 100;
-            /* backdrop-filter: blur(4px);  // Optional for glass effect */
-        }
-
-        .header {
-            position: absolute !important;
-            top: 48px;
-            left: 0;
-            width: 100%;
-            background: rgba(24, 24, 24, 0.7) !important;
-            z-index: 101;
-            /* backdrop-filter: blur(4px);  // Optional for glass effect */
-        }
-
-        .hero {
-            position: relative;
-            z-index: 1;
-        }
-
-        @media (max-width: 900px) {
-            .header {
-                top: 0 !important;
-            }
-
-            .topbar {
-                position: static !important;
-            }
-        }/* =========================
-   MODERN GLOBAL THEME
-========================= */
-
-:root{
-  --bg-primary:#0F1115;
-  --bg-secondary:#151B2D;
-  --card-bg:rgba(255,255,255,0.04);
-  --border-soft:rgba(255,255,255,0.08);
-  --gold:#D4A65A;
-  --white:#F5F5F5;
-  --muted:#B8B8B8;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Inter',sans-serif !important;
-  background:#0F1115 !important;
-  color:#F5F5F5 !important;
-  overflow-x:hidden;
-}
-
-.headline-1,
-.section-title,
-.hero-title{
-  font-family:'Playfair Display',serif;
-  letter-spacing:0.5px;
-}
-
-section{
-  padding:110px 0;
-}
-
-.section-subtitle{
-  color:var(--gold);
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
-
-.section-text,
-p{
-  color:var(--muted);
-  line-height:1.9;
-  font-size:1.05rem;
-}
-
-/* =========================
-   MODERN HEADER
-========================= */
-
-.header,
-.topbar{
-  backdrop-filter:blur(14px);
-  background:rgba(10,10,10,0.82)!important;
-  border-bottom:1px solid rgba(212,166,90,0.08);
-}
-
-.navbar-link{
-  transition:0.3s ease;
-}
-
-.navbar-link:hover{
-  color:var(--gold)!important;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom,
-  rgba(0,0,0,0.55),
-  rgba(0,0,0,0.65));
-  z-index:1;
-}
-
-.hero-slider,
-.slider-item,
-.slider-bg,
-.hero-title,
-.hero-text,
-.btn{
-  position:relative;
-  z-index:2;
-}
-
-.hero-title{
-  font-size:4.5rem!important;
-  line-height:1.15;
-  max-width:1100px;
-  margin:auto;
-  color:#fff;
-}
-
-.hero-text{
-  margin-top:24px;
-  font-size:1.2rem;
-  color:#e0e0e0;
-}
-
-@media(max-width:900px){
-  .hero-title{
-    font-size:2.5rem!important;
-    padding:0 20px;
-  }
-
-  .hero-text{
-    font-size:1rem;
-    padding:0 20px;
-  }
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-  border-radius:999px!important;
-  padding:14px 34px!important;
-  border:1px solid rgba(255,255,255,0.12)!important;
-  background:rgba(255,255,255,0.06)!important;
-  backdrop-filter:blur(10px);
-  transition:all 0.35s ease;
-  overflow:hidden;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  background:var(--gold)!important;
-  border-color:var(--gold)!important;
-}
-
-/* =========================
-   IMPACT CARDS
-========================= */
-
-.impact-highlights-container{
-  gap:32px!important;
-}
-
-.impact-item{
-  background:var(--card-bg);
-  border:1px solid var(--border-soft);
-  border-radius:28px;
-  padding:40px 24px!important;
-  backdrop-filter:blur(12px);
-  transition:all 0.35s ease;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.impact-item:hover{
-  transform:translateY(-10px);
-  border-color:rgba(212,166,90,0.4);
-}
-
-.count-up{
-  color:var(--gold)!important;
-  font-weight:700;
-}
-
-/* =========================
-   ABOUT SECTIONS
-========================= */
-
-.about-section{
-  max-width:900px;
-  margin:auto;
-}
-
-.about-section p{
-  margin-bottom:26px;
-}
-
-/* =========================
-   IMAGE STYLING
-========================= */
-
-.image-row,
-.lightbox-img,
-.carousel-image{
-  transition:0.4s ease;
-}
-
-.image-row:hover,
-.carousel-image:hover{
-  transform:scale(1.03);
-}
-
-img{
-  max-width:100%;
-}
-
-/* =========================
-   HONORS SECTION
-========================= */
-
-hr{
-  opacity:0.2;
-}
-
-/* =========================
-   SPLIT SECTION
-========================= */
-
-.split-section{
-  display:flex;
-  gap:40px;
-  padding:100px 5%;
-}
-
-.half{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:28px;
-  padding:40px;
-  backdrop-filter:blur(10px);
-}
-
-@media(max-width:900px){
-  .split-section{
-    flex-direction:column;
-  }
-}
-
-/* =========================
-   NEWS SECTION
-========================= */
-
-.event-card{
-  border-radius:24px;
-  overflow:hidden;
-  transition:0.35s ease;
-}
-
-.event-card:hover{
-  transform:translateY(-8px);
-}
-
-/* =========================
-   LIGHTBOX
-========================= */
-
-#lightbox-overlay{
-  backdrop-filter:blur(10px);
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
-
-@media(max-width:600px){
-
-  section{
-    padding:75px 0;
-  }
-
-  .impact-item{
-    padding:28px 18px!important;
-  }
-
-  .headline-1,
-  .section-title{
-    font-size:2rem!important;
-  }
-
-  .split-section{
-    padding:70px 16px;
-  }
-
-  .half{
-    padding:24px;
-  }
-} section{
-  background:#0F1115 !important;
-}
-
-.hero{
-  background:#000 !important;
-}
-
-.section-subtitle{
-  color:#D4A65A !important;
-}
-
-.headline-1,
-.section-title,
-.hero-title{
-  color:#ffffff !important;
-}
-
-.section-text,
-p{
-  color:#cfcfcf !important;
-} /* FINAL THEME OVERRIDE */
-
-body,
-.section,
-main,
-article,
-.topbar,
-.header,
-.navbar,
-#impact-highlights,
-section{
-    background-color:#0F1115 !important;
-    color:#F5F5F5 !important;
-}
-
-.hero::before{
-    background:rgba(0,0,0,0.55)!important;
-}
-
-.section-title,
-.headline-1,
-.hero-title,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    color:#ffffff !important;
-}
-
-.section-subtitle,
-.count-up,
-.span{
-    color:#D4A65A !important;
-}
-
-.section-text,
-p{
-    color:#cfcfcf !important;
-}
-
-.btn{
-    background:rgba(255,255,255,0.06)!important;
-    border:1px solid rgba(212,166,90,0.3)!important;
-}
-
-.btn:hover{
-    background:#D4A65A!important;
-}
-
-.impact-item,
-.half{
-    background:rgba(255,255,255,0.04)!important;
-    border:1px solid rgba(255,255,255,0.08)!important;
-    backdrop-filter:blur(10px);
-}
-
-.event-card{
-    background:#151B2D!important;
-}
-    </style>
-
-    <!-- 
-    - preload images
-  -->
-
-    <link rel="preload" as="image" href="/assets/images/Best/IMG_2654.JPG">
-    <link rel="preload" as="image" href="./assets/images/Best_HEIC/IMG_2641.jpg">
-    <link rel="preload" as="image" href="./assets/images/Best_HEIC/IMG_0302.jpg">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Walk The Summit — Transforming Education in the Himalayas</title>
+  <meta name="description" content="Walk The Summit is a student-led organization dedicated to transforming the lives of children in remote Himalayan villages through education, resources, and technology.">
+  <meta property="og:title" content="Walk The Summit">
+  <meta property="og:description" content="We change lives. We move mountains. We Walk The Summit.">
+  <meta property="og:image" content="./assets/Logo.jpg">
+  <link rel="icon" href="./assets/Logo.jpg" type="image/jpeg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/wts.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
-
-<body id="top">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
-    <div id="blob"></div>
-    <!-- 
-    - #PRELOADER
-  -->
-
-    <div class="preload" data-preaload>
-        <div class="circle" style="text-align: center;"></div>
-        <p class="text">Walk The Summit</p>
-    </div>
-
-    <!-- 
-    - #HERO
-    -->
-    <section class="hero text-center" aria-label="home" id="home" style="position: relative; z-index: 1;">
-
-        <ul class="hero-slider" data-hero-slider>
-
-            <li class="slider-item active" data-hero-slider-item>
-
-                <div class="slider-bg">
-                    <img src="./assets/images/hero-slider-1.png" width="1880" height="950" alt="" class="img-cover">
-                </div>
-
-                <h7 class="hero-title slider-reveal">
-                    We're a <b> student-led organization </b>dedicated to <br>transforming the lives of
-                    <b>children</b> <br>in the remote <b>villages of the Himalayas.</b>
-                </h7>
-
-                <p class="body-2 hero-text slider-reveal">
-                    For the Students <br> By the Students
-                </p>
-
-                <a href="#horizontal" class="btn fade-scrollbtn-primary slider-reveal">
-                    <span class="text text-1">Projects</span>
-
-                    <span class="text text-2" aria-hidden="true">Projects</span>
-                </a>
-
-            </li>
-
-            <li class="slider-item" data-hero-slider-item>
-
-                <div class="slider-bg">
-                    <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
-                </div>
-
-                <h2 class="display-1 hero-title slider-reveal">
-                    Walk The Summit is joining hands with the
-                    <br> <b> Himalayan International School </b>
-                    <br> To continue the transformation,
-                    <br> <b>We need your support. </b>
-                </h2>
-
-                <p class="body-2 hero-text slider-reveal">
-
-                </p>
-
-                <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" target="_blank"
-                    class="btn fade-scrollbtn-primary slider-reveal">
-                    <span class="text text-1">Donate</span>
-
-                    <span class="text text-2" aria-hidden="true">Donate</span>
-                </a>
-
-            </li>
-
-            <li class="slider-item" data-hero-slider-item>
-
-                <div class="slider-bg">
-                    <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
-                </div>
-
-                <h3 class="display-1 hero-title slider-reveal" id="longgtext">
-                    Situated near the Kempty Falls is the
-                    <br> School where dreams are turned into reality
-                    <br> to this we are also providing <br> <b> stationary kits and sports equipment</b>
-                    <br> to promote the holistic development of the students.
-                </h3>
-
-                <p class="body-2 hero-text slider-reveal">
-                </p>
-
-                <a href="#abit" class="btn fade-scrollbtn-primary slider-reveal">
-                    <span class="text text-1">About</span>
-
-                    <span class="text text-2" aria-hidden="true">About</span>
-                </a>
-
-            </li>
-
-        </ul>
-
-        <button class="fade-scroll" class="slider-btn fade-scrollprev" aria-label="slide to previous" data-prev-btn>
-            <ion-icon name="chevron-back"></ion-icon>
-        </button>
-
-        <button class="fade-scroll" class="slider-btn fade-scrollnext" aria-label="slide to next" data-next-btn>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </button>
-
-        <!-- <a href="#menu" class="hero-btn fade-scrollhas-after">
-                    <img src="./assets/images/hero-icon.svg" width="48" height="48" alt="booking icon"
-                        style="-webkit-filter: invert(100%); filter: invert(100%);">
-
-                    <span class="label-2 text-center span">All projects</span>
-                </a> -->
-
-    </section>
-
-    <!-- 
-    - #TOP BAR
-  -->
-
-    <div class="topbar"
-        style="position: absolute; top: 0; left: 0; width: 100%; background: rgba(24,24,24,0.7); z-index: 100;">
-        <div class="container" id="Gen">
-            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2"
-                target="_blank">
-                <address class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </div>
-                    <div>
-                        <span class="span">Support Our Cause</span>
-                    </div>
-                    <!-- <span class="span">Donate Now</span> -->
-                </address>
-            </a>
-
-            <div class="separator"></div>
-            <div class="topbar-item item-2">
-                <div class="icon">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
-                    <span class="span">@Walk The Summit</span>
-                </a>
-            </div>
-
-            <a href="https://www.instagram.com/walkthesummit/" target="_blank" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-
-                <span class="span">@Walk The Summit</span>
-            </a>
-
-            <div class="separator"></div>
-            <a href="./assets/pages/contact/" class="topbar-item link">
-                <div class="icon">
-                    <ion-icon name="mail-unread-outline"></ion-icon>
-                </div>
-
-                <span class="span">walkthesummit@gmail.com</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- 
-    - #HEADER
-  -->
-
-    <header class="header" data-header
-        style="position: absolute; top: 48px; left: 0; width: 100%; background: rgba(24,24,24,0.7); z-index: 101;">
-        <div class="container">
-            <a href="/" class="logo">
-                <img src="./assets/images/Logo transparent bg.png" width="160" height="50" alt="Walk The Summit - Home"
-                    style="border-radius:50%; scale:75%">
-            </a>
-
-            <nav class="navbar" data-navbar>
-                <!-- Hamburger close button (inside nav for mobile) -->
-                <button class="close-btn" aria-label="close menu" data-nav-toggler style="display:none;">
-                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-                </button>
-
-                <a href="/" class="logo">
-                    <img src="./assets/images/Logo transparent bg.png" width="160" height="50"
-                        alt="Walk The Summit - Home">
-                </a>
-
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href="/" class="navbar-link hover-underline active">
-                            <div class="separator"></div>
-
-                            <span class="span">Home</span>
-                        </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="./about.html" class="navbar-link hover-underline">
-                            <div class="separator"></div>
-
-                            <span class="span">About </span>
-                        </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="./donate.html" class="navbar-link hover-underline">
-                            <div class="separator"></div>
-
-                            <span class="span">Donate</span>
-                        </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="./contact.html" class="navbar-link hover-underline">
-                            <div class="separator"></div>
-
-                            <span class="span">Contact</span>
-                        </a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="./faqs.html" class="navbar-link hover-underline">
-                            <div class="separator"></div>
-
-                            <span class="span">FAQS</span>
-                        </a>
-                    </li>
-
-                </ul>
-
-                <div class="text-center">
-                    <p class="headline-1 navbar-title">Main Menu</p>
-                </div>
-
-                <!--    &lt;!&ndash;<address class="body-4">
-                        Main market, Leh <br>
-                        Ladakh, North India
-                    </address>
-
-                    <a href="mailto:contact@Walk The Summit.dev" class="body-4 sidebar-link">contact@Walk The Summit.dev</a>
-
-                    <div class="separator"></div>
-
-                    <p class="contact-label"></p>&ndash;&gt;
-
-                    <p class="body-4 navbar-text">Contact via:</p>
-
-                    <a href="mailto:contact@Walk The Summit.dev" class="body-1 contact-number hover-underline">
-                        contact@Walk The Summit.dev
-                    </a>
-
-                    <a href="" class="body-1 contact-number hover-underline item-2">
-                        Discord (preferred)
-                    </a>
-                </div>-->
-
-            </nav>
-            <!-- Hamburger open button (outside nav for mobile) -->
-            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-            </button>
-            <div class="overlay" data-nav-toggler data-overlay></div>
-
-        </div>
-    </header>
-
-    <main>
-        <article>
-
-            <!-- Impact Section -->
-
-            <section class="fade-scroll" id="impact-highlights"
-                style="text-align:center; background-color: #110d0d; padding: 50px 0;">
-                <p class="label-2 section-subtitle">Our Achievements</p>
-                <h1 class="headline-1 section-title">Impact Highlights</h1>
-
-                <div class="fade-scroll impact-highlights-container"
-                    style="display: flex; justify-content: space-evenly; align-items: flex-start; flex-wrap: wrap; max-width: 1200px; margin: 40px auto; gap: 24px;">
-                    <!-- Impact Item 1 -->
-                    <div class="impact-item"
-                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
-                        <h2 class="headline-1 count-up currency"
-                            style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
-                            data-target="1500000">
-                            ₹0</h2>
-                        <p class="section-text" style="color: #ffffff;"><span
-                                style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">CSR Funds</span><br>Mobilized
-                        </p>
-                    </div>
-                    <!-- Impact Item 2 -->
-                    <div class="impact-item"
-                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
-                        <h2 class="headline-1 count-up"
-                            style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
-                            data-target="2000">
-                            0</h2>
-                        <p class="section-text" style="color: #ffffff;"><span
-                                style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Students</span><br>Impacted
-                        </p>
-                    </div>
-                    <!-- Impact Item 3 -->
-                    <div class="impact-item"
-                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
-                        <h2 class="headline-1 count-up"
-                            style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
-                            data-target="70">
-                            0</h2>
-                        <p class="section-text" style="color: #ffffff;"><span
-                                style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Rural</span><br>Classrooms
-                            Reached</p>
-                    </div>
-                    <!-- Impact Item 4 -->
-                    <div class="impact-item"
-                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
-                        <h2 class="headline-1 count-up"
-                            style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
-                            data-target="400">
-                            0</h2>
-                        <p class="section-text" style="color: #ffffff;"><span
-                                style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">Hours Of Structured</span><br>Teaching
-                        </p>
-                    </div>
-                    <div class="impact-item"
-                        style="flex: 1 1 220px; min-width: 180px; padding: 0 20px; text-align: center;">
-                        <h2 class="headline-1 count-up"
-                            style="display:flex; flex-direction: row; align-items: center; justify-content: center; color: #c28840; font-size: 3em;"
-                            data-target="4">
-                            0</h2>
-                        <p class="section-text" style="color: #ffffff;"><span
-                                style="color: #c28840; font-weight: 700; letter-spacing: 0.5px; font-size: 2rem;">NGOs</span><br>Registered
-                            Partners</p>
-                    </div>
-                    
-                <style>
-                    @media (max-width: 900px) {
-                        .impact-highlights-container {
-                            flex-wrap: wrap !important;
-                            gap: 16px !important;
-                        }
-
-                        .impact-item {
-                            flex: 1 1 45% !important;
-                            min-width: 140px !important;
-                        }
-                    }
-
-                    @media (max-width: 600px) {
-                        .impact-highlights-container {
-                            flex-direction: column !important;
-                            align-items: stretch !important;
-                        }
-
-                        .impact-item {
-                            flex: 1 1 100% !important;
-                            min-width: 100px !important;
-                            padding: 0 8px !important;
-                        }
-
-                        .count-up {
-                            font-size: 2em !important;
-                        }
-                    }
-                </style>
-
-    
-            </section> 
-            <section style="padding:120px 0; text-align:center; background:linear-gradient(180deg,#111827,#0F1115);">
-  <p class="label-2 section-subtitle">Recognition & Media</p>
-  <h1 class="headline-1 section-title">Honors & Coverage</h1>
-
-  <div style="max-width: 1000px; margin: 50px auto; text-align: left; color: #ffffff; font-size: 1.2rem; line-height: 1.9;">
-
-    <p><strong>State Commission for Protection of Child Rights, Uttarakhand</strong> – Official recognition for grassroots educational impact in Himalayan regions.</p>
-
-    <p><strong>AIIMS Delhi Young Changemakers Award</strong> – Recipient for youth-led social innovation.</p>
-
-    <p><strong>PHDCCI Astitva Samman Award</strong> – Honored for inspiring social leadership and community development.</p>
-
-    <p><strong>Atal Innovation Mission (NITI Aayog)</strong> – National invitee; Republic Day Parade 2026 Special Guest.</p>
-
-    <hr style="margin: 40px 0; border-color: #333;">
-
-    <p><strong>Hindustan Times</strong> – Coverage on rural Himalayan education initiatives.</p>
-
-    <p><strong>Dainik Jagran</strong> – Feature on student empowerment and CSR-led school transformation.</p>
-
-    <p><strong>Dainik Bhaskar</strong> – Highlighting structured 21st-century skill curriculum in mountain schools.</p>
-
-    <p><strong>Amar Ujala</strong> – Recognition for grassroots impact and youth-led educational leadership.</p>
-
-  </div>
-</section>
-
-            <!-- - #Education & Outreach -->
-            <!-- ---------------------------------------------------------------------- -->
-            <section
-                style="padding-bottom:3rem; text-align:center; background-image: url(assets/images/picksoo/sddd.png); background-repeat: no-repeat; background-size: cover; background-color: rgba(0,0,0,0.7); background-blend-mode: overlay;">
-
-                <br>
-                <p class="label-2 section-subtitle" id="about-label">Education & Outreach</p>
-                <h1 class="headline-1 section-title">CSR Initiatives That Inspire</h1>
-                <br>
-
-                <!-- Van Image -->
-                <!-- <div class="fade-scroll">
-                    <img src="./assets/images/Facilities/1.jpg" alt="School Bus"
-                        style="width: 300px;height: auto; margin-left: 62.5vw;" class="remover">
-                
-                </div>  -->
-
-                <!-- style="max-width: 300px; width: 100%; height: auto; margin: 0 auto;" class="responsive-img" -->
-
-                <!-- New Image (from uploaded picture) -->
-                <!-- <div class="fade-scroll" style="margin-top: 1rem;">
-                    <img src="./assets/images/Facilities/2.jpg" alt="CSR Outreach in Action"
-                    style="width: 300px;height: auto; margin-left: 62.5vw;" class="remover">
-                       
-                </div> -->
-
-                <!-- Image Container -->
-                <div style="display: flex; justify-content: center; gap: 8rem; flex-wrap: wrap;">
-                    <div class="about-section" style="padding:5rem;">
-                        <p>
-                            At Walk The Summit, we focus on unlocking real opportunities for students in remote
-                            Himalayan
-                            regions. One of our most impactful collaborations yet has resulted in the successful
-                            provision
-                            of a brand-new Force Trax mini school bus, worth over ₹15 lakhs, to a rural partner school
-                            in
-                            Mussoorie.
-                        </p>
-                        <p>
-                            This was made possible through a CSR partnership with a reputed multinational company, which
-                            we
-                            helped connect directly to the school.
-                        </p>
-                        <p>
-                            In mountainous areas like Mussoorie, students often have to trek 8-10 kilometres daily on
-                            steep,
-                            uneven terrain through forests, rough paths and even during extreme weather. This leads to
-                            low
-                            attendance, student fatigue and dropout risks, especially among younger children and girls.
-                            The
-                            newly provided bus changes that reality.
-                            The Force Trax, known for its durability and strength in tough terrains, now ensures that
-                            children have safe, reliable and dignified transport every day. What was once a struggle is
-                            now
-                            a smoother ride toward education, confidence and consistency.
-                        </p>
-                        <p>
-                            This achievement is a testament to the power of meaningful partnerships and youth-led
-                            action.
-                            We’re proud to have played a role in bridging the gap between communities in need and
-                            institutions willing to help.
-                        </p>
-                    </div>
-
-                    <div class="fade-scroll"
-                        style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; border-radius: 5rem;">
-                        <!-- Front view -->
-                        <img src="./assets/images/Facilities/1.jpg" alt="School Bus Front"
-                            class="fade-scroll image-row lightbox-img"
-                            style="width: 400px; height: 90%;  border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
-
-                        <!-- Rear view -->
-                        <img src="./assets/images/Facilities/2.jpg" alt="School Bus Rear"
-                            class="fade-scroll image-row lightbox-img"
-                            style="width: 400px; height: 90%; border-radius: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); cursor: pointer;">
-                    </div>
-
-                </div>
-
-                <br>
-
-            </section>
-
-            <!-- #Our Mission -->
-
-            <section
-                style="padding-bottom:3rem; text-align:center; background-image: url(assets/images/picksoo/17.png); background-repeat: round no-repeat; overflow-x: hidden; background-size: 100% 100%;  ">
-                <br>
-                <p class="label-2 section-subtitle" id="about-label">About</p>
-                <h1 class="headline-1 section-title">Our Mission</h1>
-                <br>
-                <div class="fade-scroll">
-                    <img src="assets/images/Best HEIC/IMG_0314.jpg" alt=""
-                        style="width: 300px;height: auto; position: absolute; margin-left: 62.5vw;" class="remover">
-                </div>
-
-                <!-- left & right -->
-
-                <!-- <div class="fade-scroll" style="text-align: justify;">
-                    <p style="text-align: justify; margin-left: 5%; margin-right: 5%;">
-
-                        At Walk The Summit, our mission is to bridge the educational divide between urban and rural
-                        areas in the Himalayan region. <br>
-                        We aim to provide children in remote villages with the resources and skills they need to grow
-                        academically and personally. <br>
-                        Education, for us, is not just about acquiring knowledge, it’s about building confidence,
-                        fostering creativity, and empowering <br>
-                        students to excel in today’s world.
-                        <br> <br>
-                        Our approach blends traditional learning with modern technologies, ensuring students can connect
-                        with their cultural roots <br>
-                        while exploring the global community. By focusing on critical thinking, problem-solving,and
-                        independence, we aim to break <br>
-                        generational cycles of inequality and unlock the potential of every child. Education is our way
-                        to create a sustainable, <br>
-                        fair, and opportunity-filled future.<br> <br>
-
-                        “To show them that their dreams can soar as high as the peaks that surround them." <br> <br>
-
-                        With every project, we strive to meet the needs of today while preparing for the challenges of
-                        tomorrow. Our impact is both <br>
-                        immediate and long-term, ensuring the children and communities we serve can thrive for
-                        generations to come.
-                    </p>
-                </div> -->
-
-                <div class="about-section">
-                    <p>
-                        At Walk The Summit, our mission is to bridge the educational divide between urban and rural
-                        areas in the Himalayan region. We aim to provide children in remote villages with the resources
-                        and skills they need to grow academically and personally. Education, for us, is not just about
-                        acquiring knowledge, it’s about building confidence, fostering creativity, and empowering
-                        students to excel in today’s world.
-                    </p>
-                    <p>
-                        Our approach blends traditional learning with modern technologies, ensuring students can connect
-                        with their cultural roots while exploring the global community. By focusing on critical
-                        thinking, problem-solving, and independence, we aim to break generational cycles of inequality
-                        and unlock the potential of every child. Education is our way to create a sustainable, fair, and
-                        opportunity-filled future.
-                    </p>
-                    <p>
-                        “To show them that their dreams can soar as high as the peaks that surround them."
-                    </p>
-                    <p>
-                        With every project, we strive to meet the needs of today while preparing for the challenges of
-                        tomorrow. Our impact is both immediate and long-term, ensuring the children and communities we
-                        serve can thrive for generations to come.
-                    </p>
-                </div>
-
-                <!-- <p class="section-text remover" style="text-align: justify; margin-left: 5%; margin-right: 5%;">
-                    
-          
-                    At Walk The Summit, our mission is to bridge the educational divide between urban and rural areas in the Himalayan region. 
-                    We aim to provide children in remote villages with the resources and skills they need to grow academically and personally. <br> <br> 
-                    Education, for us, is not just about acquiring knowledge, it’s about building confidence, fostering creativity, and empowering <br> <br>
-                    students to excel in today’s world.
-
-                    Our approach blends traditional learning with modern technologies, ensuring students can connect with their cultural roots <br> <br>
-                    while exploring the global community. By focusing on critical thinking, problem-solving, and independence, we aim to break <br> <br>
-                    generational cycles of inequality and unlock the potential of every child. Education is our way to create a sustainable, <br> <br>
-                    fair, and opportunity-filled future. <br> <br>
-                
-                    “To show them that their dreams can soar as high as the peaks that surround them." 
-                    
-                    With every project, we strive to meet the needs of today while preparing for the challenges of tomorrow. Our impact is both <br> <br>
-                    immediate and long-term, ensuring the children and communities we serve can thrive for generations to come. <br> <br>
-                         -->
-
-                <!-- <div class="about-collage">
-    <div id="collage-container">
-      Add your images here
-    <img style="object-fit: contain;" src="./assets/images/Facilities/1.jpg" alt="Collage Image 1">
-    <img style="object-fit: contain;" src="./assets/images/Facilities/2.jpg" alt="Collage Image 1">
-
-    </div> -->
-
-                <!-- </p> -->
-                <!-- </div> -->
-
-                <!-- <br> -->
-                <!-- <div class="centerer anti-remover"> -->
-                <!-- <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" class="btn fade-scrollbtn-secondary" style="position:absolute; left: 50%;
-                    transform: translateX(-50%);
-                    " target="_blank">
-                        <span class="text text-1">Donate</span>
-
-                        <span class="text text-2" aria-hidden="true">Donate</span>
-                    </a> -->
-                <!-- <br> -->
-                <!-- </div> -->
-                <!-- <div class="anti-remover"> -->
-                <!-- <br> -->
-                <!-- </div> -->
-
-                <!-- slider1 -->
-                <!-- <div>
-                <div style="display: flex; flex-direction: column; " class="slider-outer">
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 5rem;">
-                    <h2 class="section-subtitle">Recent Interactions</h2>
-                    <p class="section-text">A glimpse into our recent interactions with the students of Himalayan International School.</p>
-                </div>
-
-                    <div class="slider-container" id="sliderContainer">
-                        <h2 ">Recent Interactions</h2>
-                        <div class="slider-track " id="sliderTrack">                            
-                            <img class="slider-image" src="./assets/images/Recent Interactions/1.jpg" alt="slide1">
-                            <img class="slider-image" src="./assets/images/Recent Interactions/2.jpg" alt="slide2">
-                            <img class="slider-image" src="./assets/images/Recent Interactions/3.jpg" alt="slide3">
-                            <img class="slider-image" src="./assets/images/Recent Interactions/4.jpg" alt="slide4">
-                            <img class="slider-image" src="./assets/images/Recent Interactions/5.jpg" alt="slide5">        
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div style="display: flex; flex-direction: column; " class="slider-outer">
-                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 5rem;">
-                    <h2 class="section-subtitle">Facilities</h2>
-                    <p class="section-text">A glimpse into the facilities available at Himalayan International School.</p>
-                     </div>
-
-                    <div class="slider-container" id="sliderContainer">
-                        <h2 ">Recent Interactions</h2>
-                        <div style="display: flex; justify-content: center; align-items: center; object-fit: contain;" class="slider-track " id="sliderTrack">                            
-                            <img class="slider-image" src="./assets/images/Facilities/1.jpg" alt="slide1">
-                            <img class="slider-image" src="./assets/images/Facilities/2.jpg" alt="slide2">      
-                        </div>
-                    </div>
-                </div> -->
-                <!-- </div>
-            <br> -->
-            </section>
-
-            <!-- <section>
-            <div class="about-section">
-  Left: Collage Section
-  <div class="about-collage">
-    <div id="collage-container">
-      Add your images here
-    <img style="object-fit: contain;" src="./assets/images/Facilities/1.jpg" alt="Collage Image 1">
-    <img style="object-fit: contain;" src="./assets/images/Facilities/2.jpg" alt="Collage Image 1">
-
-      Example: <img src="your-image2.jpg" alt="Collage Image 2">
-    </div>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="wts-preloader">
+    <img src="./assets/Logo.jpg" alt="Walk The Summit" class="preloader-logo">
+    <p class="preloader-text">Walk The Summit</p>
   </div>
 
-  Right: Text Section
-  <div class="about-text">
-    <div class="fade-scroll">
-      <p>
-        At Walk The Summit, our mission is to bridge the educational divide between urban and rural areas in the Himalayan region. We aim to provide children in remote villages with the resources and skills they need to grow academically and personally. Education, for us, is not just about acquiring knowledge, it’s about building confidence, fostering creativity, and empowering students to excel in today’s world.
-        <br><br>
-        Our approach blends traditional learning with modern technologies, ensuring students can connect with their cultural roots while exploring the global community. By focusing on critical thinking, problem-solving, and independence, we aim to break generational cycles of inequality and unlock the potential of every child. Education is our way to create a sustainable, fair, and opportunity-filled future.
-        <br><br>
-        “To show them that their dreams can soar as high as the peaks that surround them."
-        <br><br>
-        With every project, we strive to meet the needs of today while preparing for the challenges of tomorrow. Our impact is both immediate and long-term, ensuring the children and communities we serve can thrive for generations to come.
-      </p>
-    </div>
-  </div>
-</div>
-        </section> -->
-
-            <!--
-            <section class="section about text-center" aria-labelledby="about-label" id="about">
-                <div class="container mt-100">
-
-                    <div class="about-content">
-
-                        <p class="label-2 section-subtitle" id="about-label">Projects</p>
-
-                        <h2 class="headline-1 section-title">Our Mission</h2>
-
-                        <p class="section-text">
-
-                            In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity,
-                            <br> where children trek miles just to reach school, we stand as a beacon of hope and progress.
-                            <br>That's why we're not just setting up computer labs and bringing Wi-Fi to these villages,
-                            <br>we're also empowering these kids with essential 21st century life skills, preparing them for a future where they can thrive and contribute to society.
-                            <br>-
-                            <br> Our efforts extend to supporting local schools initiated by the community itself, often lacking experienced teachers and resources.
-                            <br> By providing them with computers and Wi-Fi, we connect them with the outside world, ensuring that every child has access to tools for success regardless of their geographical constraints.
-                            <br>-
-                            <br><b> We're not just changing lives, we're shaping futures and building bridges between
-                                remote communities and the global stage.</b>
-                        </p>
-                        <br>
-                        <a href="donate.html" class="btn fade-scrollbtn-primary">
-                            <span class="text text-1">Our Projects</span>
-
-                            <span class="text text-2" aria-hidden="true">Our Projects</span>
-                        </a>
-
-                    </div>
-                    
-
-                    <figure class="about-banner">
-                        <br>
-                        <img src="" width="20" height="20" loading="lazy" alt="about banner" class="w-100 remover" data-parallax-item data-parallax-speed="1">
-                        <div class="abs-img abs-img-3 has-before" data-parallax-item data-parallax-speed="1.5">
-                            <img src="./assets/images/Website/Smart Education.jpg" width="20px" height="20px" style="size: 20px; bottom: -100px; right: 50px" loading="lazy" alt="about banner" class="w-100 remover" data-parallax-item data-parallax-speed="1.5">
-                        </div>
-                        <div class="abs-img abs-img-4 has-before" data-parallax-item data-parallax-speed=".5">
-                            <img src="./assets/images/Website/Tree Plantation Drive.JPG" width="20" height="20" style="size: 20%;" loading="lazy" alt="about banner" class="w-100 remover" data-parallax-item data-parallax-speed="2.5">
-                        </div>
-                        <div class="abs-img abs-img-5 has-before" data-parallax-item data-parallax-speed=".9">
-                            <img src="./assets/images/Website/IMG_3943.JPG" width="20" height="20" loading="lazy" alt="about banner" class="w-100 remover" data-parallax-item data-parallax-speed="1.5">
-                        </div>
-
-                        <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="0.5">
-                            <img src="./assets/images/Website/IMG-20240806-WA0033.jpg" width="285" height="285" loading="lazy" alt="" class="w-100 remover">
-                        </div>
-
-                        <div class="abs-img abs-img-2 has-before"> </div>
-
-                    </figure>
-                    -->
-
-            <!--
-                    <div class="images-scroll">
-                        <div class="block">
-                            <div class="animation">
-                                <div class="first">
-                                    <img src="http://fpoimg.com/200x200?text=First">
-                                </div>
-                                <div>
-                                    <img src="http://fpoimg.com/200x200?text=Second">
-                                </div>
-                                <div>
-                                    <img src="http://fpoimg.com/200x200?text=Third">
-                                </div>
-                                <div>
-                                    <img src="http://fpoimg.com/200x200">
-                                </div>
-                                <div>
-                                    <img src="http://fpoimg.com/200x200">
-                                </div>
-                                <div>
-                                    <img src="http://fpoimg.com/200x200">
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                -->
-
-            <!-- old current projects
-            </div>
-            </section>
-
-            <section style="text-align:center; ">
-                <p class="label-2 section-subtitle" id="about-label">Projects</p>
-                <div class="anti-remover">
-                    <br><br><br>
-                </div>
-                <h1 class="headline-1 section-title">Current Project</h1>
-                <br>
-                <p class="section-text anti-remover">
-                    We are seeking funding to support our initiative of improving educational opportunities for <br> underprivileged children in the remote villages of the Himalayas. Our current project aims to <br> deliver essential educational resources,
-                    such as interactive panels, along with custom notebooks and
-                    <br> sports equipment, to schools in rural Uttarakhand. This will help bridge the significant gap in
-                    <br> quality education and exposure these children face compared to their urban counterparts. <br>
-                    <br> These technological resources will have a profound impact on the students' learning experience. By
-                    <br> introducing interactive panels and laptops, we are creating a more dynamic and engaging educational
-                    <br> environment that fosters curiosity and creativity. Our virtual summer programs, in partnership with
-                    <br> other NGOs, will further empower students by equipping them with essential 21st-century skills, such
-                    <br> as digital literacy, critical thinking, and problem-solving. The goal is not just to improve their
-                    <br>
-                </p>
-                <p class="section-text remover" style="margin-left: -40vw;">
-                    We are seeking funding to support our initiative of improving educational opportunities for <br> underprivileged children in the remote villages of the Himalayas. Our current project aims to <br> deliver essential educational resources,
-                    such as interactive panels, along with custom notebooks and
-                    <br> sports equipment, to schools in rural Uttarakhand. This will help bridge the significant gap in
-                    <br> quality education and exposure these children face compared to their urban counterparts. <br>
-                    <br> These technological resources will have a profound impact on the students' learning experience. By
-                    <br> introducing interactive panels and laptops, we are creating a more dynamic and engaging educational
-                    <br> environment that fosters curiosity and creativity. Our virtual summer programs, in partnership with
-                    <br> other NGOs, will further empower students by equipping them with essential 21st-century skills, such
-                    <br> as digital literacy, critical thinking, and problem-solving. The goal is not just to improve their
-                    <br>
-                </p>
-                <br>
-                
-               Images to come here
-                <video  class="remover" style="width: 350px; margin-left:65vw; margin-top: -360px; overflow: hidden;" autoplay="true" loop="">
-                    <source src="./assets/WebsiteSlider.mp4" type="video/mp4">
-                </video>
-                <video class="anti-remover" autoplay="" loop="">
-                    <source src="./assets/WebsiteSlider.mp4" type="video/mp4">
-                </video>
-            </section>
-            -->
-            <!--
-            <section class="special-dish text-center" aria-labelledby="dish-label">
-
-                <div class="special-dish-banner">
-                    <img src="./assets/images/picksoo/5.jpg" width="940" height="900" loading="lazy" alt="special dish" class="img-cover">
-                </div>
-
-                <div class="special-dish-content bg-black-10">
-                    <div class="container">
-
-                        <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" style="position:absolute; z-index:1; margin-left:-50px">
-
-                        <p class="section-subtitle label-2">Projects</p>
-
-                        <h2 class="headline-1 section-title">Current Project</h2>
-
-                        <p class="section-text">
-                            We are seeking funding to support our initiative of improving educational opportunities for <br> underprivileged children in the remote villages of the Himalayas. Our current project aims to <br> deliver essential educational resources,
-                    such as interactive panels, along with custom notebooks and
-                    sports equipment, to schools in rural Uttarakhand. This will help bridge the significant gap in
-                    quality education and exposure these children face compared to their urban counterparts. <br> <br>
-                    These technological resources will have a profound impact on the students' learning experience. By
-                    introducing interactive panels and laptops, we are creating a more dynamic and engaging educational
-                    environment that fosters curiosity and creativity. Our virtual summer programs, in partnership with
-                    other NGOs, will further empower students by equipping them with essential 21st-century skills, such
-                    as digital literacy, critical thinking, and problem-solving. The goal is not just to improve their
-                    
-                        </p>
-
-                        <div class="wrapper">
-                            <span class="span body-1"></span>
-                        </div>
-
-                        <a href="#horizontal" class="btn fade-scrollbtn-primary">
-                            <span class="text text-1">View all projects</span>
-
-                            <span class="text text-2" aria-hidden="true">View all projects</span>
-                        </a>
-
-                    </div>
-                </div>
-            </section>
-            -->
-            <br>
-            <iframe src="https://swaritz.github.io/walkthesummit_horizontalscroll/" frameborder="0" frameborder="0"
-                loading="lazy" style="width: 100%; height: 100vh;" scrolling="no" id="horizontal" class="fade-scroll">
-            </iframe>
-            <!--CENTERER-->
-
-            <!-- Awards Section -->
-            <section>
-                <div id="heading" style="
-                position: absolute;
-                z-index: 9;
-                left: 0;
-                right: 0;
-                margin-left: auto;
-                margin-right: auto;
-                width: fit-content;
-                text-align: center;
-                margin-top: 50px;
-                ">
-                    <p class="section-subtitle label-2 text-center">Impact</p>
-                    <h2 class="section-title headline-1 text-center">Awards</h2>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-stage" id="carousel">
-                        <div class="carousel-item">
-                            <div class="carousel-content fade-scroll ">
-                                <img class="carousel-image" src="assets/images/awards/PHDCCI.jpg" class="fade-scroll"
-                                    alt="WTS Award Image" />
-                                <div class="section-text carousel-caption fade-scroll">
-                                    <h2>Walk The Summit Honored with the Prestigious PHD Chamber of Commerce and
-                                        Industry Junior Astitva Samman Award</h2>
-                                    <p>We are thrilled to share that Walk The Summit (WTS) has been honored with the
-                                        PHDCCI Junior Astitva Samman Award by the PHD Chamber of Commerce and Industry.
-                                        This prestigious recognition celebrates our commitment to transforming education
-                                        in the rural Himalayas and empowering underprivileged students.</p>
-                                    <p>The award was presented by Lt. Gen. Vinod Khandare (Principal Advisor, Ministry
-                                        of Defence) and Smt. Savitri Thakur (State Minister, Women & Child Development),
-                                        marking a significant milestone in our journey. This achievement reinforces the
-                                        impact of youth-led initiatives and motivates us to continue striving for
-                                        meaningful change in underserved communities.</p>
-                                    <p>We extend our heartfelt gratitude to PHDCCI for this honor and to everyone who
-                                        has supported our mission. This award is not just a recognition but a reminder
-                                        that every effort towards educational equity brings us closer to a brighter
-                                        future for all.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section for Gaddi Tribe and Himalayan International School -->
-            <section class="split-section fade-scroll" style="padding-bottom: 0%;">
-                <div class="half left">
-                    <div class="content section-text">
-                        <h2 class="section-subtitle">Empowering Gaddi Tribe Students with 21st-Century Skills</h2>
-                        <p>Walk The Summit has been working closely with students from the Gaddi tribe in Dharamshala, a
-                            nomadic pastoralist community with limited access to modern education. Through this
-                            initiative, we have introduced 21st-century skills such as public speaking, leadership,
-                            critical thinking, and digital literacy, equipping students with the tools they need to
-                            thrive in a rapidly changing world.</p>
-
-                        <!-- <div style="display: flex; align-items: center; flex-direction: column; gap: 10px;"> -->
-                        <h3>Impact of Our Work</h3>
-                        <br>
-                        <ol style="list-style-type:square; padding: 0; margin: 0;">
-                            <li><strong>Bridging the Digital Divide</strong></li>
-                            <li><strong>Building Confidence & Leadership</strong> </li>
-                            <li><strong>Encouraging Independent Thinking</strong> </li>
-                            <li><strong>Fostering Self-Expression</strong> </li>
-                        </ol>
-
-                        <!-- </div> -->
-
-                        <h3>Shaping a Future of Opportunity</h3>
-                        <p>For many Gaddi tribe children, learning was once confined to textbooks and traditional
-                            methods. By introducing new ways of thinking and engaging with the world, we are helping
-                            them develop the confidence and skills needed to navigate their futures with curiosity,
-                            resilience, and ambition.</p>
-                    </div>
-                </div>
-
-                <div class="half right">
-                    <div class="content section-text">
-                        <h2 class="section-subtitle">Empowering Education at Himalayan International School</h2>
-                        <p>At Walk The Summit, we believe that education should be engaging, accessible, and
-                            future-ready. Our work at Himalayan International School near Kempty Falls, Mussoorie,
-                            reflects this commitment, bringing technology, resources, and essential skills to students
-                            who need them the most.</p>
-
-                        <h3>What We’ve Done</h3>
-                        <br>
-                        <p><strong>Smart Classrooms</strong></p>
-                        <p><strong>Digital Access</strong> </p>
-                        <p><strong>Essential Resources</strong> </p>
-                        <p><strong>21st-Century Skills</strong> </p>
-
-                        <h3>The Impact</h3>
-                        <p>With these interventions, students now have access to interactive learning, a more engaging
-                            curriculum, and skill-building opportunities that go beyond textbooks. Our goal is to create
-                            a lasting transformation in how education is experienced in remote Himalayan communities,
-                            ensuring that every child has the chance to learn, grow, and thrive.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!--  Section for Media Publications -->
-
-            <section class="section event" aria-label="event">
-                <div class="container">
-
-                    <p class="section-subtitle label-2 text-center">Media</p>
-
-                    <h2 class="section-title headline-1 text-center">News Publications</h2>
-                    <div class="fade-scroll">
-                        <ul class="grid-list" class="fade-scroll">
-
-                            <li>
-                                <div class="event-card has-before hover:shine">
-
-                                    <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                                        <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_48cacd57.jpg"
-                                            width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
-                                            style="object-fit: contain;">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="event-card has-before hover:shine">
-
-                                    <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                                        <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_4b630ffb.jpg"
-                                            width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
-                                            style="object-fit: contain;">
-
-                                    </div>
-                            </li>
-
-                            <li>
-                                <div class="event-card has-before hover:shine">
-
-                                    <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                                        <img src="./assets/news/WhatsApp Image 2024-12-14 at 10.01.28_6cc1d9ff.jpg"
-                                            width="350" height="450" loading="lazy"
-                                            alt="Flavour so good you’ll try to eat with your eyes." class="img-cover fade-scroll image-row lightbox-img"
-                                            style="object-fit: contain;">
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-
-                        <a href="https://thehillsofmussoorie.com/mussoorie/presented-smart-tv-tutorial-devices-and-sports-equipment-to-the-school/"
-                            target="_blank" class="btn fade-scrollbtn-primary">
-                            <span class="text text-1">Read More</span>
-
-                            <span class="text text-2" aria-hidden="true">Read More</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-<section style="padding:120px 0;text-align:center;">
-    
-    <p class="label-2 section-subtitle">Our Work</p>
-    <h2 class="headline-1 section-title">Impact Gallery</h2>
-
- <div class="gallery-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:25px;">
-
-        <img src="./assets/images/1.jpg.jpeg" alt="">
-        <img src="./assets/images/2.jpg.jpeg" alt="">
-        <img src="./assets/images/3.jpg.jpeg" alt="">
-        <img src="./assets/images/4.jpg.jpeg" alt="">
-        <img src="./assets/images/5.jpg.jpeg" alt="">
-        <img src="./assets/images/6.jpg.jpeg" alt="">
-
-    </div>
-
-</section>
-
-
-
-            <section style="text-align:center; ">
-                <p class="label-2 section-subtitle" id="about-label">HELPING HANDS</p>
-                <h1 class="headline-1 section-title">Partners and Collaborators</h1>
-                <div class="fade-scroll">
-
-                    <div class="remover">
-
-                        <a href="https://aasraatrust.org/" target="_blank">
-                            <img src="assets/images/collab/1692963738768-removebg-preview.png"
-                                style="-webkit-filter: invert(100%); filter: invert(100%); margin-left: 14.2857142857%;"
-                                alt="">
-                        </a>
-                        <a href="https://www.niviasports.com/?utm_source=adyogi&utm_medium=google-search&utm_campaign=NIVI_14936_adyogi_Brand-Search_Engage_New-21696052997&utm_content=-168134315915-713529651800&gad_source=1&gclid=CjwKCAiA65m7BhAwEiwAAgu4JHfEMC411cTs9UWxrwy4naN_KKCctvJrTbnRKhP-IJo6nSIXQRICJxoCmrAQAvD_BwE"
-                            target="_blank">
-                            <img src="assets/images/collab/images-removebg-preview (1).png" alt=""
-                                style="margin-top: -210px; margin-left: 71.4285714286%;">
-                        </a>
-                        <a href="https://adoreglobal.org/" target="_blank">
-                            <img src="assets/images/collab/ADORE.png" style="height: 100px; width: auto; margin-top: -170px ;
-                    margin-left: auto;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100);" alt="">
-                        </a>
-                        <br><br><br><br><br><br><br>
-                        <a href="https://www.facebook.com/people/The-Himalayan-International-School-Kempty/61566332696487/"
-                            target="_blank">
-                            <img src="assets/images/collab/this-removebg-preview.png" style="height: 150px; width: auto; margin-top: -170px ;
-                    margin-left: auto;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100);" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="assets/images/collab/ummsoo.png" style="height: 100px; width: auto; margin-top: -125px ;
-                    margin-left: auto;
-                    margin-right: 8.2857142857%; -webkit-filter: invert(100%);" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="assets/images/collab/WhatsApp_Image_2025-03-30_at_10.46.11_725d77fb-removebg-preview.png"
-                                alt="" style="margin-top: -130px; margin-left: 14.2857142857%;
-                    margin-right: auto;  filter: saturate(0); height: 150px;">
-                        </a>
-                        <br><br><br><br><br><br><br>
-                        <a href="https://www.linkedin.com/company/universe-to-us/" target="_blank">
-                            <img src="assets/images/collab/universe.png" style="height: 300px; width: auto; margin-top: -240px ;
-                    margin-left: 65%;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100);" alt="">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="assets/images/collab/sir.png" style="height: 175px; width: auto; margin-top: -200px ;
-                    margin-left: 25%;
-                    margin-right: auto; -webkit-filter: invert(100%); " alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="anti-remover">
-                    <a href="https://aasraatrust.org/" target="_blank">
-                        <img src="assets/images/collab/1692963738768-removebg-preview.png" style="-webkit-filter: invert(100%);
-        filter: invert(100%); max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto;" alt="">
-                    </a>
-                    <a href="https://www.niviasports.com/?utm_source=adyogi&utm_medium=google-search&utm_campaign=NIVI_14936_adyogi_Brand-Search_Engage_New-21696052997&utm_content=-168134315915-713529651800&gad_source=1&gclid=CjwKCAiA65m7BhAwEiwAAgu4JHfEMC411cTs9UWxrwy4naN_KKCctvJrTbnRKhP-IJo6nSIXQRICJxoCmrAQAvD_BwE"
-                        target="_blank">
-                        <img src="assets/images/collab/images-removebg-preview (1).png" alt="" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto;">
-
-                    </a>
-                    <a href="https://adoreglobal.org/" target="_blank">
-                        <img src="assets/images/collab/ADORE.png" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100); height: 100px; width: auto;"
-                            alt="">
-                    </a>
-                    <a href="https://www.facebook.com/people/The-Himalayan-International-School-Kempty/61566332696487/"
-                        target="_blank">
-                        <img src="assets/images/collab/this-removebg-preview.png" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100); height: 100px; width: auto;"
-                            alt="">
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/collab/ummsoo.png" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto; -webkit-filter: invert(100%);height: 100px; width: auto;" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/collab/WhatsApp_Image_2025-03-30_at_10.46.11_725d77fb-removebg-preview.png"
-                            alt="" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto;  filter: saturate(0); height: 100px;">
-                    </a>
-                    <a href="https://www.linkedin.com/company/universe-to-us/" target="_blank">
-                        <img src="assets/images/collab/universe.png" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto; filter:saturate(0); filter: brightness(100); height: 300px;" alt="">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="assets/images/collab/sir.png" style="max-width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto; -webkit-filter: invert(100%); height: 100px; width: auto;" alt="">
-                    </a>
-                    <br>
-                </div>
-                </div>
-            </section>
-
-    </main>
-
-    <section class="reservation remover">
-        <div class="container">
-
-            <div class="reservation-form ">
-
-                <div class="fixerr">
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!--Bottom bar brs DONT REMOVE-->
-    <br> <br> <br> <br> <br> <br> <br> <br> <br><br>
-    <br>
-    <section style="text-align:center; ">
-        <p class="label-2 section-subtitle" id="about-label">Intrested?</p>
-        <div class="anti-remover">
-            <br><br><br>
-        </div>
-        <h1 class="headline-1 section-title">Get Involved</h1>
-
-        <dotlottie-player class="fade-scroll"
-            src="https://lottie.host/af371a7b-055c-470a-8963-5586b6dc4967/IaKXqmMWcu.lottie" background="transparent"
-            speed="0.5" style="width: 600px; height: 600px; max-width: fit-content;
-margin-left: auto;
-margin-top: -80px;
-margin-right: auto;" loop autoplay></dotlottie-player>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/alreadyresponded"
-            class="btn fade-scrollbtn-secondary" style="position:absolute; margin-top:-100px;left: 50%;border-color: #265656;
-transform: translateX(-50%);
-" target="_blank">
-            <span class="text text-1" style="color: #265656;">Join Now</span>
-
-            <span class="text text-2" aria-hidden="true">Join Now</span>
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div class="ann-links">
+        <a href="https://www.instagram.com/walkthesummit/" target="_blank" rel="noopener">
+          <ion-icon name="logo-instagram"></ion-icon> @walkthesummit
         </a>
+        <div class="ann-dot"></div>
+        <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank" rel="noopener">
+          <ion-icon name="logo-linkedin"></ion-icon> Walk The Summit
+        </a>
+        <div class="ann-dot"></div>
+        <a href="mailto:walkthesummit@gmail.com">
+          <ion-icon name="mail-outline"></ion-icon> walkthesummit@gmail.com
+        </a>
+      </div>
+      <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" target="_blank" class="ann-donate">
+        <ion-icon name="heart"></ion-icon> Support Our Cause
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav" style="top: 41px;">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="./assets/Logo.jpg" alt="Walk The Summit Logo" class="nav-logo-img">
+          <div class="nav-logo-text">
+            Walk The Summit
+            <span>For the Students, By the Students</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="media.html" class="nav-link">Media</a>
+          <a href="faqs.html" class="nav-link">FAQs</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="donate.html" class="btn-nav-donate">Donate Now</a>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="nav-logo">
+        <img src="./assets/Logo.jpg" alt="Logo" class="nav-logo-img">
+        <div class="nav-logo-text">Walk The Summit</div>
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <a href="index.html" class="mobile-nav-link active">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="media.html" class="mobile-nav-link">Media</a>
+    <a href="faqs.html" class="mobile-nav-link">FAQs</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="donate.html" class="mobile-nav-donate">Donate Now →</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="./assets/images/hero-slider-1.png" alt="Children in Himalayan classroom" loading="eager">
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow reveal">Student-Led · Est. 2022 · Himalayas, India</div>
+          <h1 class="hero-title reveal reveal-delay-1">
+            We <em>change lives.</em><br>
+            We move mountains.<br>
+            We Walk The Summit.
+          </h1>
+          <p class="hero-sub reveal reveal-delay-2">
+            A student-led organization dedicated to transforming education for children in remote Himalayan villages — one classroom, one computer, one life at a time.
+          </p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="about.html" class="btn-primary">
+              Our Story <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" target="_blank" class="btn-secondary">
+              <ion-icon name="heart-outline"></ion-icon> Donate &amp; Impact Lives
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
     </section>
 
-    <div id="bottombar">
-        <div class="container" id="Gen">
-            <a href="https://milaap.org/fundraisers/support-underprivileged-children-of-himalayas" id="Gen2">
-                <address class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </div>
-
-                    <span class="span">
-                        Donate Now </span>
-                </address>
-            </a>
-
-            <div class="separator"></div>
-            <div class="topbar-item item-2">
-                <div class="icon">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-                <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank">
-                    <span class="span">Walk The Summit</span>
-                </a>
-            </div>
-
-            <div class="separator"></div>
-
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform?usp=sf_link"
-                class="topbar-item link" target="_blank">
-                <div class="icon">
-                    <ion-icon name="person-add-outline"></ion-icon>
-                </div>
-
-                <span class="span">Apply Now</span>
-            </a>
-
-            <a href="index.html" class="topbar-item link" target="">
-                <div class="icon">
-                    <ion-icon name="call-outline"></ion-icon>
-                </div>
-
-                <span class="span">+91 9520008950 / +91 96541910894᲼᲼᲼᲼</span>
-            </a>
+    <!-- STATS STRIP -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-count="1500000" data-prefix="₹">₹0</div>
+            <div class="stat-label">CSR Funds Mobilized</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number" data-count="2000" data-suffix="+">0</div>
+            <div class="stat-label">Students Impacted</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number" data-count="70" data-suffix="+">0</div>
+            <div class="stat-label">Rural Classrooms Reached</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number" data-count="400" data-suffix="+">0</div>
+            <div class="stat-label">Hours of Structured Teaching</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-4">
+            <div class="stat-number" data-count="4">0</div>
+            <div class="stat-label">NGO Registered Partners</div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <img src="./assets/images/Best/Best_Duo.jpg" alt="Walk The Summit founders with students" class="about-img-primary">
+            <img src="./assets/images/Best/main.jpg" alt="Students in classroom" class="about-img-float">
+            <div class="about-badge">Est. 2022 · Himalayas</div>
+          </div>
+          <div class="about-text">
+            <div class="reveal">
+              <div class="section-tag">Our Mission</div>
+              <h2 class="section-title">Geography should <em>never</em> determine the quality of education</h2>
+            </div>
+            <p class="section-body reveal reveal-delay-1">
+              In the rugged terrain of the Himalayas, where a simple pencil is a precious commodity and children trek miles just to reach school, Walk The Summit stands as a beacon of hope and progress.
+            </p>
+            <div class="about-feature-list">
+              <div class="about-feature reveal reveal-delay-1">
+                <div class="feature-icon"><ion-icon name="laptop-outline"></ion-icon></div>
+                <div>
+                  <div class="feature-label">Digital Classrooms</div>
+                  <div class="feature-desc">Setting up computer labs and Wi-Fi connectivity in remote mountain schools.</div>
+                </div>
+              </div>
+              <div class="about-feature reveal reveal-delay-2">
+                <div class="feature-icon"><ion-icon name="book-outline"></ion-icon></div>
+                <div>
+                  <div class="feature-label">21st Century Skills</div>
+                  <div class="feature-desc">Empowering kids with life skills, preparing them to thrive in a global world.</div>
+                </div>
+              </div>
+              <div class="about-feature reveal reveal-delay-3">
+                <div class="feature-icon"><ion-icon name="people-outline"></ion-icon></div>
+                <div>
+                  <div class="feature-label">Community Partnership</div>
+                  <div class="feature-desc">Supporting local schools and bridging remote communities to global opportunities.</div>
+                </div>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-4">
+              <a href="about.html" class="btn-primary">Read Our Full Story <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER STORY -->
+    <section class="story-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media reveal">
+            <img src="./assets/images/Best/duo.jpg" alt="Krishiv and Vansh — Co-founders" class="story-img">
+            <div class="story-quote">
+              <p>"We change lives. We move mountains. We Walk The Summit."</p>
+              <cite>— Krishiv &amp; Vansh, Co-founders</cite>
+            </div>
+          </div>
+          <div class="story-text">
+            <div class="reveal">
+              <div class="section-tag">Founder's Story</div>
+              <h2 class="section-title">Two friends. One <em>shared</em> purpose.</h2>
+            </div>
+            <p class="story-para reveal reveal-delay-1">
+              <strong>Krishiv</strong> spent summers in his grandmother's remote village in Uttarakhand, where he repeatedly witnessed children walking miles to schools with little infrastructure or technology. These experiences shaped his vision: every child deserves access to the opportunities they deserve.
+            </p>
+            <p class="story-para reveal reveal-delay-2">
+              <strong>Vansh</strong>, inspired by Krishiv's stories and driven by his own passion for change, co-founded Walk The Summit. Together, they are leveling the playing field for rural students — ensuring access to modern educational tools and a gateway to the world.
+            </p>
+            <p class="story-para reveal reveal-delay-3">
+              Their journey began in high school and has since grown into a nationally recognised movement touching thousands of lives across the Himalayan region.
+            </p>
+            <div class="reveal reveal-delay-4" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <a href="about.html" class="btn-primary">Full Story</a>
+              <a href="contact.html" class="btn-secondary">Get Involved</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY / IMPACT -->
+    <section class="impact-section" id="impact">
+      <div class="container">
+        <div class="impact-header">
+          <div>
+            <div class="section-tag reveal">Impact Gallery</div>
+            <h2 class="section-title reveal reveal-delay-1">Lives we've <em>touched</em></h2>
+          </div>
+          <a href="media.html" class="btn-secondary reveal">View All Photos <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+        <div class="gallery-masonry">
+          <div class="gallery-item reveal">
+            <img src="./assets/images/Best/people.jpg" alt="Students and volunteers">
+            <div class="gallery-item-overlay"><span class="gallery-item-label">Community Outreach</span></div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-1">
+            <img src="./assets/images/Best/Games.jpg" alt="Students playing games">
+            <div class="gallery-item-overlay"><span class="gallery-item-label">After-School Programs</span></div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2">
+            <img src="./assets/images/Best/art.jpg" alt="Creative sessions with children">
+            <div class="gallery-item-overlay"><span class="gallery-item-label">Creative Learning</span></div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-3">
+            <img src="./assets/images/Best/outdoor.jpg" alt="Outdoor activity with students">
+            <div class="gallery-item-overlay"><span class="gallery-item-label">Sports &amp; Wellness</span></div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-4">
+            <img src="./assets/images/Best/showcase.jpg" alt="Student showcase">
+            <div class="gallery-item-overlay"><span class="gallery-item-label">Student Showcase</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS & RECOGNITION -->
+    <section class="awards-section">
+      <div class="container">
+        <div class="awards-grid">
+          <div>
+            <div class="section-tag reveal">Recognition</div>
+            <h2 class="section-title reveal reveal-delay-1">Honors &amp; <em>Coverage</em></h2>
+            <div class="award-list" style="margin-top:40px;">
+              <div class="award-item reveal reveal-delay-1">
+                <div class="award-num">01</div>
+                <div class="award-text">
+                  <h3>State Commission for Protection of Child Rights, Uttarakhand</h3>
+                  <p>Official recognition for grassroots educational impact in Himalayan regions.</p>
+                </div>
+              </div>
+              <div class="award-item reveal reveal-delay-2">
+                <div class="award-num">02</div>
+                <div class="award-text">
+                  <h3>AIIMS Delhi Young Changemakers Award</h3>
+                  <p>Recipient for youth-led social innovation and impactful community work.</p>
+                </div>
+              </div>
+              <div class="award-item reveal reveal-delay-3">
+                <div class="award-num">03</div>
+                <div class="award-text">
+                  <h3>PHDCCI Astitva Samman Award</h3>
+                  <p>Honored for inspiring social leadership and community development in India.</p>
+                </div>
+              </div>
+              <div class="award-item reveal reveal-delay-4">
+                <div class="award-num">04</div>
+                <div class="award-text">
+                  <h3>Atal Innovation Mission, NITI Aayog</h3>
+                  <p>National invitee. Special Guest at Republic Day Parade 2026.</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:40px;" class="reveal">
+              <div class="section-tag" style="margin-bottom:20px;">Press Coverage</div>
+              <div class="press-list">
+                <div class="press-item">Hindustan Times <span>Rural Education Initiative</span></div>
+                <div class="press-item">Dainik Jagran <span>Student Empowerment &amp; CSR</span></div>
+                <div class="press-item">Dainik Bhaskar <span>21st Century Skills Curriculum</span></div>
+                <div class="press-item">Amar Ujala <span>Youth-Led Educational Leadership</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="awards-media reveal reveal-delay-2">
+            <img src="./assets/images/Facilities/1.jpg" alt="CSR School Bus — Mussoorie" class="awards-img">
+            <div class="awards-csr-box">
+              <h3>CSR Collaboration: ₹15 Lakh School Bus</h3>
+              <p>Our most impactful collaboration resulted in providing a brand-new Force Trax mini school bus to a rural partner school in Mussoorie — enabling children who once trekked 8-10 km daily to attend school safely and reliably.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section class="involve-section">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Join the Movement</div>
+          <h2 class="section-title" style="margin:0 auto 16px;">How you can <em>help</em></h2>
+          <p class="section-body" style="margin:0 auto;">Every person who joins our mission makes the mountains a little more reachable for a child who dreams big.</p>
+        </div>
+        <div class="involve-grid" style="margin-top:60px;">
+          <div class="involve-card reveal">
+            <div class="involve-icon"><ion-icon name="heart-outline"></ion-icon></div>
+            <h3>Donate</h3>
+            <p>Your contribution directly funds computers, school buses, Wi-Fi, and educational materials for children in remote villages.</p>
+            <a href="donate.html" class="involve-link">Donate Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <div class="involve-card reveal reveal-delay-1">
+            <div class="involve-icon"><ion-icon name="people-outline"></ion-icon></div>
+            <h3>Volunteer</h3>
+            <p>Join our team of passionate students and professionals. Help us teach, organise, and expand our reach to more villages.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform" target="_blank" class="involve-link">Apply Now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+          <div class="involve-card reveal reveal-delay-2">
+            <div class="involve-icon"><ion-icon name="business-outline"></ion-icon></div>
+            <h3>CSR Partnership</h3>
+            <p>Partner with us through your organisation's CSR fund. We connect companies directly with high-impact schools in the Himalayas.</p>
+            <a href="contact.html" class="involve-link">Get in Touch <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./assets/Logo.jpg" alt="Walk The Summit Logo">
+            <div class="footer-logo-text">Walk The Summit</div>
+          </div>
+          <p class="footer-tagline">A student-led organisation transforming education for children in remote Himalayan villages through technology, resources, and unwavering determination.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/walkthesummit/" target="_blank" class="footer-social"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.linkedin.com/company/walk-the-summit/" target="_blank" class="footer-social"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="mailto:walkthesummit@gmail.com" class="footer-social"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="media.html" class="footer-link">Media</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="donate.html" class="footer-link">Donate</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="faqs.html" class="footer-link">FAQs</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYz7ayFUmQ5GyFp30ujiD_zR7fwDivOokoklOgoRCribVEXQ/viewform" target="_blank" class="footer-link">Apply to Join</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span class="footer-link">walkthesummit@gmail.com</span>
+            <span class="footer-link">+91 9520008950</span>
+            <span class="footer-link">+91 9654191089</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Walk The Summit. All rights reserved.</p>
+        <!-- zuup.dev employee id 109 -->
+        <a href="https://zuup.dev" target="_blank" rel="noopener" class="zuup-wm">manufactured by zuup.dev</a>
+      </div>
     </div>
+  </footer>
 
-    <!-- 
-    - #BACK TO TOP
-  -->
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <a href=" #top " class=" back-top-btn fade-scrollactive " aria-label=" back to top " data-back-top-btn>
-        <ion-icon name="chevron-up-outline" alt=" Top " id=" topper "></ion-icon>
-    </a>
+  <script>
+    // ── Preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('wts-preloader').classList.add('hidden');
+      }, 800);
+    });
 
-    <!-- 
-    - custom js link
-  -->
-    <script src=" ./assets/js/script.js "></script>
-    <script src="./assets/js/popup.js"></script>
+    // ── Sticky Nav
+    const nav = document.getElementById('site-nav');
+    const annBar = document.querySelector('.announcement-bar');
+    const annH = annBar ? annBar.offsetHeight : 41;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        nav.style.top = '0';
+        nav.classList.add('scrolled');
+      } else {
+        nav.style.top = annH + 'px';
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
 
-    <!-- 
-    - ionicon link
-  -->
+    // ── Mobile Nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const overlay = document.getElementById('nav-overlay');
+    const closeBtn = document.getElementById('mobile-nav-close');
+    function openNav() { mobileNav.classList.add('open'); overlay.classList.add('show'); hamburger.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeNav() { mobileNav.classList.remove('open'); overlay.classList.remove('show'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', openNav);
+    closeBtn.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    // ── Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
 
-    </div>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.utils.toArray(".fade-scroll").forEach(el => {
-            gsap.fromTo(el, {
-                opacity: 0
-            }, {
-                opacity: 1,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 75%", // when top of element hits 75% of viewport
-                    end: "top 30%", // when top of element hits 50% of viewport
-                    scrub: true // ties the animation to scroll position
-                }
-            });
-        });
-    </script>
-
-    <script>
-        // Auto-scrolling horizontal slider
-        const container = document.getElementById('sliderContainer');
-        let scrollSpeed = 1; // pixels per frame
-        let isPaused = false;
-
-        function autoScroll() {
-            if (!isPaused) {
-                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
-                    container.scrollLeft = 0; // Instantly jump to start
-                } else {
-                    container.scrollLeft += scrollSpeed;
-                }
-            }
-            requestAnimationFrame(autoScroll);
+    // ── Count Up
+    function animateCount(el) {
+      const target = parseInt(el.dataset.count, 10);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(ease * target);
+        if (target >= 100000) {
+          el.textContent = prefix + (value >= 100000 ? '₹' + (value / 100000).toFixed(1) + 'L' : prefix + value) + suffix;
+          if (progress === 1) el.textContent = prefix + '15L+' + suffix;
+        } else {
+          el.textContent = prefix + value.toLocaleString('en-IN') + suffix;
         }
-        container.addEventListener('mouseenter', () => {
-            isPaused = true;
-        });
-        container.addEventListener('mouseleave', () => {
-            isPaused = false;
-        });
-        window.onload = autoScroll;
-    </script>
-
-    <script>
-        // Count-up animation every time section is visible
-        (function() {
-            function runCounters() {
-                document.querySelectorAll('.count-up').forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    let current = 0;
-                    const increment = Math.max(1, Math.ceil(target / 150));
-                    // Reset counter text before animating
-                    counter.innerText = counter.classList.contains('currency') ? '₹0' : '0';
-
-                    function updateCount() {
-                        current += increment;
-                        if (current < target) {
-                            const value = Math.ceil(current).toLocaleString();
-                            counter.innerText = counter.classList.contains('currency') ? `₹${value}+` :
-                                `${value}+`;
-                            setTimeout(updateCount, 10);
-                        } else {
-                            const finalValue = target.toLocaleString();
-                            counter.innerText = counter.classList.contains('currency') ? `₹${finalValue}+` :
-                                `${finalValue}+`;
-                        }
-                    }
-                    updateCount();
-                });
-            }
-            const section = document.getElementById('impact-highlights');
-            if (window.IntersectionObserver && section) {
-                let wasIntersecting = false;
-                const observer = new IntersectionObserver(entries => {
-                    if (entries[0].isIntersecting) {
-                        runCounters();
-                        wasIntersecting = true;
-                    } else {
-                        wasIntersecting = false;
-                    }
-                }, {
-                    threshold: 0.3
-                });
-                observer.observe(section);
-            } else {
-                // fallback: run on load
-                runCounters();
-            }
-        })();
-    </script>
-
-    <!-- Add Lightbox HTML at the end of body, before </body> -->
-    <div id="lightbox-overlay"
-        style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
-        <img id="lightbox-img" src="" alt="Preview"
-            style="max-width:90vw; max-height:90vh; border-radius:2rem; box-shadow:0 8px 32px rgba(0,0,0,0.35); background:#fff;">
-    </div>
-
-    <script>
-        // Lightbox JS
-        document.querySelectorAll('.lightbox-img').forEach(img => {
-            img.addEventListener('click', function() {
-                document.getElementById('lightbox-img').src = this.src;
-                document.getElementById('lightbox-overlay').style.display = 'flex';
-            });
-        });
-        document.getElementById('lightbox-overlay').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-                document.getElementById('lightbox-img').src = '';
-            }
-        });
-    </script>
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+    const countEls = document.querySelectorAll('[data-count]');
+    const countIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); countIO.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    countEls.forEach(el => countIO.observe(el));
+  </script>
 </body>
-
 </html>

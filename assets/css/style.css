@@ -1,31 +1,32 @@
+/* zuup.dev employee id 109 */
 :root {
     /**
    * COLORS
    */
-  --gold-crayola: #d9dde7;
---quick-silver: #aeb6c7;
+  --gold-crayola: #E0A95A;
+--quick-silver: #C48443;
 
---smoky-black-1: #0f1115;
---smoky-black-2: #171b22;
---smoky-black-3: #1e242d;
+--smoky-black-1: #1C3333;
+--smoky-black-2: #2A4B4B;
+--smoky-black-3: #2B2522;
 
---eerie-black-1: #2a313d;
---eerie-black-2: #364052;
---eerie-black-3: #445066;
---eerie-black-4: #5f6c84;
+--eerie-black-1: #2B2522;
+--eerie-black-2: #65432B;
+--eerie-black-3: #2A4B4B;
+--eerie-black-4: #3D6B6B;
 
---white: #ffffff;
---white-alpha-20: hsla(0, 0%, 100%, 0.2);
---white-alpha-10: hsla(0, 0%, 100%, 0.1);
+--white: #EFE2C5;
+--white-alpha-20: rgba(239, 226, 197, 0.2);
+--white-alpha-10: rgba(239, 226, 197, 0.1);
 
---black: hsla(0, 0%, 0%, 1);
---black-alpha-80: hsla(0, 0%, 0%, 0.8);
---black-alpha-15: hsla(0, 0%, 0%, 0.15);
+--black: #1C3333;
+--black-alpha-80: rgba(28, 51, 51, 0.8);
+--black-alpha-15: rgba(28, 51, 51, 0.15);
     /**
    * GRADIENT COLOR
    */
     --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%, transparent 66.66% 75%);
-    --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
+    --gradient-1: linear-gradient(to top, rgba(28, 51, 51, 0.9), rgba(42, 75, 75, 0.7), transparent);
     /**
    * TYPOGRAPHY
    */
@@ -93,7 +94,7 @@
 #blob {
     width: 30px;
     height: 30px;
-    border: 5px solid #c28840;
+    border: 5px solid #E0A95A;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -3498,7 +3499,7 @@ p {
 
 /* For number counters */
 .count-up {
-  color: #c28840;
+  color: #E0A95A;
   font-size: 3em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -3563,7 +3564,7 @@ p {
     box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 } body {
     background:
-    radial-gradient(circle at top, #1b2230 0%, #090b10 55%);
+    radial-gradient(circle at top, #2A4B4B 0%, #1C3333 75%);
 }
 
 img {
@@ -3638,4 +3639,32 @@ img {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Premium Footer Watermark */
+.zuup-watermark {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(239, 226, 197, 0.7);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 2rem;
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.zuup-watermark span {
+    background: linear-gradient(90deg, #E0A95A, #EFE2C5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    margin-left: 6px;
 }
